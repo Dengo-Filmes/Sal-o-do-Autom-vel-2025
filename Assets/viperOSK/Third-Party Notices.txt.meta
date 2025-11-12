@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: b55c8da264d62954db3411f542260786
+TextScriptImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 238231
+  packageName: viper OSK On-Screen Keyboard
+  packageVersion: 3.6
+  assetPath: Assets/viperOSK/Third-Party Notices.txt
+  uploadId: 812062

@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 6e4e8eaffc30c804dae11b2632ad8e63
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 238231
+  packageName: viper OSK On-Screen Keyboard
+  packageVersion: 3.6
+  assetPath: Assets/viperOSK/Examples/Scenes/Example9_LongPress.unity
+  uploadId: 812062

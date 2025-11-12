@@ -1,0 +1,47 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8c6492f617602a43bfa3bd14d703deb, type: 3}
+  m_Name: viperOSK_AccentMap_French
+  m_EditorClassIdentifier: 
+  entries:
+  - baseCharacter: a
+    accentedCharacters:
+    - "\xE0"
+    - "\xE2"
+    - "\xE4"
+    - "\xE6"
+  - baseCharacter: c
+    accentedCharacters:
+    - "\xE7"
+  - baseCharacter: e
+    accentedCharacters:
+    - "\xE9"
+    - "\xE8"
+    - "\xEA"
+    - "\xEB"
+  - baseCharacter: i
+    accentedCharacters:
+    - "\xEE"
+    - "\xEF"
+  - baseCharacter: o
+    accentedCharacters:
+    - "\xF4"
+    - "\xF6"
+    - "\u0153"
+  - baseCharacter: u
+    accentedCharacters:
+    - "\xF9"
+    - "\xFB"
+    - "\xFC"
+  - baseCharacter: y
+    accentedCharacters:
+    - "\xFF"

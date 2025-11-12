@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 68b9fe99b2ea31243827f8b1a62fa652
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 238231
+  packageName: viper OSK On-Screen Keyboard
+  packageVersion: 3.6
+  assetPath: Assets/viperOSK/Examples/Scenes/Example6_A_GamePads.unity
+  uploadId: 812062

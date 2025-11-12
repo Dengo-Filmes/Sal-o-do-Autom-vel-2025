@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: d9d969ec2629d4044a1af4dd6a429f68
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 238231
+  packageName: viper OSK On-Screen Keyboard
+  packageVersion: 3.6
+  assetPath: Assets/viperOSK/OSK/Resources/viperOSK_LP_Turkiye.asset
+  uploadId: 812062

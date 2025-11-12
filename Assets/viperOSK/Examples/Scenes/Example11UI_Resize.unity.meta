@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 80a0ba264b2d8bc469d261c1372e0eb4
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 238231
+  packageName: viper OSK On-Screen Keyboard
+  packageVersion: 3.6
+  assetPath: Assets/viperOSK/Examples/Scenes/Example11UI_Resize.unity
+  uploadId: 812062

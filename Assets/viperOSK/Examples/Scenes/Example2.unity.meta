@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: fcead3de5666fa2469320db9e3406cb1
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 238231
+  packageName: viper OSK On-Screen Keyboard
+  packageVersion: 3.6
+  assetPath: Assets/viperOSK/Examples/Scenes/Example2.unity
+  uploadId: 812062

@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fcc4b44ea0097d240a980936fa8a082b, type: 3}
+  m_Name: viperOSK_AltKeyboard
+  m_EditorClassIdentifier: 
+  keyboardLayout: "Q W E R T Y U I O P \xEC Skip.5 7 8 9 /\nA S D F G H J K L , ?
+    Skip.5 4 5 6 *\nZ X C V B N M \xE8 \xE9 Backspace Skip.5 1 2 3 -\nLeftAlt CapsLock
+    Space Return Skip.5 0 . +"
+  altKeyboardLayout: "~ ` @ # $ % ^ & ( ) \xA3 Skip.5 7 8 9 /\n| \\ < > =  [ ] {
+    } \u20AC \xA2 Skip.5 4 5 6 *\n? , : ; \" _ \xE0 \xF6 \xF4 Backspace Skip.5 1
+    2 3 -\nLeftAlt CapsLock Space Return Skip.5 0 . +"
+  accentPackage: {fileID: 0}

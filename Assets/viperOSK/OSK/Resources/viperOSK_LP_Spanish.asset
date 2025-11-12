@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fcc4b44ea0097d240a980936fa8a082b, type: 3}
+  m_Name: viperOSK_LP_Spanish
+  m_EditorClassIdentifier: 
+  keyboardLayout: "1 2 3 4 5 6 7 8 9 0 Delete\nQ W E R T Y U I O P ?\nA S D F G H
+    J K L \xF1 Exclaim\nZ X C V B N M Comma Period Backspace\nLeftShift LeftAlt Space
+    - @ Return"
+  altKeyboardLayout: "1 2 3 4 5 6 7 8 9 0 Delete\n& \" ' { } [ ] ( ) / $\n? ! % +
+    - * = # < > \u20AC\n^ | \\ ~ ` _ , ; : Backspace\nLeftShift LeftAlt Space . @
+    Return"
+  accentPackage: {fileID: 11400000, guid: 510d5ce9be66464449a40b76451d0683, type: 2}

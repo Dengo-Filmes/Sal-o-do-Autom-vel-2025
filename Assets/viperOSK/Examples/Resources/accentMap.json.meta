@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 203f4323483ac874e8dd748b25369834
+TextScriptImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 238231
+  packageName: viper OSK On-Screen Keyboard
+  packageVersion: 3.6
+  assetPath: Assets/viperOSK/Examples/Resources/accentMap.json
+  uploadId: 812062

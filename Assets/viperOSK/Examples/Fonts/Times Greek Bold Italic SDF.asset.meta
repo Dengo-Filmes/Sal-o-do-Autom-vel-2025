@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 8fb0ef9016bc16c43a431216af5f63f6
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 238231
+  packageName: viper OSK On-Screen Keyboard
+  packageVersion: 3.6
+  assetPath: Assets/viperOSK/Examples/Fonts/Times Greek Bold Italic SDF.asset
+  uploadId: 812062
