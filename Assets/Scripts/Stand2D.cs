@@ -4,9 +4,9 @@ using UnityEngine.EventSystems;
 public class Stand2D : MonoBehaviour, IPointerClickHandler
 {
     [Header("Configurações do Stand")]
-    public string standName = "Stand sem nome";  
-    public float focusZoom = 4f;                 
-    public Color highlightColor = Color.yellow;  
+    public string standName = "Stand sem nome";
+    public float focusZoom = 4f;
+    public Color highlightColor = Color.yellow;
 
     private Color originalColor;
     private UnityEngine.UI.Image image;
@@ -26,7 +26,7 @@ public class Stand2D : MonoBehaviour, IPointerClickHandler
             map.FocusOnStand(GetComponent<RectTransform>(), focusZoom);
         }
 
-        
+
         if (image != null)
         {
             StopAllCoroutines();

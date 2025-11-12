@@ -6,22 +6,23 @@ using System.Collections;
 public class MapPanZoom2D : MonoBehaviour, IDragHandler, IBeginDragHandler
 {
     [Header("References")]
-    public RectTransform mapTransform;      
-    public RectTransform containerRect;     
-    public Slider zoomSlider;               
-    public Canvas canvas;                   
+    public RectTransform mapTransform;
+    public RectTransform containerRect;
+    public Slider zoomSlider;
+    public Canvas canvas;
 
     [Header("Configurações")]
     public float panSpeed = 1f;
     public float minZoom = 1f;
     public float maxZoom = 4f;
     public float focusLerpSpeed = 6f;
-    public float inactivityTime = 10f;      
+    public float inactivityTime = 10f;
 
     private float zoom = 1f;
     private Coroutine focusCoroutine;
     private bool isFocusing = false;
     private float inactivityTimer = 0f;
+
 
     void Start()
     {
@@ -38,7 +39,7 @@ public class MapPanZoom2D : MonoBehaviour, IDragHandler, IBeginDragHandler
     {
         inactivityTimer += Time.deltaTime;
 
-        
+
         if (inactivityTimer >= inactivityTime && !isFocusing)
         {
             ResetMapToDefault();
@@ -80,14 +81,14 @@ public class MapPanZoom2D : MonoBehaviour, IDragHandler, IBeginDragHandler
         isFocusing = true;
         zoomTarget = Mathf.Clamp(zoomTarget, minZoom, maxZoom);
 
-        // Posição inicial
+
         Vector2 startAnchoredPos = mapTransform.anchoredPosition;
         float startZoom = zoom;
 
         if (zoomSlider != null)
             zoomSlider.value = zoomTarget;
 
-        // Calcula a posição alvo ANTES de iniciar a animação
+
         Vector2 standLocalPos;
         RectTransformUtility.ScreenPointToLocalPointInRectangle(
             mapTransform,
@@ -104,17 +105,17 @@ public class MapPanZoom2D : MonoBehaviour, IDragHandler, IBeginDragHandler
             out containerLocalCenter
         );
 
-        Vector2 delta = (standLocalPos - containerLocalCenter) * zoomTarget; // Usa zoomTarget aqui
+        Vector2 delta = (standLocalPos - containerLocalCenter) * zoomTarget;
         Vector2 targetAnchoredPos = startAnchoredPos - delta;
 
-        // Animação simultânea de zoom e pan
+
         float t = 0f;
         while (t < 1f)
         {
             t += Time.deltaTime * focusLerpSpeed;
             float smoothT = Mathf.SmoothStep(0, 1, t);
 
-            // Aplica zoom e pan simultaneamente
+
             zoom = Mathf.Lerp(startZoom, zoomTarget, smoothT);
             mapTransform.localScale = Vector3.one * zoom;
             mapTransform.anchoredPosition = Vector2.Lerp(startAnchoredPos, targetAnchoredPos, smoothT);
@@ -123,7 +124,7 @@ public class MapPanZoom2D : MonoBehaviour, IDragHandler, IBeginDragHandler
             yield return null;
         }
 
-        // Garante valores finais exatos
+
         zoom = zoomTarget;
         mapTransform.localScale = Vector3.one * zoom;
         mapTransform.anchoredPosition = targetAnchoredPos;
@@ -147,7 +148,7 @@ public class MapPanZoom2D : MonoBehaviour, IDragHandler, IBeginDragHandler
         float startZoom = zoom;
         float t = 0f;
 
-        Vector2 targetPos = Vector2.zero; 
+        Vector2 targetPos = Vector2.zero;
         float targetZoom = 1f;
 
         if (zoomSlider) zoomSlider.value = targetZoom;
