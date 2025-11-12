@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
+using System.Collections;
 
 public class Stand2D : MonoBehaviour, IPointerClickHandler
 {
@@ -26,17 +27,20 @@ public class Stand2D : MonoBehaviour, IPointerClickHandler
             map.FocusOnStand(GetComponent<RectTransform>(), focusZoom);
         }
 
+        // Mover seta animada acima do stand
+        ArrowIndicatorController.ShowAbove(GetComponent<RectTransform>());
 
+        // efeito visual no stand
         if (image != null)
         {
             StopAllCoroutines();
             StartCoroutine(FlashHighlight());
         }
 
-        Debug.Log($" Stand selecionado: {standName}");
+        Debug.Log($"Stand selecionado: {standName}");
     }
 
-    System.Collections.IEnumerator FlashHighlight()
+    IEnumerator FlashHighlight()
     {
         image.color = highlightColor;
         yield return new WaitForSeconds(0.25f);
