@@ -16,11 +16,14 @@ public class SearchStandUI : MonoBehaviour
     public int minSearchLength = 3;
 
     [Header("Seta (prefab)")]
-    public RectTransform arrowPrefab;     // arraste o prefab da seta
-    public RectTransform mapTransform;    // arraste o painel do mapa
+    public RectTransform arrowPrefab;
+    public RectTransform mapTransform;
+
+    private List<Stand2D> allStands;
 
     void Start()
     {
+        allStands = FindObjectsOfType<Stand2D>(true).ToList();
         if (inputField != null)
             inputField.onEndEdit.AddListener(OnSearch);
     }
@@ -31,15 +34,11 @@ public class SearchStandUI : MonoBehaviour
 
         query = query.Trim().ToLower();
 
-        // exige no mínimo X letras
         if (query.Length < minSearchLength)
         {
-            Debug.LogWarning($" Digite pelo menos {minSearchLength} letras para buscar um stand.");
+            Debug.LogWarning($"Digite pelo menos {minSearchLength} letras para buscar um stand.");
             return;
         }
-
-        // encontra TODOS os stands que correspondem
-        var allStands = FindObjectsOfType<Stand2D>(true).ToList();
 
         List<Stand2D> foundStands;
 
@@ -48,49 +47,31 @@ public class SearchStandUI : MonoBehaviour
         else
             foundStands = allStands.Where(s => s.standName.ToLower() == query).ToList();
 
-        //  Remove todas as setas antigas antes de criar novas
-        foreach (var oldArrow in FindObjectsOfType<ArrowIndicatorController>())
-        {
-            if (oldArrow != null)
-                oldArrow.DestroyArrow();
-        }
+        // remove todas as setas anteriores
+        ArrowManager.Instance?.ClearAll();
 
-        // Se encontrou algum
         if (foundStands.Count > 0)
         {
-            Debug.Log($" Encontrados {foundStands.Count} stand(s): {string.Join(", ", foundStands.Select(s => s.standName))}");
+            Debug.Log($"Encontrados {foundStands.Count} stand(s): {string.Join(", ", foundStands.Select(s => s.standName))}");
 
-            // Centraliza a câmera no primeiro apenas
             var first = foundStands[0];
             map.FocusOnStand(first.GetComponent<RectTransform>(), searchZoom);
 
-            // Mostra seta em todos os stands encontrados
             foreach (var stand in foundStands)
             {
                 if (arrowPrefab != null && mapTransform != null)
-                {
                     ArrowIndicatorController.Create(arrowPrefab, mapTransform, stand.GetComponent<RectTransform>());
-                }
 
                 var img = stand.GetComponent<UnityEngine.UI.Image>();
                 if (img != null)
-                    StartCoroutine(Highlight(img));
+                    StartCoroutine(UIHighlightHelper.Flash(img, Color.cyan, 0.4f));
             }
         }
         else
         {
-            Debug.LogWarning($" Nenhum stand encontrado com: {query}");
+            Debug.LogWarning($"Nenhum stand encontrado com: {query}");
         }
 
-        // limpa o input após a busca
         inputField.text = "";
-    }
-
-    IEnumerator Highlight(UnityEngine.UI.Image img)
-    {
-        var original = img.color;
-        img.color = Color.cyan;
-        yield return new WaitForSeconds(0.4f);
-        img.color = original;
     }
 }

@@ -10,8 +10,8 @@ public class Stand2D : MonoBehaviour, IPointerClickHandler
     public Color highlightColor = Color.yellow;
 
     [Header("Seta (prefab)")]
-    public RectTransform arrowPrefab;    // arraste o prefab da seta
-    public RectTransform mapTransform;   // arraste o painel do mapa
+    public RectTransform arrowPrefab;
+    public RectTransform mapTransform;
 
     private Color originalColor;
     private UnityEngine.UI.Image image;
@@ -22,7 +22,6 @@ public class Stand2D : MonoBehaviour, IPointerClickHandler
         if (image != null)
             originalColor = image.color;
 
-        // se não tiver setado no inspetor, tenta achar o painel do mapa
         if (mapTransform == null)
         {
             var mp = FindObjectOfType<MapPanZoom2D>();
@@ -33,42 +32,28 @@ public class Stand2D : MonoBehaviour, IPointerClickHandler
 
     public void OnPointerClick(PointerEventData eventData)
     {
-        // Foca a câmera no stand
         var map = FindObjectOfType<MapPanZoom2D>();
         if (map != null)
             map.FocusOnStand(GetComponent<RectTransform>(), focusZoom);
 
-        //  Remove todas as setas antigas antes de criar uma nova
-        foreach (var oldArrow in FindObjectsOfType<ArrowIndicatorController>())
-        {
-            if (oldArrow != null)
-                oldArrow.DestroyArrow();
-        }
+        // limpa todas as setas antes de criar a nova
+        ArrowManager.Instance?.ClearAll();
 
-        // Cria a nova seta acima do stand clicado
         if (arrowPrefab != null && mapTransform != null)
         {
             ArrowIndicatorController.Create(arrowPrefab, mapTransform, GetComponent<RectTransform>());
         }
         else
         {
-            Debug.LogWarning("? Arrow prefab ou mapTransform não configurados no Stand2D.");
+            Debug.LogWarning(" Arrow prefab ou mapTransform não configurados no Stand2D.");
         }
 
-        // efeito visual de destaque
         if (image != null)
         {
             StopAllCoroutines();
-            StartCoroutine(FlashHighlight());
+            StartCoroutine(UIHighlightHelper.Flash(image, highlightColor, 0.25f));
         }
 
         Debug.Log($" Stand selecionado: {standName}");
-    }
-
-    IEnumerator FlashHighlight()
-    {
-        image.color = highlightColor;
-        yield return new WaitForSeconds(0.25f);
-        image.color = originalColor;
     }
 }

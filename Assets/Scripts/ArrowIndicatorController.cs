@@ -12,6 +12,10 @@ public class ArrowIndicatorController : MonoBehaviour
         var instance = Instantiate(prefab, parent);
         var controller = instance.GetComponent<ArrowIndicatorController>();
         controller.Setup(target);
+
+        // registra no ArrowManager
+        ArrowManager.Instance?.Register(controller);
+
         return controller;
     }
 
@@ -19,9 +23,11 @@ public class ArrowIndicatorController : MonoBehaviour
     {
         arrowRect = GetComponent<RectTransform>();
         this.target = target;
+
+        // garante que a seta esteja no mesmo parent que o mapa
+        arrowRect.SetParent(target.parent, false);
         UpdatePosition();
 
-        //  animação suave (opcional) — movimento vertical, sem rotação
         if (pulseRoutine != null)
             StopCoroutine(pulseRoutine);
         pulseRoutine = StartCoroutine(Pulse());
@@ -35,23 +41,19 @@ public class ArrowIndicatorController : MonoBehaviour
 
     void UpdatePosition()
     {
-        if (arrowRect != null && target != null)
-        {
-            // posiciona logo acima do stand
-            Vector3 pos = target.anchoredPosition;
-            pos.y += target.rect.height * 0.6f; // distância acima do stand
-            arrowRect.anchoredPosition = pos;
+        if (arrowRect == null || target == null) return;
 
-            // seta parada, sem rotação
-            arrowRect.localRotation = Quaternion.identity;
-        }
+        Vector3 pos = target.anchoredPosition;
+        pos.y += target.rect.height * 0.6f;
+        arrowRect.anchoredPosition = pos;
+        arrowRect.localRotation = Quaternion.identity;
     }
 
     IEnumerator Pulse()
     {
         Vector3 basePos = arrowRect.localPosition;
-        float amplitude = 10f; // quanto ela sobe/desce
-        float speed = 2f;      // velocidade da animação
+        float amplitude = 10f;
+        float speed = 2f;
 
         while (true)
         {

@@ -406,7 +406,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: fb43092b82bd46e4db386e1911479813, type: 3}
   - {fileID: 21300000, guid: 5cecde3970e65c9428a63c0ca9a02120, type: 3}
   - {fileID: 21300000, guid: f848f942c8de16a4e8092a07bebf7f6f, type: 3}
-  frameRate: 60
+  frameRate: 30
   loop: 1
 --- !u!114 &6196206815221112079
 MonoBehaviour:
@@ -420,6 +420,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7c865e1bede4684a928dcae642b15b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ArrowIndicatorController
-  arrowRect: {fileID: 2536400114329630426}
-  mapTransform: {fileID: 0}
-  offsetY: 50
