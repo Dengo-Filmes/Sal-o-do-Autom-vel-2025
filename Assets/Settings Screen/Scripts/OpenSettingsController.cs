@@ -15,7 +15,7 @@ public class OpenSettingsController : MonoBehaviour
 
     [Header("Maps")]
     public List<Transform> totemPositions = new();
-    [SerializeField] Transform _currentTotem;
+    Transform _currentTotem;
 
     private void Awake()
     {
@@ -45,5 +45,10 @@ public class OpenSettingsController : MonoBehaviour
         int thisIndex = (int)index - 1;
 
         _currentTotem = totemPositions[thisIndex];
+    }
+
+    public Transform GetCurrentTotem()
+    {
+        return _currentTotem;
     }
 }
