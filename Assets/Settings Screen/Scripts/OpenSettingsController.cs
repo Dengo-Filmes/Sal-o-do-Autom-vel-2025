@@ -43,8 +43,20 @@ public class OpenSettingsController : MonoBehaviour
     public void SetCurrentTotem(float index)
     {
         int thisIndex = (int)index - 1;
+        for (int i = 0; i < totemPositions.Count; i++)
+        {
+            if (i == thisIndex)
+            {
+                totemPositions[i].gameObject.SetActive(true);
+            }
 
-        _currentTotem = totemPositions[thisIndex];
+            else
+            {
+                totemPositions[i].gameObject.SetActive(false);
+
+            }
+        }
+
     }
 
     public Transform GetCurrentTotem()
