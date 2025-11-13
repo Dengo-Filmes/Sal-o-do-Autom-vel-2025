@@ -1631,7 +1631,7 @@ GameObject:
   - component: {fileID: 123809194}
   - component: {fileID: 123809195}
   m_Layer: 5
-  m_Name: Brightness Slider
+  m_Name: Map Slider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1712,7 +1712,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 946496643}
         m_TargetAssemblyTypeName: SettingsController, Assembly-CSharp
-        m_MethodName: ChangeBrightness
+        m_MethodName: ChangeTotem
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2978,6 +2978,7 @@ GameObject:
   - component: {fileID: 221755689}
   - component: {fileID: 221755688}
   - component: {fileID: 221755687}
+  - component: {fileID: 221755690}
   m_Layer: 5
   m_Name: Maps
   m_TagString: Untagged
@@ -3049,7 +3050,31 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 221755688}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 946496643}
+        m_TargetAssemblyTypeName: SettingsController, Assembly-CSharp
+        m_MethodName: SelectSettings
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 736423261}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.CanvasGroup, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 946496643}
+        m_TargetAssemblyTypeName: SettingsController, Assembly-CSharp
+        m_MethodName: OpenSettings
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 221755686}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.RectTransform, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &221755688
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3088,6 +3113,51 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 221755685}
   m_CullTransparentMesh: 1
+--- !u!114 &221755690
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 221755685}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.EventSystems.EventTrigger
+  m_Delegates:
+  - eventID: 9
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 946496642}
+          m_TargetAssemblyTypeName: ScreenController, Assembly-CSharp
+          m_MethodName: SetIndicatorText
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: "Configura\xE7\xF5es de mapa"
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 946496642}
+          m_TargetAssemblyTypeName: ScreenController, Assembly-CSharp
+          m_MethodName: SetIndicatorText
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: "Configura\xE7\xF5es de mapa"
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &225703454
 GameObject:
   m_ObjectHideFlags: 0
@@ -14276,6 +14346,7 @@ MonoBehaviour:
   _contrastSlider: {fileID: 1283370550}
   _saturationSlider: {fileID: 297244536}
   _volumeSlider: {fileID: 1712718376}
+  _mapSlider: {fileID: 123809195}
   _volume: {fileID: 0}
   _mixer: {fileID: 24100000, guid: 27b91a64b5c84314380f089b60c11705, type: 2}
 --- !u!1 &955682609
@@ -19027,8 +19098,8 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 565566790}
-  - {fileID: 889766884}
   - {fileID: 736423259}
+  - {fileID: 889766884}
   - {fileID: 334110965}
   m_Father: {fileID: 1364678528}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

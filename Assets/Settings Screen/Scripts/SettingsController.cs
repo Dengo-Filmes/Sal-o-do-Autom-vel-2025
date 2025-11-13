@@ -36,6 +36,8 @@ public class SettingsController : MonoBehaviour
     [SerializeField] Slider _saturationSlider;
     [Space(10)]
     [SerializeField] Slider _volumeSlider;
+    [Space(20)]
+    [SerializeField] Slider _mapSlider;
 
     [Header("Settings")]
     [SerializeField] Volume _volume;
@@ -126,6 +128,7 @@ public class SettingsController : MonoBehaviour
         TMP_Text contrastText = _contrastSlider.transform.parent.GetChild(2).GetComponent<TMP_Text>();
         TMP_Text saturationText = _saturationSlider.transform.parent.GetChild(2).GetComponent<TMP_Text>();
         TMP_Text volumeText = _volumeSlider.transform.parent.GetChild(2).GetComponent<TMP_Text>();
+        TMP_Text mapText = _mapSlider.transform.parent.GetChild(2).GetComponent<TMP_Text>();
 
         brightnessText.text = _brightnessSlider.value.ToString("+#;-#;0");
         contrastText.text = _contrastSlider.value.ToString("+#;-#;0");
@@ -133,6 +136,8 @@ public class SettingsController : MonoBehaviour
 
         float textVolume = _volumeSlider.value * 100;
         volumeText.text = Mathf.RoundToInt(textVolume).ToString();
+        mapText.text = _mapSlider.value.ToString();
+        _mapSlider.maxValue = OpenSettingsController.Instance.totemPositions.Count;
     }
     #endregion
 
@@ -161,6 +166,14 @@ public class SettingsController : MonoBehaviour
         {
             adjustments.saturation.value = saturation;
             _saturationValue = saturation;
+        }
+    }
+
+    public void ChangeTotem(float totem)
+    {
+        if(OpenSettingsController.Instance.totemPositions.Count > 0)
+        {
+            OpenSettingsController.Instance.SetCurrentTotem(totem);
         }
     }
 
