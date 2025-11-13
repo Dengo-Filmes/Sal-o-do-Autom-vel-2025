@@ -2,15 +2,16 @@ using UnityEngine;
 using UnityEngine.Video;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
+using UnityEngine.InputSystem; // novo input system
 using System.Collections;
 
 public class IdleVideoController : MonoBehaviour, IPointerDownHandler
 {
     [Header("Referências")]
     public VideoPlayer videoPlayer;
-    public CanvasGroup videoGroup; // CanvasGroup do vídeo
+    public CanvasGroup videoGroup;
     public float fadeDuration = 0.5f;
-    public float idleTime = 60f; // tempo sem interação
+    public float idleTime = 60f;
 
     private float timer;
     private bool videoActive = true;
@@ -18,7 +19,6 @@ public class IdleVideoController : MonoBehaviour, IPointerDownHandler
 
     void Start()
     {
-        // Garante que o vídeo inicia corretamente
         if (videoPlayer)
         {
             videoPlayer.isLooping = true;
@@ -29,7 +29,7 @@ public class IdleVideoController : MonoBehaviour, IPointerDownHandler
         if (videoGroup)
         {
             videoGroup.alpha = 1f;
-            videoGroup.blocksRaycasts = true; // bloqueia toque enquanto visível
+            videoGroup.blocksRaycasts = true;
             videoGroup.interactable = true;
         }
 
@@ -39,6 +39,14 @@ public class IdleVideoController : MonoBehaviour, IPointerDownHandler
 
     void Update()
     {
+        // Detecta qualquer clique/toque/tecla pelo novo Input System
+        if (Mouse.current != null && Mouse.current.leftButton.wasPressedThisFrame)
+            ResetTimer();
+        if (Touchscreen.current != null && Touchscreen.current.primaryTouch.press.wasPressedThisFrame)
+            ResetTimer();
+        if (Keyboard.current != null && Keyboard.current.anyKey.wasPressedThisFrame)
+            ResetTimer();
+
         timer += Time.deltaTime;
 
         if (timer >= idleTime && !videoActive)
@@ -49,19 +57,22 @@ public class IdleVideoController : MonoBehaviour, IPointerDownHandler
 
     public void OnPointerDown(PointerEventData eventData)
     {
-        timer = 0f; // reseta o contador sempre que clicar
+        ResetTimer();
 
         if (videoActive)
-        {
             HideVideo();
-        }
     }
 
     public void RegisterInteraction()
     {
-        timer = 0f;
+        ResetTimer();
         if (videoActive)
             HideVideo();
+    }
+
+    private void ResetTimer()
+    {
+        timer = 0f;
     }
 
     private void ShowVideo()
@@ -86,12 +97,10 @@ public class IdleVideoController : MonoBehaviour, IPointerDownHandler
 
         if (show)
         {
-            // Reinicia completamente o vídeo para evitar frame travado
             videoPlayer.Stop();
             videoPlayer.frame = 0;
             videoPlayer.Play();
 
-            // Ativa bloqueio de toque
             videoGroup.blocksRaycasts = true;
             videoGroup.interactable = true;
         }
@@ -108,8 +117,6 @@ public class IdleVideoController : MonoBehaviour, IPointerDownHandler
         if (!show)
         {
             videoPlayer.Stop();
-
-            // Libera os cliques no mapa
             videoGroup.blocksRaycasts = false;
             videoGroup.interactable = false;
         }

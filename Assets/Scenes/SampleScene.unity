@@ -257,7 +257,7 @@ MonoBehaviour:
   videoPlayer: {fileID: 63806330}
   videoGroup: {fileID: 63806329}
   fadeDuration: 0.5
-  idleTime: 30
+  idleTime: 20
 --- !u!1 &106883277
 GameObject:
   m_ObjectHideFlags: 0

@@ -23,7 +23,6 @@ public class MapPanZoom2D : MonoBehaviour, IDragHandler, IBeginDragHandler
     private bool isFocusing = false;
     private float inactivityTimer = 0f;
 
-
     void Start()
     {
         if (zoomSlider)
@@ -38,7 +37,6 @@ public class MapPanZoom2D : MonoBehaviour, IDragHandler, IBeginDragHandler
     void Update()
     {
         inactivityTimer += Time.deltaTime;
-
 
         if (inactivityTimer >= inactivityTime && !isFocusing)
         {
@@ -81,13 +79,11 @@ public class MapPanZoom2D : MonoBehaviour, IDragHandler, IBeginDragHandler
         isFocusing = true;
         zoomTarget = Mathf.Clamp(zoomTarget, minZoom, maxZoom);
 
-
         Vector2 startAnchoredPos = mapTransform.anchoredPosition;
         float startZoom = zoom;
 
         if (zoomSlider != null)
             zoomSlider.value = zoomTarget;
-
 
         Vector2 standLocalPos;
         RectTransformUtility.ScreenPointToLocalPointInRectangle(
@@ -108,13 +104,11 @@ public class MapPanZoom2D : MonoBehaviour, IDragHandler, IBeginDragHandler
         Vector2 delta = (standLocalPos - containerLocalCenter) * zoomTarget;
         Vector2 targetAnchoredPos = startAnchoredPos - delta;
 
-
         float t = 0f;
         while (t < 1f)
         {
             t += Time.deltaTime * focusLerpSpeed;
             float smoothT = Mathf.SmoothStep(0, 1, t);
-
 
             zoom = Mathf.Lerp(startZoom, zoomTarget, smoothT);
             mapTransform.localScale = Vector3.one * zoom;
@@ -123,7 +117,6 @@ public class MapPanZoom2D : MonoBehaviour, IDragHandler, IBeginDragHandler
             ClampMapInsideBounds();
             yield return null;
         }
-
 
         zoom = zoomTarget;
         mapTransform.localScale = Vector3.one * zoom;
@@ -138,6 +131,10 @@ public class MapPanZoom2D : MonoBehaviour, IDragHandler, IBeginDragHandler
     {
         if (isFocusing) return;
         StopAllFocusCoroutines();
+
+        // Limpa todas as setas quando o mapa resetar por inatividade
+        ArrowManager.Instance?.ClearAll();
+
         focusCoroutine = StartCoroutine(ResetRoutine());
     }
 
