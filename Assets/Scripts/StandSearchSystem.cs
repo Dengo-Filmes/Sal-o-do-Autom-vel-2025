@@ -1,6 +1,8 @@
 using UnityEngine;
 using TMPro;
 using System.Linq;
+using System.Collections;
+using System.Collections.Generic;
 
 public class SearchStandUI : MonoBehaviour
 {
@@ -9,8 +11,13 @@ public class SearchStandUI : MonoBehaviour
     public MapPanZoom2D map;
 
     [Header("Configurações")]
-    public float searchZoom = 4f;  
-    public bool partialMatch = true; 
+    public float searchZoom = 4f;
+    public bool partialMatch = true;
+    public int minSearchLength = 3;
+
+    [Header("Seta (prefab)")]
+    public RectTransform arrowPrefab;     // arraste o prefab da seta
+    public RectTransform mapTransform;    // arraste o painel do mapa
 
     void Start()
     {
@@ -24,42 +31,62 @@ public class SearchStandUI : MonoBehaviour
 
         query = query.Trim().ToLower();
 
-        
-        var stands = FindObjectsOfType<Stand2D>(true);
+        // exige no mínimo X letras
+        if (query.Length < minSearchLength)
+        {
+            Debug.LogWarning($" Digite pelo menos {minSearchLength} letras para buscar um stand.");
+            return;
+        }
 
-        Stand2D foundStand = null;
+        // encontra TODOS os stands que correspondem
+        var allStands = FindObjectsOfType<Stand2D>(true).ToList();
+
+        List<Stand2D> foundStands;
 
         if (partialMatch)
-        {
-            foundStand = stands.FirstOrDefault(s =>
-                s.standName.ToLower().Contains(query));
-        }
+            foundStands = allStands.Where(s => s.standName.ToLower().Contains(query)).ToList();
         else
+            foundStands = allStands.Where(s => s.standName.ToLower() == query).ToList();
+
+        //  Remove todas as setas antigas antes de criar novas
+        foreach (var oldArrow in FindObjectsOfType<ArrowIndicatorController>())
         {
-            foundStand = stands.FirstOrDefault(s =>
-                s.standName.ToLower() == query);
+            if (oldArrow != null)
+                oldArrow.DestroyArrow();
         }
 
-        if (foundStand != null)
+        // Se encontrou algum
+        if (foundStands.Count > 0)
         {
-            Debug.Log($" Encontrado: {foundStand.standName}");
-            map.FocusOnStand(foundStand.GetComponent<RectTransform>(), searchZoom);
+            Debug.Log($" Encontrados {foundStands.Count} stand(s): {string.Join(", ", foundStands.Select(s => s.standName))}");
 
-            
-            var img = foundStand.GetComponent<UnityEngine.UI.Image>();
-            if (img != null)
-                StartCoroutine(Highlight(img));
+            // Centraliza a câmera no primeiro apenas
+            var first = foundStands[0];
+            map.FocusOnStand(first.GetComponent<RectTransform>(), searchZoom);
+
+            // Mostra seta em todos os stands encontrados
+            foreach (var stand in foundStands)
+            {
+                if (arrowPrefab != null && mapTransform != null)
+                {
+                    ArrowIndicatorController.Create(arrowPrefab, mapTransform, stand.GetComponent<RectTransform>());
+                }
+
+                var img = stand.GetComponent<UnityEngine.UI.Image>();
+                if (img != null)
+                    StartCoroutine(Highlight(img));
+            }
         }
         else
         {
             Debug.LogWarning($" Nenhum stand encontrado com: {query}");
         }
 
-        
+        // limpa o input após a busca
         inputField.text = "";
     }
 
-    System.Collections.IEnumerator Highlight(UnityEngine.UI.Image img)
+    IEnumerator Highlight(UnityEngine.UI.Image img)
     {
         var original = img.color;
         img.color = Color.cyan;

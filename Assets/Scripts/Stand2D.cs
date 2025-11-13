@@ -9,6 +9,10 @@ public class Stand2D : MonoBehaviour, IPointerClickHandler
     public float focusZoom = 4f;
     public Color highlightColor = Color.yellow;
 
+    [Header("Seta (prefab)")]
+    public RectTransform arrowPrefab;    // arraste o prefab da seta
+    public RectTransform mapTransform;   // arraste o painel do mapa
+
     private Color originalColor;
     private UnityEngine.UI.Image image;
 
@@ -17,27 +21,48 @@ public class Stand2D : MonoBehaviour, IPointerClickHandler
         image = GetComponent<UnityEngine.UI.Image>();
         if (image != null)
             originalColor = image.color;
+
+        // se não tiver setado no inspetor, tenta achar o painel do mapa
+        if (mapTransform == null)
+        {
+            var mp = FindObjectOfType<MapPanZoom2D>();
+            if (mp != null)
+                mapTransform = mp.GetComponent<RectTransform>();
+        }
     }
 
     public void OnPointerClick(PointerEventData eventData)
     {
+        // Foca a câmera no stand
         var map = FindObjectOfType<MapPanZoom2D>();
         if (map != null)
-        {
             map.FocusOnStand(GetComponent<RectTransform>(), focusZoom);
+
+        //  Remove todas as setas antigas antes de criar uma nova
+        foreach (var oldArrow in FindObjectsOfType<ArrowIndicatorController>())
+        {
+            if (oldArrow != null)
+                oldArrow.DestroyArrow();
         }
 
-        // Mover seta animada acima do stand
-        ArrowIndicatorController.ShowAbove(GetComponent<RectTransform>());
+        // Cria a nova seta acima do stand clicado
+        if (arrowPrefab != null && mapTransform != null)
+        {
+            ArrowIndicatorController.Create(arrowPrefab, mapTransform, GetComponent<RectTransform>());
+        }
+        else
+        {
+            Debug.LogWarning("? Arrow prefab ou mapTransform não configurados no Stand2D.");
+        }
 
-        // efeito visual no stand
+        // efeito visual de destaque
         if (image != null)
         {
             StopAllCoroutines();
             StartCoroutine(FlashHighlight());
         }
 
-        Debug.Log($"Stand selecionado: {standName}");
+        Debug.Log($" Stand selecionado: {standName}");
     }
 
     IEnumerator FlashHighlight()

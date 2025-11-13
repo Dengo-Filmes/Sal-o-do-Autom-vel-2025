@@ -1,55 +1,70 @@
 using UnityEngine;
-using UnityEngine.UI;
+using System.Collections;
 
 public class ArrowIndicatorController : MonoBehaviour
 {
-    public RectTransform arrowRect;       // referência ao próprio objeto
-    public RectTransform mapTransform;    // o MapImage
-    public float offsetY = 120f;          // distância acima do stand
+    private RectTransform arrowRect;
+    private RectTransform target;
+    private Coroutine pulseRoutine;
 
-    private static ArrowIndicatorController instance; // singleton simples
-
-    void Awake()
+    public static ArrowIndicatorController Create(RectTransform prefab, RectTransform parent, RectTransform target)
     {
-        if (arrowRect == null)
-            arrowRect = GetComponent<RectTransform>();
-
-        instance = this;
-        gameObject.SetActive(false); // invisível no início
+        var instance = Instantiate(prefab, parent);
+        var controller = instance.GetComponent<ArrowIndicatorController>();
+        controller.Setup(target);
+        return controller;
     }
 
-    /// <summary>
-    /// Chama para mover e exibir a seta sobre um stand.
-    /// </summary>
-    public static void ShowAbove(RectTransform standRect)
+    void Setup(RectTransform target)
     {
-        if (instance == null || standRect == null) return;
+        arrowRect = GetComponent<RectTransform>();
+        this.target = target;
+        UpdatePosition();
 
-        instance.MoveTo(standRect);
+        //  animação suave (opcional) — movimento vertical, sem rotação
+        if (pulseRoutine != null)
+            StopCoroutine(pulseRoutine);
+        pulseRoutine = StartCoroutine(Pulse());
     }
 
-    void MoveTo(RectTransform standRect)
+    void Update()
     {
-        // pega posição local relativa ao mapa
-        Vector2 localPos;
-        RectTransformUtility.ScreenPointToLocalPointInRectangle(
-            mapTransform,
-            RectTransformUtility.WorldToScreenPoint(null, standRect.position),
-            null,
-            out localPos
-        );
-
-        // aplica posição acima do stand
-        arrowRect.anchoredPosition = localPos + new Vector2(0, offsetY);
-
-        // ativa seta
-        if (!gameObject.activeSelf)
-            gameObject.SetActive(true);
+        if (target != null)
+            UpdatePosition();
     }
 
-    public static void Hide()
+    void UpdatePosition()
     {
-        if (instance != null)
-            instance.gameObject.SetActive(false);
+        if (arrowRect != null && target != null)
+        {
+            // posiciona logo acima do stand
+            Vector3 pos = target.anchoredPosition;
+            pos.y += target.rect.height * 0.6f; // distância acima do stand
+            arrowRect.anchoredPosition = pos;
+
+            // seta parada, sem rotação
+            arrowRect.localRotation = Quaternion.identity;
+        }
+    }
+
+    IEnumerator Pulse()
+    {
+        Vector3 basePos = arrowRect.localPosition;
+        float amplitude = 10f; // quanto ela sobe/desce
+        float speed = 2f;      // velocidade da animação
+
+        while (true)
+        {
+            float offsetY = Mathf.Sin(Time.time * speed) * amplitude;
+            arrowRect.localPosition = basePos + new Vector3(0, offsetY, 0);
+            yield return null;
+        }
+    }
+
+    public void DestroyArrow()
+    {
+        if (pulseRoutine != null)
+            StopCoroutine(pulseRoutine);
+        Destroy(gameObject);
     }
 }
