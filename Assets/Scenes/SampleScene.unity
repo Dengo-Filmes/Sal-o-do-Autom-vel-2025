@@ -1901,6 +1901,18 @@ PrefabInstance:
       value: 341.94128
       objectReference: {fileID: 0}
     - target: {fileID: 7572487202038846485, guid: f5cb60637c5073f4a8eab1f100d7f95f, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7572487202038846485, guid: f5cb60637c5073f4a8eab1f100d7f95f, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7572487202038846485, guid: f5cb60637c5073f4a8eab1f100d7f95f, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7572487202038846485, guid: f5cb60637c5073f4a8eab1f100d7f95f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -1910,7 +1922,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7572487202038846485, guid: f5cb60637c5073f4a8eab1f100d7f95f, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -9720
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7572487202038846485, guid: f5cb60637c5073f4a8eab1f100d7f95f, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1918,23 +1930,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7572487202038846485, guid: f5cb60637c5073f4a8eab1f100d7f95f, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 7572487202038846485, guid: f5cb60637c5073f4a8eab1f100d7f95f, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 7572487202038846485, guid: f5cb60637c5073f4a8eab1f100d7f95f, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 7572487202038846485, guid: f5cb60637c5073f4a8eab1f100d7f95f, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 165.86072
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7572487202038846485, guid: f5cb60637c5073f4a8eab1f100d7f95f, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -471.4969
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7572487202038846485, guid: f5cb60637c5073f4a8eab1f100d7f95f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -4914,6 +4926,28 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1261444374}
   m_CullTransparentMesh: 1
+--- !u!114 &1269789848 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6308006393996244397, guid: f5cb60637c5073f4a8eab1f100d7f95f, type: 3}
+  m_PrefabInstance: {fileID: 419954231}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0e0cd246cf4cfb4b8564856ee3d1827, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1269789851 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4847194447770845930, guid: f5cb60637c5073f4a8eab1f100d7f95f, type: 3}
+  m_PrefabInstance: {fileID: 419954231}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e59a724b822defa44976fe19aac026dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1269832998
 GameObject:
   m_ObjectHideFlags: 0
@@ -5207,16 +5241,28 @@ PrefabInstance:
       value: viperOSK_AccentedCharacters
       objectReference: {fileID: 0}
     - target: {fileID: 4979241191190382573, guid: 5ab9e25dc3abab1409b2ee900330a259, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4979241191190382573, guid: 5ab9e25dc3abab1409b2ee900330a259, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4979241191190382573, guid: 5ab9e25dc3abab1409b2ee900330a259, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4979241191190382573, guid: 5ab9e25dc3abab1409b2ee900330a259, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 165.86072
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4979241191190382573, guid: 5ab9e25dc3abab1409b2ee900330a259, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -506.49695
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4979241191190382573, guid: 5ab9e25dc3abab1409b2ee900330a259, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -9720
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4979241191190382573, guid: 5ab9e25dc3abab1409b2ee900330a259, type: 3}
       propertyPath: m_LocalRotation.w
@@ -5224,15 +5270,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4979241191190382573, guid: 5ab9e25dc3abab1409b2ee900330a259, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4979241191190382573, guid: 5ab9e25dc3abab1409b2ee900330a259, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4979241191190382573, guid: 5ab9e25dc3abab1409b2ee900330a259, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4979241191190382573, guid: 5ab9e25dc3abab1409b2ee900330a259, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -6096,6 +6142,18 @@ PrefabInstance:
       value: 341.94128
       objectReference: {fileID: 0}
     - target: {fileID: 8539181221951330246, guid: e0f63b3af33cce845bf48c72c67eb43d, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8539181221951330246, guid: e0f63b3af33cce845bf48c72c67eb43d, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8539181221951330246, guid: e0f63b3af33cce845bf48c72c67eb43d, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8539181221951330246, guid: e0f63b3af33cce845bf48c72c67eb43d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -6105,7 +6163,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8539181221951330246, guid: e0f63b3af33cce845bf48c72c67eb43d, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -9720
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8539181221951330246, guid: e0f63b3af33cce845bf48c72c67eb43d, type: 3}
       propertyPath: m_LocalRotation.w
@@ -6113,23 +6171,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8539181221951330246, guid: e0f63b3af33cce845bf48c72c67eb43d, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 8539181221951330246, guid: e0f63b3af33cce845bf48c72c67eb43d, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 8539181221951330246, guid: e0f63b3af33cce845bf48c72c67eb43d, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 8539181221951330246, guid: e0f63b3af33cce845bf48c72c67eb43d, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 165.86072
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8539181221951330246, guid: e0f63b3af33cce845bf48c72c67eb43d, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -471.4969
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8539181221951330246, guid: e0f63b3af33cce845bf48c72c67eb43d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -6153,6 +6211,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 8539181221951330246, guid: e0f63b3af33cce845bf48c72c67eb43d, type: 3}
   m_PrefabInstance: {fileID: 1741538198}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1741538200 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 403019041709221433, guid: e0f63b3af33cce845bf48c72c67eb43d, type: 3}
+  m_PrefabInstance: {fileID: 1741538198}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0e0cd246cf4cfb4b8564856ee3d1827, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1743831283
 GameObject:
   m_ObjectHideFlags: 0
@@ -7192,6 +7261,7 @@ GameObject:
   - component: {fileID: 2011048247}
   - component: {fileID: 2011048251}
   - component: {fileID: 2011048252}
+  - component: {fileID: 2011048253}
   m_Layer: 5
   m_Name: InputField
   m_TagString: Untagged
@@ -7305,7 +7375,43 @@ MonoBehaviour:
       m_Calls: []
   m_OnSelect:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1269789848}
+        m_TargetAssemblyTypeName: KeyboardController, Assembly-CSharp
+        m_MethodName: OpenCloseKeyboard
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1741538200}
+        m_TargetAssemblyTypeName: KeyboardController, Assembly-CSharp
+        m_MethodName: OpenCloseKeyboard
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1269789851}
+        m_TargetAssemblyTypeName: viperOSK.OSK_UI_Keyboard, Assembly-CSharp
+        m_MethodName: SetOutput
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 2011048253}
+          m_ObjectArgumentAssemblyTypeName: viperOSK.OSK_Receiver, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
   m_OnDeselect:
     m_PersistentCalls:
       m_Calls: []
@@ -7402,6 +7508,58 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Mask
   m_ShowMaskGraphic: 1
+--- !u!114 &2011048253
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2011048245}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32c5d97324c4a034d98360a1b821b928, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::viperOSK.OSK_UI_InputReceiver
+  textLimit: 200
+  textReceiver: {fileID: 0}
+  cursorIndex: 0
+  interactable: 0
+  allowTextSelection: 1
+  normalColor:
+    serializedVersion: 2
+    rgba: 0
+  highlightColor:
+    serializedVersion: 2
+    rgba: 0
+  charMask: 
+  useCharMask: 0
+  OnSubmit:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1269789848}
+        m_TargetAssemblyTypeName: KeyboardController, Assembly-CSharp
+        m_MethodName: OpenCloseKeyboard
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  OnValueChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  onFocus:
+    m_PersistentCalls:
+      m_Calls: []
+  onLostFocus:
+    m_PersistentCalls:
+      m_Calls: []
+  onSelectClick:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &2079284025
 GameObject:
   m_ObjectHideFlags: 0
