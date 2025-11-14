@@ -23,14 +23,11 @@ public class MapPanZoom2D : MonoBehaviour, IDragHandler, IBeginDragHandler
     private bool isFocusing = false;
     private float inactivityTimer = 0f;
 
-
     private Vector2 initialPos;
     private float initialZoom;
 
-
     void Start()
     {
-   
         initialPos = mapTransform.anchoredPosition;
         initialZoom = 1f;
 
@@ -43,17 +40,17 @@ public class MapPanZoom2D : MonoBehaviour, IDragHandler, IBeginDragHandler
         }
     }
 
-
     void Update()
     {
         inactivityTimer += Time.deltaTime;
+
+        HandlePinchZoom();
 
         if (inactivityTimer >= inactivityTime && !isFocusing)
         {
             ResetMapToDefault();
         }
     }
-
 
     public void OnBeginDrag(PointerEventData eventData)
     {
@@ -69,7 +66,6 @@ public class MapPanZoom2D : MonoBehaviour, IDragHandler, IBeginDragHandler
         ResetInactivityTimer();
     }
 
-
     public void SetZoom(float value)
     {
         if (isFocusing) return;
@@ -79,14 +75,12 @@ public class MapPanZoom2D : MonoBehaviour, IDragHandler, IBeginDragHandler
         ResetInactivityTimer();
     }
 
-
     public void FocusOnStand(RectTransform standRect, float zoomTarget = 4f)
     {
         StopAllFocusCoroutines();
         focusCoroutine = StartCoroutine(FocusRoutine(standRect, zoomTarget));
         ResetInactivityTimer();
     }
-
 
     IEnumerator FocusRoutine(RectTransform standRect, float zoomTarget)
     {
@@ -135,12 +129,11 @@ public class MapPanZoom2D : MonoBehaviour, IDragHandler, IBeginDragHandler
         zoom = zoomTarget;
         mapTransform.localScale = Vector3.one * zoom;
         mapTransform.anchoredPosition = targetAnchoredPos;
-        ClampMapInsideBounds();
 
+        ClampMapInsideBounds();
         isFocusing = false;
         focusCoroutine = null;
     }
-
 
     private void ResetMapToDefault()
     {
@@ -152,25 +145,26 @@ public class MapPanZoom2D : MonoBehaviour, IDragHandler, IBeginDragHandler
         focusCoroutine = StartCoroutine(ResetRoutine());
     }
 
-
     IEnumerator ResetRoutine()
     {
         isFocusing = true;
         Vector2 startPos = mapTransform.anchoredPosition;
         float startZoom = zoom;
-        float t = 0f;
 
         Vector2 targetPos = initialPos;
         float targetZoom = initialZoom;
 
         if (zoomSlider) zoomSlider.value = targetZoom;
 
+        float t = 0f;
         while (t < 1f)
         {
             t += Time.deltaTime * focusLerpSpeed;
+
             zoom = Mathf.Lerp(startZoom, targetZoom, Mathf.SmoothStep(0, 1, t));
             mapTransform.localScale = Vector3.one * zoom;
             mapTransform.anchoredPosition = Vector2.Lerp(startPos, targetPos, Mathf.SmoothStep(0, 1, t));
+
             ClampMapInsideBounds();
             yield return null;
         }
@@ -182,7 +176,6 @@ public class MapPanZoom2D : MonoBehaviour, IDragHandler, IBeginDragHandler
         isFocusing = false;
         inactivityTimer = 0f;
     }
-
 
     private void ClampMapInsideBounds()
     {
@@ -202,20 +195,19 @@ public class MapPanZoom2D : MonoBehaviour, IDragHandler, IBeginDragHandler
         mapTransform.anchoredPosition = pos;
     }
 
-
     private void StopAllFocusCoroutines()
     {
-        if (focusCoroutine != null) StopCoroutine(focusCoroutine);
+        if (focusCoroutine != null)
+            StopCoroutine(focusCoroutine);
+
         focusCoroutine = null;
         isFocusing = false;
     }
-
 
     private void ResetInactivityTimer()
     {
         inactivityTimer = 0f;
     }
-
 
     public void ResetCamera()
     {
@@ -230,5 +222,36 @@ public class MapPanZoom2D : MonoBehaviour, IDragHandler, IBeginDragHandler
             zoomSlider.value = initialZoom;
 
         ClampMapInsideBounds();
+    }
+
+
+    private void HandlePinchZoom()
+    {
+        if (Input.touchCount == 2 && !isFocusing)
+        {
+            Touch t0 = Input.GetTouch(0);
+            Touch t1 = Input.GetTouch(1);
+
+            Vector2 t0Prev = t0.position - t0.deltaPosition;
+            Vector2 t1Prev = t1.position - t1.deltaPosition;
+
+            float prevDist = Vector2.Distance(t0Prev, t1Prev);
+            float currDist = Vector2.Distance(t0.position, t1.position);
+            float delta = currDist - prevDist;
+
+            float pinchSpeed = 0.01f;
+
+            float newZoom = zoom + delta * pinchSpeed;
+            newZoom = Mathf.Clamp(newZoom, minZoom, maxZoom);
+
+            zoom = newZoom;
+            mapTransform.localScale = Vector3.one * zoom;
+
+            if (zoomSlider != null)
+                zoomSlider.value = zoom;
+
+            ClampMapInsideBounds();
+            ResetInactivityTimer();
+        }
     }
 }
