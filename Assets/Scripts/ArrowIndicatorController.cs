@@ -55,7 +55,7 @@ public class ArrowIndicatorController : MonoBehaviour
 
     IEnumerator Pulse()
     {
-        float amplitude = 10f;
+        float amplitude = 2f;
         float speed = 2f;
 
         while (true)
