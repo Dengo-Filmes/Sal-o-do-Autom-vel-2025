@@ -52,20 +52,6 @@ namespace viperOSK
         public UnityEvent<OSK_LongPressPacket> longPressAction;
 #endif
 
-        /// <summary>
-        /// type in the physical keyboard layout of your keyboard starting top-left and moving right then down
-        /// </summary>
-        [TextArea(1, 8)]
-        public string physicalKeyboardLayout = "QWERTYUIOP[]\nASDFGHJKL;'\nZXCVBNM,./";
-
-        public Dictionary<KeyCode, OSK_KeyCode> physicalKeyboardMap = new Dictionary<KeyCode, OSK_KeyCode>();
-
-        /// <summary>
-        /// remaps physical keyboard to match on-screen only applies for letters and numbers only. 
-        /// if top layout of the OSK row has letters than it starts with the top left key on physical keyboard (Q in a QWERTY keyboard)
-        /// </summary>
-        public bool remapPhysicalKeyboard;
-
         public void SetLongPressAction(UnityAction<OSK_LongPressPacket> action)
         {
             longPressAction.AddListener(action);
@@ -80,8 +66,6 @@ namespace viperOSK
             }
             
         }
-
-
 
     }
 }

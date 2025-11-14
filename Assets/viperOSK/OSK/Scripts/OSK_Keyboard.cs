@@ -54,11 +54,6 @@ namespace viperOSK
         public Vector3 keySize;
         public TMP_FontAsset keyFont;
 
-        /// <summary>
-        /// language profile for glyph support
-        /// </summary>
-        public OSK_LanguagePackage languageProfile;
-
         // is Caps Lock on?
         public bool caps;
 
@@ -159,11 +154,6 @@ namespace viperOSK
             return keySpanBottomRight;
         }
 
-        public virtual Vector3 KeyScreenSize()
-        {
-            return keySize;
-        }
-
         public void AutoCorrectLayout()
         {
             string corrected = osk_Keymap.AutoCorrectLayout(layout);
@@ -171,8 +161,6 @@ namespace viperOSK
             {
                 layout = corrected;
             }
-
-            KeyboardSizeEstimator();
         }
 
         /// <summary>
@@ -305,12 +293,7 @@ namespace viperOSK
 
             }
 
-            // update keymap with any language profiles that are included in the OSK_GlyphKeymapProfile
 
-            if (languageProfile != null)
-            {
-                osk_Keymap.SupportGlyphs(languageProfile);
-            }
 
             if (Application.isPlaying)
             {
@@ -468,22 +451,6 @@ namespace viperOSK
             keyDict.Clear();
 
             keyLayout.Clear();
-        }
-
-        /// <summary>
-        /// resizes the keysize and regenerates the keyboard so it fits a defined width and height (in scrSize)
-        /// </summary>
-        /// <param name="scrSize">scrSize the size that the keyboard must fit - note this might warp how the keys look</param>
-        public virtual void ResizeKeyToFit(Vector2 scrSize)
-        {
-            Vector3 estSize = KeyboardSizeEstimator();
-
-            Vector2 fit = new Vector2(scrSize.x / estSize.x, scrSize.y / estSize.y);
-
-            
-            // todo: adjust for localscale
-            keySize.x = fit.x;
-            keySize.y = fit.y;
         }
 
 
@@ -800,83 +767,6 @@ namespace viperOSK
             }
         }
 
-
-        /// <summary>
-        /// Estimates the x and y size of the keyboard in terms of units (1 unit = 1 key)
-        /// </summary>
-        /// <returns>size of keyboard in x and y units</returns>
-        public virtual Vector3 KeyboardSizeEstimator()
-        {
-
-            Vector3 estSize = new Vector3(0f, 0f, 0f);
-
-            List<string> layoutRows = layout.Split('\n').ToList();
-            float lx = 0;
-            float ly = 0;
-
-            for (int rowIdx = 0; rowIdx < layoutRows.Count; rowIdx++)
-            {
-                string[] chars = layoutRows[rowIdx].Split(' ');
-
-                for (int i = 0; i < chars.Length; i++)
-                {
-
-                    if (chars[i].Contains("Skip"))
-                    {
-                        // Skip command allows modification of how the keys are offset
-                        string ns = string.Join("", chars[i].ToCharArray().Where(item => char.IsDigit(item) || item == '.' || item == '-'));
-                        if (ns.Length > 0)
-                        {
-                            float n;
-                            if (float.TryParse(ns, out n))
-                            {
-                                lx += n;
-                            }
-                            else
-                            {
-                                lx++;
-                            }
-
-
-                        }
-                    }
-                    else if (chars[i].Length >= 1)
-                    {
-
-                        OSK_KeyCode key = GetOSKKeyCode(chars[i]);
-
-                        OSK_SpecialKeys special = specialKeys.Find(item => item.keycode == key);
-                        OSK_KEY_TYPES keyType = OSK_KeyTypeMeta.KeyType(key);
-
-                        if (special != null)
-                        {
-
-                            lx += special.x_size;
-                        }
-                        else
-                        {
-                            lx++;
-                        }
-
-                    }
-
-                    estSize.x = Mathf.Max(estSize.x, lx);
-
-                    
-                }//line
-
-                lx = 0;
-                ly++;
-
-            }//row
-
-            estSize.y = ly;
-
-            //Debug.Log("Keyboard estimated at " + estSize.ToString() + " units");
-
-            return estSize;
-
-        }
 
 
         /// <summary>
@@ -1372,7 +1262,7 @@ namespace viperOSK
         /// <param name="c">char typed on keyboard</param>
         protected virtual void OnPhysicalKeyStroke(char c)
         {
-            Debug.Log("[viperOSK] Physical key stroke: " + c.ToString());
+
             OSK_KeyCode k;
             if(osk_Keymap.chartoKeycode.TryGetValue(c.ToString(), out k))
             {
@@ -1382,9 +1272,6 @@ namespace viperOSK
                     key.Click("keyboard");
                     
                 }
-            } else
-            {
-                Debug.Log("[viperOSK] Physical key stroke: " + c.ToString() + " not registered in character map");
             }
 
         }
@@ -1438,59 +1325,6 @@ namespace viperOSK
             }
 
 
-        }
-
-        /// <summary>
-        /// v3.6
-        /// maps the physical keyboard keys to best correspond to the ones on the OSK
-        /// if top layout of the OSK row has letters than it starts with the top left key on physical keyboard (Q in a QWERTY keyboard)
-        /// you will have to be careful how to build both your OSK and how it relates to the phyiscal keyboard layout
-        /// </summary>
-        public virtual void RemapPhysicalKeyboard()
-        {
-
-            if (!OSK_Settings.instance.remapPhysicalKeyboard)
-                return;
-
-            OSK_Settings.instance.physicalKeyboardMap.Clear();
-
-            string[] lines = OSK_Settings.instance.physicalKeyboardLayout.Split('\n');
-
-            OSK_Key lastKey = null;
-
-            int r = 0;  //physical keyboad layout row
-            int c = 0;  //physical keyboad layout col
-
-            int i = 0;  //keylayout row
-            int j = 0;  //keylayout col
-
-            do
-            {
-                do
-                {
-
-                    if (lastKey == null || keyLayout[i][j] != lastKey)
-                    {
-                        lastKey = keyLayout[i][j];
-
-                        KeyCode keycode = GetKeyCode(lines[r][c].ToString());
-                        // todo: validate keycode before adding to dict
-                        OSK_Settings.instance.physicalKeyboardMap.TryAdd(keycode, lastKey.key);
-                        c++;
-                    }
-
-                    j++;
-                } while (j < keyLayout[i].Count && c < lines[r].Length);
-                i++;
-                r++;
-
-            } while (i < keyLayout.Count && r < lines.Length);
-
-            Debug.Log("Physical Keyboard remap :" + keyLayout.Count);
-            foreach (KeyValuePair<KeyCode, OSK_KeyCode> kvp in OSK_Settings.instance.physicalKeyboardMap)
-            {
-                Debug.Log(kvp.Key + " = " + kvp.Value);
-            }
         }
 
         /// <summary>
@@ -1563,42 +1397,16 @@ namespace viperOSK
 
             if (acceptPhysicalKeyboard)
             {
-                var e = Event.current;
-                if (e == null) return;
-
-                OSK_KeyCode osk_keycode;
-
-                // override the keycode pressed if there's a physical keyboard map
-                // this mapping always supercedes
-                if (OSK_Settings.instance.physicalKeyboardMap.TryGetValue(Event.current.keyCode, out osk_keycode))
+                
+                if (Event.current.isKey && keyDict.ContainsKey((OSK_KeyCode) Event.current.keyCode))
                 {
-
-                }
-                else if (keyDict.ContainsKey((OSK_KeyCode)Event.current.keyCode))
-                {
-                    osk_keycode = (OSK_KeyCode)Event.current.keyCode;
-                }
-                else
-                {
-                    return;
-                }
-
-
-                if (e.type == EventType.KeyDown)
-                {
-
                     //KeyCall(Event.current.keyCode, OSK_KEY_TYPES.LETTER);
-                    keyDict[osk_keycode].OnKeyPress("keyboard", output);
-
-
+                    keyDict[(OSK_KeyCode)Event.current.keyCode].Click("keyboard", output);
+                    
+                    
                 }
-                else if (e.type == EventType.KeyUp)
-                {
-                    keyDict[osk_keycode].OnKeyDepress("keyboard", output);
-                }
-
-
             }
+
         }
 
         private void Update()

@@ -9,7 +9,6 @@
 ///////////////////////////////////////////////////////////////////////////////////////
 
 
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -34,32 +33,23 @@ namespace viperOSK
         {
             if (keyboard == null)
             {
-                AutoFindKeyboard();
-            }
-
-
-        }
-
-        private void AutoFindKeyboard()
-        {
-            keyboard = this.gameObject.GetComponentInParent<OSK_Keyboard>();
-            if (keyboard == null)
-            {
+                keyboard = this.gameObject.GetComponentInParent<OSK_Keyboard>();
+                if (keyboard == null)
+                {
 #if UNITY_2019
                     keyboard = GameObject.FindObjectOfType<OSK_Keyboard>();
 #else
-                keyboard = GameObject.FindAnyObjectByType<OSK_Keyboard>();
+                    keyboard = GameObject.FindAnyObjectByType<OSK_Keyboard>();
 #endif
-
-
-                if (keyboard == null)
+                }
+                else
                 {
                     Debug.LogError("OSK_Background requires a OSK_Keyboard to be in the scene");
                 }
             }
-            
-        }
 
+
+        }
 
 
         /// <summary>
@@ -67,9 +57,6 @@ namespace viperOSK
         /// </summary>
         public void ResizeToFit()
         {
-            if (keyboard == null)
-                AutoFindKeyboard();
-
             keyboard.Traverse();
 
             
@@ -88,12 +75,6 @@ namespace viperOSK
             }
             else // is UI
             {
-
-                newSize = new Vector2(keyboard.KeyboardSizeEstimator().x * keyboard.KeyScreenSize().x + leftRightMargins*2f, 
-                    keyboard.KeyboardSizeEstimator().y * keyboard.KeyScreenSize().y + topBottomMargins * 2f);
-
-                //Debug.Log("new BG size=" + newSize.ToString());
-
                 Image img = this.GetComponent<Image>();
                 if (img != null)
                 {

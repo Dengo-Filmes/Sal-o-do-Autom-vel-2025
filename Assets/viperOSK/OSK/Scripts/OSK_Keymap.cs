@@ -134,8 +134,6 @@ namespace viperOSK
             { "≥", OSK_KeyCode.GreaterOrEqual },
             { "≠", OSK_KeyCode.NotEqual },
 
-            { "ß" , OSK_KeyCode.S_05},
-
             {"€", OSK_KeyCode.Euro },
             {"£", OSK_KeyCode.Sterling },
             {"¥", OSK_KeyCode.Yen },
@@ -153,24 +151,7 @@ namespace viperOSK
 
         public Dictionary<string, int> altAlphabeticalAssignment = new Dictionary<string, int>();
 
-        public void SupportGlyphs(OSK_LanguagePackage glyphProfile)
-        {
-            var map = OSK_GlyphHandler.BuildAssignments<OSK_KeyCode>(
-               glyphProfile);
 
-            foreach(var kvp in map)
-            { 
-                if(chartoKeycode.TryAdd(kvp.glyph, kvp.keycode))
-                {
-
-                } else
-                {
-                    Debug.LogWarning("[viperOSK] Glyph " + kvp.glyph + " already in Keyboard keymapping");
-                }
-            }
-            
-
-        }
 
         /// <summary>
         /// uses unicode to return the base character of an accented char
@@ -341,20 +322,6 @@ namespace viperOSK
         {
             // Replace the miscapitalized part with the correctly capitalized form
             return Regex.Replace(input, Regex.Escape(correctForm), correctForm, RegexOptions.IgnoreCase);
-        }
-
-        public static string AddDiacritic(char baseChar, params char[] diacritics)
-        {
-            string res = baseChar.ToString();
-
-            foreach(char accent in diacritics)
-            {
-                res = res + accent;
-                
-            }
-            string normalized = res.Normalize(NormalizationForm.FormC);
-
-            return normalized;
         }
     }
 }

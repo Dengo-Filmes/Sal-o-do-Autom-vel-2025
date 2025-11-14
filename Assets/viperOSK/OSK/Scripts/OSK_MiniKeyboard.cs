@@ -518,7 +518,7 @@ namespace viperOSK
                     inputTimer += Time.unscaledDeltaTime;
 
 
-                    if(isUI)// && isJoystickSelection)
+                    if(isUI && isJoystickSelection)
                     {
                         OSK_UI_Key ui_key;
                         if (EventSystem.current.currentSelectedGameObject != null && EventSystem.current.currentSelectedGameObject.TryGetComponent<OSK_UI_Key>(out ui_key))
@@ -529,9 +529,8 @@ namespace viperOSK
                         
                     }
                     
-                    if ((viperInput.AButtonUp() && AbtnDown) || viperInput.KeyUp(KeyCode.Space))
+                    if (viperInput.AButtonUp() && AbtnDown)
                     {
-                        Debug.Log("keyup");
                         selectedKey.Click("joystick");
                         AbtnDown = false;
                     }

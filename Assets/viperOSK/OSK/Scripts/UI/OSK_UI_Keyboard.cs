@@ -42,8 +42,6 @@ namespace viperOSK
 
         private Transform keyboardAssets;
 
-        
-
         public override Vector3 SpanTopLeft()
         {
             return keySpanTopLeft;
@@ -52,14 +50,6 @@ namespace viperOSK
         public override Vector3 SpanBottomRight()
         {
             return keySpanBottomRight;
-        }
-
-        public override Vector3 KeyScreenSize()
-        {
-            RectTransform k_transform = KeyPrefab.GetComponent<RectTransform>();
-            
-
-            return new Vector3(keySize.x * k_transform.rect.width, keySize.y * k_transform.rect.height, keySize.z);
         }
 
         public void ShowHideKeyboard(bool show)
@@ -93,11 +83,9 @@ namespace viperOSK
                 {
                     if(Application.isEditor)
                     {
-                        p.callBack.RemoveAllListeners();
                         DestroyImmediate(p.gameObject);
                     } else
                     {
-                        p.callBack.RemoveAllListeners();
                         Destroy(p.gameObject);
                     }
                     
@@ -110,29 +98,11 @@ namespace viperOSK
         }
 
         /// <summary>
-        /// resizes the keysize and regenerates the keyboard so it fits a defined width and height (in scrSize)
-        /// </summary>
-        /// <param name="scrSize">scrSize the size that the keyboard must fit - note this might warp how the keys look</param>
-        public override void ResizeKeyToFit(Vector2 scrSize)
-        {
-            Vector3 estSize = KeyboardSizeEstimator();
-
-            //Vector3 offsetSize = KeyScreenSize();
-
-            Vector2 fit = new Vector2(scrSize.x / estSize.x, scrSize.y / estSize.y);
-
-            RectTransform k_transform = KeyPrefab.GetComponent<RectTransform>();
-
-            keySize.x = fit.x / k_transform.rect.width;
-            keySize.y = fit.y / k_transform.rect.height;
-        }
-
-        /// <summary>
         /// Routine to generate the keyboard keys based on the layout. Can be called from Editor or as runtime script
         /// </summary>
         public override void Generate()
         {
-            
+
             //first check and clear all keys
             Reset();
 
@@ -143,7 +113,7 @@ namespace viperOSK
             RectTransform k_transform = KeyPrefab.GetComponent<RectTransform>();
             Vector3 keyOffset = new Vector3(keySize.x * k_transform.rect.width, keySize.y * k_transform.rect.height, keySize.z);
 
-            Vector3 v = topLeft.localPosition + new Vector3(0f, -.5f * (keySize.y * k_transform.rect.height), 0f); ;
+            Vector3 v = topLeft.localPosition;
 
             keySpanBottomRight = new Vector3(float.MinValue, float.MaxValue, 0f);
             keySpanTopLeft = new Vector3(float.MaxValue, float.MinValue, 0f);
@@ -315,9 +285,6 @@ namespace viperOSK
             }
 
             GamepadWrapNavigation();
-            RemapPhysicalKeyboard();
-
-            Debug.Log("[viperOSK] Keyboard generated");
 
         }
 
@@ -381,20 +348,17 @@ namespace viperOSK
 
                                 if (special.specialAction.GetPersistentEventCount() == 0)
                                 {
-                                    thisKey.callBack.RemoveAllListeners();
                                     thisKey.callBack.AddListener(KeyCallBase);
                                     thisKey.callBack.AddListener(KeyCall);
                                 }
                                 else
                                 {
-                                    thisKey.callBack.RemoveAllListeners();
                                     thisKey.callBack = special.specialAction;
                                     thisKey.callBack.AddListener(KeyCallBase);
                                 }
                             }
                             else
                             {
-                                thisKey.callBack.RemoveAllListeners();
                                 thisKey.callBack.AddListener(KeyCallBase);
                                 thisKey.callBack.AddListener(KeyCall);
                             }
@@ -439,9 +403,6 @@ namespace viperOSK
             }
 
             GamepadWrapNavigation();
-            RemapPhysicalKeyboard();
-
-            Debug.Log("[viperOSK] Keyboard traversed");
         }
 
 
@@ -523,72 +484,6 @@ namespace viperOSK
         }
 
         /// <summary>
-        /// v3.6
-        /// maps the physical keyboard keys to best correspond to the ones on the OSK
-        /// if top layout of the OSK row has letters than it starts with the top left key on physical keyboard (Q in a QWERTY keyboard)
-        /// you will have to be careful how to build both your OSK and how it relates to the phyiscal keyboard layout
-        /// </summary>
-        public override void RemapPhysicalKeyboard()
-        {
-
-            if (!OSK_Settings.instance.remapPhysicalKeyboard && OSK_Settings.instance.physicalKeyboardLayout.Length > 0)
-                return;
-
-            OSK_Settings.instance.physicalKeyboardMap.Clear();
-
-            string[] lines = OSK_Settings.instance.physicalKeyboardLayout.Split('\n');
-
-            OSK_UI_Key lastKey = null;
-
-            int r = 0;  //physical keyboad layout row
-            int c = 0;  //physical keyboad layout col
-
-            int i = 0;  //keylayout row
-            int j = 0;  //keylayout col
-
-            do
-            {
-                do
-                {
-
-                    if (lastKey == null || keyLayout[i][j] != lastKey)
-                    {
-                        lastKey = keyLayout[i][j];
-
-                        KeyCode keycode = GetKeyCode(lines[r][c].ToString());
-                        // todo: validate keycode before adding to dict
-                        OSK_Settings.instance.physicalKeyboardMap.TryAdd(keycode, lastKey.key);
-
-                        // uncomment for debugging
-                        //Debug.Log(lines[r][c].ToString()+"["+r+";"+c+" = " + keycode.ToString());
-                        c++;
-                    }
-
-                    j++;
-                } while (j < keyLayout[i].Count && c < lines[r].Length);
-
-                j = 0;
-                c = 0;
-
-                i++;
-                r++;
-
-            } while (i < keyLayout.Count && r < lines.Length);
-
-            /* 
-            // uncomment for debugging
-            Debug.Log("Physical Keyboard remap :" + keyLayout.Count);
-            foreach (KeyValuePair<KeyCode, OSK_KeyCode> kvp in OSK_Settings.instance.physicalKeyboardMap)
-            {
-                Debug.Log(kvp.Key + " = " + kvp.Value);
-            }
-            */
-        }
-
-
-
-
-        /// <summary>
         /// this base KeyCall callback is invoked for all key presses whether the key has a UnityEvent attached or not.
         /// </summary>
         /// <param name="k">keycode of key pressed</param>
@@ -633,7 +528,7 @@ namespace viperOSK
         /// <param name="ktype">Key Type (digit, letter, punctuation, control) of the key pressed</param>
         public override void KeyCall(OSK_KeyCode k, OSK_Receiver receiver)
         {
-            //Debug.Log("key callback " + k.ToString());
+
 
             if (!hasFocus)
                 return;
@@ -842,7 +737,7 @@ namespace viperOSK
                     else
                         DpadSelection.y = keyLayout.Count - 1;
                 }
-                
+
             }
 
 
@@ -923,54 +818,21 @@ namespace viperOSK
             keyboardAssets = this.transform.GetChild(0);
         }
 
-        void OnGUI()
+        /*void OnGUI()
         {
             if (!hasFocus || !Application.isPlaying)
                 return;
 
             if (acceptPhysicalKeyboard)
             {
-                var e = Event.current;
-                if (e == null) return;
-                OSK_KeyCode osk_keycode;
-
-
-                if (!Event.current.isKey)
-                    return;
-
-                // override the keycode pressed if there's a physical keyboard map
-                // this mapping always supercedes
-                if (OSK_Settings.instance.physicalKeyboardMap.TryGetValue(Event.current.keyCode, out osk_keycode))
+                if (Event.current.isKey && keyDict.ContainsKey(Event.current.keyCode))
                 {
-                    Debug.Log("[viperOSK] phys keymap : " + Event.current.keyCode.ToString() + " = " + osk_keycode.ToString());
-                }
-                else if (keyDict.ContainsKey((OSK_KeyCode)Event.current.keyCode))
-                {
-                    osk_keycode = (OSK_KeyCode)Event.current.keyCode;
-                    Debug.Log("[viperOSK] keyDict : " + Event.current.keyCode.ToString() + " = " + osk_keycode.ToString());
-                }
-                else
-                {
-                    Debug.Log("[viperOSK] no dice : " + Event.current.keyCode.ToString());
-                    return;
-                }
-
-
-                if (e.type == EventType.KeyDown)
-                {
-
                     //KeyCall(Event.current.keyCode, OSK_KEY_TYPES.LETTER);
-                    keyDict[osk_keycode].OnKeyPress("keyboard", output);
-
-
-                }
-                else if (e.type == EventType.KeyUp)
-                {
-                    keyDict[osk_keycode].OnKeyDepress("keyboard", output);
+                    keyDict[Event.current.keyCode].Click(output);
                 }
             }
 
-        }
+        }*/
 
         private void Update()
         {
@@ -1008,7 +870,6 @@ namespace viperOSK
             }
             else
                 currentSelUIKey = null;
-
         }
 
 

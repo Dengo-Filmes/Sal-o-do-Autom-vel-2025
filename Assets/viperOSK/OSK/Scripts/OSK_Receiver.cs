@@ -137,17 +137,7 @@ namespace viperOSK
             //this.gameObject.SetActive(false);
             //textReceiver.SetText(text, true);
             //this.gameObject.SetActive(true);
-            if(viperInput.KeyUp(KeyCode.LeftArrow))
-            {
-                cursorIndex--;
-                cursorIndex = (int) Mathf.Clamp(cursorIndex, 0, text.Length);
-            }
 
-            if (viperInput.KeyUp(KeyCode.RightArrow))
-            {
-                cursorIndex++;
-                cursorIndex = (int)Mathf.Clamp(cursorIndex, 0, text.Length);
-            }
         }
 
 #region UnityEngine.EventSystems Pointer Handlers
@@ -289,31 +279,12 @@ namespace viperOSK
                 vertexColors[vertexIndex + 3] = c;
 
             }
+      
 
 
-
-            textReceiver.UpdateVertexData(TMP_VertexDataUpdateFlags.All);
+        textReceiver.UpdateVertexData(TMP_VertexDataUpdateFlags.All);
 
         }
-
-        /// <summary>
-        /// [v3.6]
-        /// Allows dev to create routines to change the last character in the input field text. For example to switch a character to an accentedcharacter
-        /// </summary>
-        /// <param name="newLastChar">new character string to replace last char</param>
-        public void ModifyLastChar(string newLastChar)
-        {
-            if(text.Length > 0)
-            {
-                text = text.Substring(0, text.Length - 1) + newLastChar;
-                
-            } else
-            {
-                text = newLastChar;
-            }
-
-            ValueChanged();
-        }    
 
 #region Receiver virtual routines
 

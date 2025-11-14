@@ -42,8 +42,6 @@ namespace viperTools
             
         }
 
-        public static bool IsLetterAZ(KeyCode k) => k >= KeyCode.A && k <= KeyCode.Z;
-
         public static void RegisterKeyStrokeCallback(Action<char> action, bool enable)
         {
 #if ENABLE_INPUT_SYSTEM
@@ -87,7 +85,7 @@ namespace viperTools
 
 #if ENABLE_INPUT_SYSTEM
             Key c = ConvertKeyCodeToKey(k);
-            return Keyboard.current[c].isPressed;
+            return Keyboard.current[c].wasPressedThisFrame;
 #else
             return Input.GetKeyDown(k);
 #endif

@@ -53,7 +53,7 @@ namespace viperOSK
                     return OSK_KEY_TYPES.LETTER;
 
 
-                } 
+                }
                 else if (char.IsPunctuation((char)key) || char.IsSymbol((char)key))
                 {
                     return OSK_KEY_TYPES.PUNCTUATION;
@@ -64,10 +64,6 @@ namespace viperOSK
                 }
             } else
             {
-                if (key >= OSK_KeyCode._GLYPHS__ && key <= OSK_KeyCode._END_GLYPHS__)
-                {
-                    return OSK_KEY_TYPES.LETTER;
-                } else
                 if (key >= OSK_KeyCode.__ACCENTS__ && key < OSK_KeyCode._END_ACCENTS__)
                 {
                     return OSK_KEY_TYPES.LETTER;

@@ -55,8 +55,6 @@ namespace viperOSK
 
         Vector2Int layoutLoc = new Vector2Int();
 
-        int timesPressed;
-
         /// <summary>
         /// string containing the type of device used to press button. Options are "pointer" "keyboard" "joystick" (applies for gamepads as well)
         /// </summary>
@@ -246,13 +244,10 @@ namespace viperOSK
                 lastPressed = Time.time;
                 this.transform.localPosition = this.transform.localPosition - new Vector3(.025f, -.05f, 0f);
 
-                timesPressed++;
-
                 // this is where the key pressed callBack is called
-                
+
                 if (callBack != null)
                     callBack.Invoke(key, tmpOutput);
-
                 if (altAction != null)
                     altAction?.Invoke(keyName.text, tmpOutput);
 
@@ -410,13 +405,11 @@ namespace viperOSK
         {
             if (hi)
             {
-               // SetBkColor(c, false);
-                bk.Select();
+                SetBkColor(c, false);
             }
             else
             {
-              //  SetBkColor(bk_baseColor, false);
-                
+                SetBkColor(bk_baseColor, false);
             }
         }
 

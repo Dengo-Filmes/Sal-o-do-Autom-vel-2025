@@ -1,3 +1,0 @@
-The following Third-Party digital resources have been used:
-- Font: See "Anton OFL.txt" under "Assets > viperOSK > Fonts" for SIL license (resource as part of TMPro).
-- SFX: See "Third-Party License.txt" under "Assets > viperOSK > OSK > Sounds" for license.
