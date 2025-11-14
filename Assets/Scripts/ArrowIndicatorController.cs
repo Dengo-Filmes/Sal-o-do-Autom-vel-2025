@@ -13,7 +13,6 @@ public class ArrowIndicatorController : MonoBehaviour
         var controller = instance.GetComponent<ArrowIndicatorController>();
         controller.Setup(target);
 
-        // registra no ArrowManager
         ArrowManager.Instance?.Register(controller);
 
         return controller;
@@ -24,7 +23,6 @@ public class ArrowIndicatorController : MonoBehaviour
         arrowRect = GetComponent<RectTransform>();
         this.target = target;
 
-        // garante que a seta esteja no mesmo parent que o mapa
         arrowRect.SetParent(target.parent, false);
         UpdatePosition();
 

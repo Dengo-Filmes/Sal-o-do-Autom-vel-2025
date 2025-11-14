@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.Video;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
-using UnityEngine.InputSystem; // novo input system
+using UnityEngine.InputSystem; 
 using System.Collections;
 
 public class IdleVideoController : MonoBehaviour, IPointerDownHandler
@@ -39,7 +39,6 @@ public class IdleVideoController : MonoBehaviour, IPointerDownHandler
 
     void Update()
     {
-        // Detecta qualquer clique/toque/tecla pelo novo Input System
         if (Mouse.current != null && Mouse.current.leftButton.wasPressedThisFrame)
             ResetTimer();
         if (Touchscreen.current != null && Touchscreen.current.primaryTouch.press.wasPressedThisFrame)

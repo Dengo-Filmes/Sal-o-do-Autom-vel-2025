@@ -28,7 +28,6 @@ public class DropdownStandSearch : MonoBehaviour
             .GroupBy(s => s.standName)
             .ToDictionary(g => g.Key, g => g.ToList());
 
-        // Ordena alfabeticamente (A - Z)
         List<string> sortedNames = groupedStands.Keys.OrderBy(name => name).ToList();
 
         dropdown.AddOptions(sortedNames);
@@ -52,18 +51,15 @@ public class DropdownStandSearch : MonoBehaviour
 
         if (stands.Count == 1)
         {
-            // 1 stand usa o focus normal
             Stand2D s = stands[0];
             map.FocusOnStand(s.GetComponent<RectTransform>(), s.focusZoom);
         }
         else
         {
-            // 1 stand voltar zoom inicial SEM zoom de foco
             map.ResetCamera();
             Debug.Log($"Vários stands encontrados, resetando zoom para 1.");
         }
 
-        // cria setas em todos os stands
         foreach (var stand in stands)
         {
             ArrowIndicatorController.Create(

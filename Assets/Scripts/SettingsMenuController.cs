@@ -16,7 +16,6 @@ public class SettingsMenuController : MonoBehaviour
 
     void Start()
     {
-        // Garante que o menu começa fechado
         if (settingsPanel)
         {
             settingsPanel.alpha = 0;
@@ -25,7 +24,6 @@ public class SettingsMenuController : MonoBehaviour
         }
     }
 
-    // Chamado pelo botão de configurações (OnTimerEnd)
     public void ToggleSettings()
     {
         if (isOpen)

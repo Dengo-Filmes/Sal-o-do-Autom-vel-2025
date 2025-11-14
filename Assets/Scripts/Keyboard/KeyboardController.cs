@@ -21,7 +21,6 @@ public class KeyboardController : MonoBehaviour
         rectTransform = GetComponent<RectTransform>();
         parentRect = rectTransform.parent as RectTransform;
 
-        // pega o canvas onde ele está
         parentCanvas = GetComponentInParent<Canvas>();
     }
 

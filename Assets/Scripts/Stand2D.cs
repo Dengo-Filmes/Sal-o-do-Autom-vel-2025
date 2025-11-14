@@ -36,7 +36,6 @@ public class Stand2D : MonoBehaviour, IPointerClickHandler
         if (map != null)
             map.FocusOnStand(GetComponent<RectTransform>(), focusZoom);
 
-        // limpa todas as setas antes de criar a nova
         ArrowManager.Instance?.ClearAll();
 
         if (arrowPrefab != null && mapTransform != null)
