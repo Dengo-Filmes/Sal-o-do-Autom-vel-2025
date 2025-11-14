@@ -23,8 +23,17 @@ public class MapPanZoom2D : MonoBehaviour, IDragHandler, IBeginDragHandler
     private bool isFocusing = false;
     private float inactivityTimer = 0f;
 
+
+    private Vector2 initialPos;
+    private float initialZoom;
+
+
     void Start()
     {
+   
+        initialPos = mapTransform.anchoredPosition;
+        initialZoom = 1f;
+
         if (zoomSlider)
         {
             zoomSlider.minValue = minZoom;
@@ -33,6 +42,7 @@ public class MapPanZoom2D : MonoBehaviour, IDragHandler, IBeginDragHandler
             zoomSlider.onValueChanged.AddListener(SetZoom);
         }
     }
+
 
     void Update()
     {
@@ -43,6 +53,7 @@ public class MapPanZoom2D : MonoBehaviour, IDragHandler, IBeginDragHandler
             ResetMapToDefault();
         }
     }
+
 
     public void OnBeginDrag(PointerEventData eventData)
     {
@@ -58,6 +69,7 @@ public class MapPanZoom2D : MonoBehaviour, IDragHandler, IBeginDragHandler
         ResetInactivityTimer();
     }
 
+
     public void SetZoom(float value)
     {
         if (isFocusing) return;
@@ -67,12 +79,14 @@ public class MapPanZoom2D : MonoBehaviour, IDragHandler, IBeginDragHandler
         ResetInactivityTimer();
     }
 
+
     public void FocusOnStand(RectTransform standRect, float zoomTarget = 4f)
     {
         StopAllFocusCoroutines();
         focusCoroutine = StartCoroutine(FocusRoutine(standRect, zoomTarget));
         ResetInactivityTimer();
     }
+
 
     IEnumerator FocusRoutine(RectTransform standRect, float zoomTarget)
     {
@@ -127,16 +141,17 @@ public class MapPanZoom2D : MonoBehaviour, IDragHandler, IBeginDragHandler
         focusCoroutine = null;
     }
 
+
     private void ResetMapToDefault()
     {
         if (isFocusing) return;
         StopAllFocusCoroutines();
 
-        // Limpa todas as setas quando o mapa resetar por inatividade
         ArrowManager.Instance?.ClearAll();
 
         focusCoroutine = StartCoroutine(ResetRoutine());
     }
+
 
     IEnumerator ResetRoutine()
     {
@@ -145,8 +160,8 @@ public class MapPanZoom2D : MonoBehaviour, IDragHandler, IBeginDragHandler
         float startZoom = zoom;
         float t = 0f;
 
-        Vector2 targetPos = Vector2.zero;
-        float targetZoom = 1f;
+        Vector2 targetPos = initialPos;
+        float targetZoom = initialZoom;
 
         if (zoomSlider) zoomSlider.value = targetZoom;
 
@@ -168,6 +183,7 @@ public class MapPanZoom2D : MonoBehaviour, IDragHandler, IBeginDragHandler
         inactivityTimer = 0f;
     }
 
+
     private void ClampMapInsideBounds()
     {
         if (mapTransform == null || containerRect == null) return;
@@ -186,6 +202,7 @@ public class MapPanZoom2D : MonoBehaviour, IDragHandler, IBeginDragHandler
         mapTransform.anchoredPosition = pos;
     }
 
+
     private void StopAllFocusCoroutines()
     {
         if (focusCoroutine != null) StopCoroutine(focusCoroutine);
@@ -193,8 +210,25 @@ public class MapPanZoom2D : MonoBehaviour, IDragHandler, IBeginDragHandler
         isFocusing = false;
     }
 
+
     private void ResetInactivityTimer()
     {
         inactivityTimer = 0f;
+    }
+
+
+    public void ResetCamera()
+    {
+        StopAllFocusCoroutines();
+
+        zoom = initialZoom;
+        mapTransform.localScale = Vector3.one * zoom;
+
+        mapTransform.anchoredPosition = initialPos;
+
+        if (zoomSlider)
+            zoomSlider.value = initialZoom;
+
+        ClampMapInsideBounds();
     }
 }

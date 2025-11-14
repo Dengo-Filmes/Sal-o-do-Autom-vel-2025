@@ -6,7 +6,7 @@ public class Stand2D : MonoBehaviour, IPointerClickHandler
 {
     [Header("Configurações do Stand")]
     public string standName = "Stand sem nome";
-    public float focusZoom = 4f;
+    public float focusZoom = 2f;
     public Color highlightColor = Color.yellow;
 
     [Header("Seta (prefab)")]

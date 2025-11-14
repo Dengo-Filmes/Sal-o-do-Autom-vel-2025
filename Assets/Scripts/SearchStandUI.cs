@@ -11,7 +11,7 @@ public class SearchStandUI : MonoBehaviour
     public MapPanZoom2D map;
 
     [Header("Configurações")]
-    public float searchZoom = 4f;
+    public float searchZoom = 2f;
     public bool partialMatch = true;
     public int minSearchLength = 3;
 
@@ -47,29 +47,41 @@ public class SearchStandUI : MonoBehaviour
         else
             foundStands = allStands.Where(s => s.standName.ToLower() == query).ToList();
 
-        // remove todas as setas anteriores
+       
         ArrowManager.Instance?.ClearAll();
 
-        if (foundStands.Count > 0)
+        if (foundStands.Count == 0)
         {
-            Debug.Log($"Encontrados {foundStands.Count} stand(s): {string.Join(", ", foundStands.Select(s => s.standName))}");
+            Debug.LogWarning($"Nenhum stand encontrado com: {query}");
+            return;
+        }
 
+        Debug.Log($"Encontrados {foundStands.Count} stand(s): {string.Join(", ", foundStands.Select(s => s.standName))}");
+
+
+        if (foundStands.Count == 1)
+        {
             var first = foundStands[0];
             map.FocusOnStand(first.GetComponent<RectTransform>(), searchZoom);
-
-            foreach (var stand in foundStands)
-            {
-                if (arrowPrefab != null && mapTransform != null)
-                    ArrowIndicatorController.Create(arrowPrefab, mapTransform, stand.GetComponent<RectTransform>());
-
-                var img = stand.GetComponent<UnityEngine.UI.Image>();
-                if (img != null)
-                    StartCoroutine(UIHighlightHelper.Flash(img, Color.cyan, 0.4f));
-            }
         }
         else
         {
-            Debug.LogWarning($"Nenhum stand encontrado com: {query}");
+            Debug.Log("Múltiplos resultados encontrados sem zoom, apenas setas.");
+        }
+
+        
+        foreach (var stand in foundStands)
+        {
+            if (arrowPrefab != null && mapTransform != null)
+                ArrowIndicatorController.Create(
+                    arrowPrefab,
+                    mapTransform,
+                    stand.GetComponent<RectTransform>()
+                );
+
+            var img = stand.GetComponent<UnityEngine.UI.Image>();
+            if (img != null)
+                StartCoroutine(UIHighlightHelper.Flash(img, Color.cyan, 0.4f));
         }
 
         inputField.text = "";
