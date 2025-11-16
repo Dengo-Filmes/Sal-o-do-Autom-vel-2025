@@ -829,6 +829,146 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 54088240}
   m_CullTransparentMesh: 1
+--- !u!1 &55652633
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 55652634}
+  - component: {fileID: 55652638}
+  - component: {fileID: 55652637}
+  - component: {fileID: 55652636}
+  - component: {fileID: 55652635}
+  m_Layer: 5
+  m_Name: DREAM LOUNGE
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 2147483647
+  m_IsActive: 1
+--- !u!224 &55652634
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 55652633}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1608541172}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 14.74, y: 363.69}
+  m_SizeDelta: {x: 104.17, y: 126.06}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &55652635
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 55652633}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0bd300471173db845820fe0917578e73, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Stand2D
+  standName: "EXPOSI\xC7\xC3O"
+  focusZoom: 1.5
+  highlightColor: {r: 1, g: 0.078431375, b: 0.015686274, a: 0.39215687}
+  arrowPrefab: {fileID: 2536400114329630426, guid: 27cd8e8301cb0b84f8a740e49865f5a6, type: 3}
+  mapTransform: {fileID: 1608541172}
+--- !u!61 &55652636
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 55652633}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 1
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 1
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
+--- !u!114 &55652637
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 55652633}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &55652638
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 55652633}
+  m_CullTransparentMesh: 1
 --- !u!1 &63806327
 GameObject:
   m_ObjectHideFlags: 0
@@ -1774,6 +1914,146 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 137425934}
   m_CullTransparentMesh: 1
+--- !u!1 &140341180
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 140341181}
+  - component: {fileID: 140341185}
+  - component: {fileID: 140341184}
+  - component: {fileID: 140341183}
+  - component: {fileID: 140341182}
+  m_Layer: 5
+  m_Name: Drive
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 2147483647
+  m_IsActive: 1
+--- !u!224 &140341181
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 140341180}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1608541172}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -425.62, y: 184.96}
+  m_SizeDelta: {x: 138.44, y: 104.72}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &140341182
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 140341180}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0bd300471173db845820fe0917578e73, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Stand2D
+  standName: "EXPOSI\xC7\xC3O"
+  focusZoom: 1.5
+  highlightColor: {r: 1, g: 0.078431375, b: 0.015686274, a: 0.39215687}
+  arrowPrefab: {fileID: 2536400114329630426, guid: 27cd8e8301cb0b84f8a740e49865f5a6, type: 3}
+  mapTransform: {fileID: 1608541172}
+--- !u!61 &140341183
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 140341180}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 1
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 1
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
+--- !u!114 &140341184
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 140341180}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &140341185
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 140341180}
+  m_CullTransparentMesh: 1
 --- !u!1 &141204023
 GameObject:
   m_ObjectHideFlags: 0
@@ -2105,7 +2385,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0bd300471173db845820fe0917578e73, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Stand2D
-  standName: DREAM
+  standName: "EXPOSI\xC7\xC3O"
   focusZoom: 1.5
   highlightColor: {r: 1, g: 0.078431375, b: 0.015686274, a: 0.39215687}
   arrowPrefab: {fileID: 2536400114329630426, guid: 27cd8e8301cb0b84f8a740e49865f5a6, type: 3}
@@ -5612,7 +5892,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0bd300471173db845820fe0917578e73, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Stand2D
-  standName: 4 RODAS EXPERIENCE
+  standName: "EXPOSI\xC7\xC3O"
   focusZoom: 1.5
   highlightColor: {r: 1, g: 0.078431375, b: 0.015686274, a: 0.39215687}
   arrowPrefab: {fileID: 2536400114329630426, guid: 27cd8e8301cb0b84f8a740e49865f5a6, type: 3}
@@ -6863,7 +7143,6 @@ MonoBehaviour:
   maxZoom: 3
   focusLerpSpeed: 3
   inactivityTime: 10
-  pinchSpeed: 0.02
 --- !u!114 &529260150
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10016,7 +10295,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0bd300471173db845820fe0917578e73, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Stand2D
-  standName: ROLEX
+  standName: "EXPOSI\xC7\xC3O"
   focusZoom: 1.5
   highlightColor: {r: 1, g: 0.078431375, b: 0.015686274, a: 0.39215687}
   arrowPrefab: {fileID: 2536400114329630426, guid: 27cd8e8301cb0b84f8a740e49865f5a6, type: 3}
@@ -16148,7 +16427,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0bd300471173db845820fe0917578e73, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Stand2D
-  standName: LIVE GARAGE SHOW
+  standName: "EXPOSI\xC7\xC3O"
   focusZoom: 1.5
   highlightColor: {r: 1, g: 0.078431375, b: 0.015686274, a: 0.39215687}
   arrowPrefab: {fileID: 2536400114329630426, guid: 27cd8e8301cb0b84f8a740e49865f5a6, type: 3}
@@ -16544,6 +16823,8 @@ RectTransform:
   - {fileID: 1780968442}
   - {fileID: 68193088}
   - {fileID: 1547209186}
+  - {fileID: 55652634}
+  - {fileID: 140341181}
   - {fileID: 1677336729}
   - {fileID: 376544921}
   - {fileID: 485193690}
@@ -17457,7 +17738,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0bd300471173db845820fe0917578e73, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Stand2D
-  standName: RACING GAME ZONE
+  standName: "EXPOSI\xC7\xC3O"
   focusZoom: 1.5
   highlightColor: {r: 1, g: 0.078431375, b: 0.015686274, a: 0.39215687}
   arrowPrefab: {fileID: 2536400114329630426, guid: 27cd8e8301cb0b84f8a740e49865f5a6, type: 3}
@@ -18388,7 +18669,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0bd300471173db845820fe0917578e73, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Stand2D
-  standName: NASCAR BRASIL SERIES
+  standName: "EXPOSI\xC7\xC3O"
   focusZoom: 1.5
   highlightColor: {r: 1, g: 0.078431375, b: 0.015686274, a: 0.39215687}
   arrowPrefab: {fileID: 2536400114329630426, guid: 27cd8e8301cb0b84f8a740e49865f5a6, type: 3}
@@ -19024,7 +19305,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 413.2, y: 0.4}
+  m_AnchoredPosition: {x: 414.4, y: 0.4}
   m_SizeDelta: {x: 224, y: 225}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1887205373
@@ -21001,7 +21282,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0bd300471173db845820fe0917578e73, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Stand2D
-  standName: C.A.R.D.E MUSEU
+  standName: "EXPOSI\xC7\xC3O"
   focusZoom: 1.5
   highlightColor: {r: 1, g: 0.078431375, b: 0.015686274, a: 0.39215687}
   arrowPrefab: {fileID: 2536400114329630426, guid: 27cd8e8301cb0b84f8a740e49865f5a6, type: 3}
@@ -21421,7 +21702,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0bd300471173db845820fe0917578e73, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Stand2D
-  standName: LEGO EXPERIENCE
+  standName: "EXPOSI\xC7\xC3O"
   focusZoom: 1.5
   highlightColor: {r: 1, g: 0.078431375, b: 0.015686274, a: 0.39215687}
   arrowPrefab: {fileID: 2536400114329630426, guid: 27cd8e8301cb0b84f8a740e49865f5a6, type: 3}
