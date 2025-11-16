@@ -15,6 +15,8 @@ public class DropdownStandSearch : MonoBehaviour
     public RectTransform mapTransform;
     private Dictionary<string, List<Stand2D>> groupedStands;
 
+    private Color unifiedHighlightColor = new Color(255f / 255f, 20f / 255f, 4f / 255f, 100f / 255f);
+
     void Start()
     {
         dropdown.ClearOptions();
@@ -34,7 +36,6 @@ public class DropdownStandSearch : MonoBehaviour
 
         dropdown.onValueChanged.AddListener(OnDropdownSelect);
     }
-
 
     void OnDropdownSelect(int index)
     {
@@ -70,8 +71,7 @@ public class DropdownStandSearch : MonoBehaviour
 
             var img = stand.GetComponent<UnityEngine.UI.Image>();
             if (img != null)
-                StartCoroutine(UIHighlightHelper.Flash(img, Color.cyan, 0.4f));
+                StartCoroutine(UIHighlightHelper.Flash(img, unifiedHighlightColor, 0.4f));
         }
     }
-
 }

@@ -7,13 +7,13 @@ public class Stand2D : MonoBehaviour, IPointerClickHandler
     [Header("Configurações do Stand")]
     public string standName = "Stand sem nome";
     public float focusZoom = 2f;
-    public Color highlightColor = Color.yellow;
 
     [Header("Seta (prefab)")]
     public RectTransform arrowPrefab;
     public RectTransform mapTransform;
 
     private Color originalColor;
+    private Color highlightColor = new Color(255f / 255f, 20f / 255f, 4f / 255f, 100f / 255f);
     private UnityEngine.UI.Image image;
 
     void Awake()
@@ -44,7 +44,7 @@ public class Stand2D : MonoBehaviour, IPointerClickHandler
         }
         else
         {
-            Debug.LogWarning(" Arrow prefab ou mapTransform não configurados no Stand2D.");
+            Debug.LogWarning("Arrow prefab ou mapTransform não configurados no Stand2D.");
         }
 
         if (image != null)
@@ -53,6 +53,6 @@ public class Stand2D : MonoBehaviour, IPointerClickHandler
             StartCoroutine(UIHighlightHelper.Flash(image, highlightColor, 0.25f));
         }
 
-        Debug.Log($" Stand selecionado: {standName}");
+        Debug.Log($"Stand selecionado: {standName}");
     }
 }
