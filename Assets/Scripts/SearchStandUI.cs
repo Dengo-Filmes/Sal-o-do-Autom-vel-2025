@@ -62,7 +62,7 @@ public class SearchStandUI : MonoBehaviour
         if (foundStands.Count == 1)
         {
             var first = foundStands[0];
-            map.FocusOnStand(first.GetComponent<RectTransform>(), searchZoom);
+            map.FocusOnStand(first, searchZoom);
         }
         else
         {

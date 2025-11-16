@@ -34,7 +34,7 @@ public class ButtonStandCategory : MonoBehaviour
 
         ArrowManager.Instance?.ClearAll();
 
-        map.FocusOnStand(stands[0].GetComponent<RectTransform>(), 1f);
+        map.FocusOnStand(stands[0], 1f);
 
         foreach (var stand in stands)
         {

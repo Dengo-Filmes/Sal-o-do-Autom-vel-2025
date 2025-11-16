@@ -53,7 +53,7 @@ public class DropdownStandSearch : MonoBehaviour
         if (stands.Count == 1)
         {
             Stand2D s = stands[0];
-            map.FocusOnStand(s.GetComponent<RectTransform>(), s.focusZoom);
+            map.FocusOnStand(s, s.focusZoom);
         }
         else
         {

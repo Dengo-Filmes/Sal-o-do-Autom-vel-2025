@@ -57,6 +57,7 @@ public class OpenSettingsController : MonoBehaviour
             }
         }
 
+        _currentTotem = totemPositions[thisIndex];
     }
 
     public Transform GetCurrentTotem()

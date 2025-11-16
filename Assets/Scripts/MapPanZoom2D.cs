@@ -5,6 +5,8 @@ using System.Collections;
 
 public class MapPanZoom2D : MonoBehaviour, IDragHandler, IBeginDragHandler
 {
+    public static MapPanZoom2D Instance;
+
     [Header("References")]
     public RectTransform mapTransform;
     public RectTransform containerRect;
@@ -25,6 +27,15 @@ public class MapPanZoom2D : MonoBehaviour, IDragHandler, IBeginDragHandler
 
     private Vector2 initialPos;
     private float initialZoom;
+
+    Stand2D _selectedStand;
+
+    public Camera mapCamera;
+
+    private void Awake()
+    {
+        Instance = this;
+    }
 
     void Start()
     {
@@ -75,10 +86,12 @@ public class MapPanZoom2D : MonoBehaviour, IDragHandler, IBeginDragHandler
         ResetInactivityTimer();
     }
 
-    public void FocusOnStand(RectTransform standRect, float zoomTarget = 4f)
+    public void FocusOnStand(Stand2D standRect, float zoomTarget = 4f)
     {
+        _selectedStand = standRect;
+
         StopAllFocusCoroutines();
-        focusCoroutine = StartCoroutine(FocusRoutine(standRect, zoomTarget));
+        focusCoroutine = StartCoroutine(FocusRoutine(standRect.GetComponent<RectTransform>(), zoomTarget));
         ResetInactivityTimer();
     }
 
@@ -138,6 +151,7 @@ public class MapPanZoom2D : MonoBehaviour, IDragHandler, IBeginDragHandler
     private void ResetMapToDefault()
     {
         if (isFocusing) return;
+        _selectedStand = null;
         StopAllFocusCoroutines();
 
         ArrowManager.Instance?.ClearAll();
@@ -254,4 +268,19 @@ public class MapPanZoom2D : MonoBehaviour, IDragHandler, IBeginDragHandler
             ResetInactivityTimer();
         }
     }
+
+    #region Route
+    public void CalculatePath()
+    {
+        if (!_selectedStand)
+        {
+            Debug.Log("No stand selected");
+            return;
+        }
+
+        ResetCamera();
+        PathController.Instance.SetPositions(OpenSettingsController.Instance.GetCurrentTotem().GetComponent<TotemController>().GetIRLTotem(), _selectedStand.GetIRLTransform());
+        PathController.Instance.CalculatePath();
+    }
+    #endregion
 }

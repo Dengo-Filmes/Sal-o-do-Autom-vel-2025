@@ -45,7 +45,8 @@ public class PathController : MonoBehaviour
         if (NavMesh.CalculatePath(pointAOnNavMesh, pointBOnNavMesh, NavMesh.AllAreas, path))
         {
             List<Vector3> corners = path.corners.ToList();
-            //corners.Add(pointB.position);
+            corners.Insert(0, pointA.position);
+            corners.Add(pointB.position);
             List<Vector3> cornersOrtho = Orthogonalize(corners);
 
             _lineRenderer.positionCount = cornersOrtho.Count;
