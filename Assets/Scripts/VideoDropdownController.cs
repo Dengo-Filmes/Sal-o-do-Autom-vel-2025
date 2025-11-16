@@ -54,5 +54,5 @@ public class VideoDropdownController : MonoBehaviour
         videoPlayer.clip = videos[index].clip;
         videoPlayer.isLooping = true;
         videoPlayer.Play();
-    }
+    }                               
 }
