@@ -60,6 +60,12 @@ public class MapPanZoom2D : MonoBehaviour, IDragHandler, IBeginDragHandler
         if (inactivityTimer >= inactivityTime && !isFocusing)
         {
             ResetMapToDefault();
+            PathController.Instance.ResetPath();
+        }
+
+        if (zoom != 1)
+        {
+            PathController.Instance.ResetPath();
         }
     }
 

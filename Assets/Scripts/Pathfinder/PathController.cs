@@ -59,6 +59,13 @@ public class PathController : MonoBehaviour
         else print("<color=red>PATH FAILED");
     }
 
+    public void ResetPath()
+    {
+        if (_lineRenderer.positionCount <= 0) return;
+
+        _lineRenderer.positionCount = 0;
+    }
+
     Vector3 SampleToNavmesh(Vector3 sourcePos)
     {
         if (NavMesh.SamplePosition(sourcePos, out NavMeshHit hit, 10f, NavMesh.AllAreas))
