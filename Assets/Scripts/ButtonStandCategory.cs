@@ -4,12 +4,14 @@ using System.Linq;
 
 public class ButtonStandCategory : MonoBehaviour
 {
-    public string categoryName;                   
+    public string categoryName;
     public MapPanZoom2D map;
     public RectTransform arrowPrefab;
     public RectTransform mapTransform;
 
     private Dictionary<string, List<Stand2D>> groupedStands;
+
+    private Color unifiedHighlightColor = new Color(255f / 255f, 20f / 255f, 4f / 255f, 100f / 255f);
 
     void Start()
     {
@@ -44,7 +46,7 @@ public class ButtonStandCategory : MonoBehaviour
 
             var img = stand.GetComponent<UnityEngine.UI.Image>();
             if (img != null)
-                StartCoroutine(UIHighlightHelper.Flash(img, Color.cyan, 0.4f));
+                StartCoroutine(UIHighlightHelper.Flash(img, unifiedHighlightColor, 0.4f));
         }
     }
 }
