@@ -25270,6 +25270,9 @@ GameObject:
   - component: {fileID: 1608541172}
   - component: {fileID: 1608541174}
   - component: {fileID: 1608541173}
+  - component: {fileID: 1608541177}
+  - component: {fileID: 1608541176}
+  - component: {fileID: 1608541175}
   m_Layer: 5
   m_Name: Mapa
   m_TagString: Untagged
@@ -25445,6 +25448,82 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1608541171}
   m_CullTransparentMesh: 1
+--- !u!114 &1608541175
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1608541171}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5cc9b56eba8098247bb81ff9d81b5e74, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LimitPinchScale
+  minScale: 0.8
+  maxScale: 2.5
+--- !u!114 &1608541176
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1608541171}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 978a486d8ecf8437cbb87e8534908895, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TouchScript.Behaviors.Transformer
+  enableSmoothing: 1
+  smoothingFactor: 0.00001
+  positionThreshold: 0.010000001
+  rotationThreshold: 0.1
+  scaleThreshold: 0.010000001
+  allowChangingFromOutside: 0
+--- !u!114 &1608541177
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1608541171}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11ea9930ecb674732bee27116520fad8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TouchScript.Gestures.TransformGestures.TransformGesture
+  debugMode: 0
+  OnStateChange:
+    m_PersistentCalls:
+      m_Calls: []
+  basicEditor: 0
+  generalProps: 0
+  limitsProps: 0
+  advancedProps: 0
+  minPointers: 0
+  maxPointers: 0
+  useSendMessage: 0
+  sendStateChangeMessages: 0
+  sendMessageTarget: {fileID: 0}
+  useUnityEvents: 0
+  sendStateChangeEvents: 0
+  requireGestureToFail: {fileID: 0}
+  friendlyGestures: []
+  OnTransformStart:
+    m_PersistentCalls:
+      m_Calls: []
+  OnTransform:
+    m_PersistentCalls:
+      m_Calls: []
+  OnTransformComplete:
+    m_PersistentCalls:
+      m_Calls: []
+  type: 4
+  screenTransformThreshold: 0.1
+  minScreenPointsDistance: 2
+  projectionProps: 0
+  projection: 0
+  projectionPlaneNormal: {x: 0, y: 0, z: 1}
 --- !u!1 &1611568619 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8498713510965293396, guid: d1cb06d1ad42f024992e45f0c7c22eba, type: 3}
@@ -26393,7 +26472,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1675686943}
-  - component: {fileID: 1675686942}
   m_Layer: 0
   m_Name: TouchManager
   m_TagString: Untagged
@@ -26401,52 +26479,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1675686942
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1675686941}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0dd4c394fe06f4ea49e03aaa5e7a8190, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::TouchScript.TouchManager
-  debugMode: 0
-  OnFrameStart:
-    m_PersistentCalls:
-      m_Calls: []
-  OnFrameFinish:
-    m_PersistentCalls:
-      m_Calls: []
-  OnPointersAdd:
-    m_PersistentCalls:
-      m_Calls: []
-  OnPointersUpdate:
-    m_PersistentCalls:
-      m_Calls: []
-  OnPointersPress:
-    m_PersistentCalls:
-      m_Calls: []
-  OnPointersRelease:
-    m_PersistentCalls:
-      m_Calls: []
-  OnPointersRemove:
-    m_PersistentCalls:
-      m_Calls: []
-  OnPointersCancel:
-    m_PersistentCalls:
-      m_Calls: []
-  basicEditor: 1
-  displayDevice: {fileID: 0}
-  shouldCreateCameraLayer: 1
-  shouldCreateStandardInput: 1
-  useSendMessage: 0
-  sendMessageEvents: 252
-  sendMessageTarget: {fileID: 0}
-  useUnityEvents: 0
-  layers: []
 --- !u!4 &1675686943
 Transform:
   m_ObjectHideFlags: 0
