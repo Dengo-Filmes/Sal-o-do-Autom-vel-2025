@@ -5,17 +5,22 @@ using UnityEngine.AI;
 
 public class PathController : MonoBehaviour
 {
+    public static PathController Instance;
+
     LineRenderer _lineRenderer;
 
     public Transform pointA;
     public Transform pointB;
 
+    private void Awake()
+    {
+        Instance = this;
+    }
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         _lineRenderer = GetComponent<LineRenderer>();
-
-        Invoke("CalculatePath", 1);
     }
 
     // Update is called once per frame
@@ -24,24 +29,41 @@ public class PathController : MonoBehaviour
         
     }
 
-    void CalculatePath()
+    public void SetPositions(Transform totem, Transform destination)
+    {
+        pointA = totem;
+        pointB = destination;
+    }
+
+    public void CalculatePath()
     {
         NavMeshPath path = new();
 
-        if (NavMesh.CalculatePath(pointA.position, pointB.position, NavMesh.AllAreas, path))
+        Vector3 pointAOnNavMesh = SampleToNavmesh(pointA.position);
+        Vector3 pointBOnNavMesh = SampleToNavmesh(pointB.position);
+
+        if (NavMesh.CalculatePath(pointAOnNavMesh, pointBOnNavMesh, NavMesh.AllAreas, path))
         {
             List<Vector3> corners = path.corners.ToList();
+            //corners.Add(pointB.position);
             List<Vector3> cornersOrtho = Orthogonalize(corners);
 
-            _lineRenderer.positionCount =  cornersOrtho.Count;
+            _lineRenderer.positionCount = cornersOrtho.Count;
 
             for (int i = 0; i < cornersOrtho.Count; i++)
-            {
                 _lineRenderer.SetPosition(i, cornersOrtho[i] + Vector3.up);
-            }
+
             print("<color=green>PATH FOUND");
         }
         else print("<color=red>PATH FAILED");
+    }
+
+    Vector3 SampleToNavmesh(Vector3 sourcePos)
+    {
+        if (NavMesh.SamplePosition(sourcePos, out NavMeshHit hit, 10f, NavMesh.AllAreas))
+            return hit.position;
+
+        return sourcePos; // fallback
     }
 
     List<Vector3> Orthogonalize(List<Vector3> corners)

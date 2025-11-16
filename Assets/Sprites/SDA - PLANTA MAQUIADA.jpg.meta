@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 494777443baf6b34f870575565461a1f
+guid: 6e46fcda4add730428a1a1f6ceb1e924
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5005279810190393594
-    second: map alta_0
+      213: 8156939847391955873
+    second: SDA - PLANTA MAQUIADA_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -75,7 +75,7 @@ TextureImporter:
     maxTextureSize: 16384
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 2
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -122,30 +122,17 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: WindowsStoreApps
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: map alta_0
+      name: SDA - PLANTA MAQUIADA_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 10401
-        height: 8154
+        width: 11735
+        height: 8901
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -154,8 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 60fba20288ca98ab0800000000000000
-      internalID: -5005279810190393594
+      spriteID: 1abc60ae295433170800000000000000
+      internalID: 8156939847391955873
       vertices: []
       indices: 
       edges: []
@@ -174,7 +161,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      map alta_0: -5005279810190393594
+      SDA - PLANTA MAQUIADA_0: 8156939847391955873
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
