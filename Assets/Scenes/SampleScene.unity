@@ -32572,6 +32572,26 @@ PrefabInstance:
       propertyPath: m_Positions.Array.data[1].z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1307775300707820412, guid: d1cb06d1ad42f024992e45f0c7c22eba, type: 3}
+      propertyPath: m_Parameters.widthMultiplier
+      value: 0.075
+      objectReference: {fileID: 0}
+    - target: {fileID: 1307775300707820412, guid: d1cb06d1ad42f024992e45f0c7c22eba, type: 3}
+      propertyPath: m_Parameters.colorGradient.key0.b
+      value: 0.13333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 1307775300707820412, guid: d1cb06d1ad42f024992e45f0c7c22eba, type: 3}
+      propertyPath: m_Parameters.colorGradient.key0.g
+      value: 0.4901961
+      objectReference: {fileID: 0}
+    - target: {fileID: 1307775300707820412, guid: d1cb06d1ad42f024992e45f0c7c22eba, type: 3}
+      propertyPath: m_Parameters.colorGradient.key1.b
+      value: 0.13333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 1307775300707820412, guid: d1cb06d1ad42f024992e45f0c7c22eba, type: 3}
+      propertyPath: m_Parameters.colorGradient.key1.g
+      value: 0.4901961
+      objectReference: {fileID: 0}
     - target: {fileID: 1392258822613855250, guid: d1cb06d1ad42f024992e45f0c7c22eba, type: 3}
       propertyPath: m_Enabled
       value: 0
