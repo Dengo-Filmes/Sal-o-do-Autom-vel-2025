@@ -278,6 +278,8 @@ public class MapPanZoom2D : MonoBehaviour, IDragHandler, IBeginDragHandler
     #region Route
     public void CalculatePath()
     {
+        if (!_selectedStand.GetIRLTransform()) return;
+
         if (!_selectedStand)
         {
             Debug.Log("No stand selected");
