@@ -15085,9 +15085,9 @@ MonoBehaviour:
   videoDisplay: {fileID: 1830495724}
   videoPlayer: {fileID: 336574960}
   videos:
-  - videoName: 1
-    clip: {fileID: 32900000, guid: 5f3e00de04f39ea42aa20302b524daf5, type: 3}
-  - videoName: 2
+  - videoName: XBRI
+    clip: {fileID: 32900000, guid: 746c8fc22c5e54d4eb9cac575f29abb1, type: 3}
+  - videoName: 'EXEMPLO '
     clip: {fileID: 32900000, guid: 27eccc4db6b3ad145befcd4158d3a0d6, type: 3}
 --- !u!1 &1319888604
 GameObject:
