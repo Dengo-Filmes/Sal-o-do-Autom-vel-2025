@@ -80,20 +80,22 @@ public class PathController : MonoBehaviour
         if (corners.Count == 0)
             return result;
 
-        result.Add(corners[0]);
+        // Força Y = 1 no primeiro ponto
+        Vector3 first = corners[0];
+        first.y = 1;
+        result.Add(first);
 
         int i = 0;
 
         while (i < corners.Count - 1)
         {
-            Vector3 start = result[result.Count - 1];   // importante: usar o valor já normalizado
+            Vector3 start = result[result.Count - 1];   // já normalizado
             Vector3 next = corners[i + 1];
 
             float dx = Mathf.Abs(next.x - start.x);
             float dz = Mathf.Abs(next.z - start.z);
 
             bool horizontal = dx > dz;
-
             int farthest = i + 1;
 
             // Encontra o último ponto contínuo na mesma direção
@@ -115,17 +117,14 @@ public class PathController : MonoBehaviour
             // Ponto final bruto
             Vector3 end = corners[farthest];
 
-            // ----------------------------------------------------
-            // NORMALIZAÇÃO: média aplicada nos DOIS pontos
-            // ----------------------------------------------------
-
+            // -------------------------------
+            // NORMALIZAÇÃO DOS EIXOS
+            // -------------------------------
             if (horizontal)
             {
                 float avgZ = (start.z + end.z) * 0.5f;
                 start.z = avgZ;
                 end.z = avgZ;
-
-                // atualizar o último ponto já colocado
                 result[result.Count - 1] = start;
             }
             else
@@ -133,9 +132,11 @@ public class PathController : MonoBehaviour
                 float avgX = (start.x + end.x) * 0.5f;
                 start.x = avgX;
                 end.x = avgX;
-
                 result[result.Count - 1] = start;
             }
+
+            // 🔥 GARANTE Y = 1 NO END
+            end.y = 1;
 
             result.Add(end);
             i = farthest;
