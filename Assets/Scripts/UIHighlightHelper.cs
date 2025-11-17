@@ -1,6 +1,6 @@
-using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
+using System.Collections;
 
 public static class UIHighlightHelper
 {
@@ -8,9 +8,12 @@ public static class UIHighlightHelper
     {
         if (img == null) yield break;
 
-        var original = img.color;
+        Color original = img.color;
+
         img.color = color;
         yield return new WaitForSeconds(duration);
-        img.color = original;
+
+        if (img != null)
+            img.color = original;
     }
 }

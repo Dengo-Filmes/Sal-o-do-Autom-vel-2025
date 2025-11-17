@@ -21,6 +21,7 @@ public class Stand2D : MonoBehaviour, IPointerClickHandler
     void Awake()
     {
         image = GetComponent<UnityEngine.UI.Image>();
+
         if (image != null)
             originalColor = image.color;
 
@@ -44,7 +45,11 @@ public class Stand2D : MonoBehaviour, IPointerClickHandler
 
         if (arrowPrefab != null && mapTransform != null)
         {
-            ArrowIndicatorController.Create(arrowPrefab, mapTransform, GetComponent<RectTransform>());
+            ArrowIndicatorController.Create(
+                arrowPrefab,
+                mapTransform,
+                GetComponent<RectTransform>()
+            );
         }
         else
         {
@@ -54,8 +59,10 @@ public class Stand2D : MonoBehaviour, IPointerClickHandler
         if (image != null)
         {
             StopAllCoroutines();
+            image.color = originalColor;   // <<< garante que nunca acumula cor
             StartCoroutine(UIHighlightHelper.Flash(image, highlightColor, 0.25f));
         }
+
         Debug.Log($"Stand selecionado: {standName}");
     }
 
@@ -72,10 +79,10 @@ public class Stand2D : MonoBehaviour, IPointerClickHandler
         Vector3 rayDir = MapPanZoom2D.Instance.mapCamera.transform.forward * 15;
         Ray ray = new(worldPoint, rayDir);
 
-        if(Physics.Raycast(ray, out RaycastHit hit, 50f, 1 << 6))
+        if (Physics.Raycast(ray, out RaycastHit hit, 50f, 1 << 6))
         {
             _irlTransform = hit.transform;
-            Debug.Log("IRL Stand is " +  _irlTransform.name);
+            Debug.Log("IRL Stand encontrado: " + _irlTransform.name);
         }
     }
 
