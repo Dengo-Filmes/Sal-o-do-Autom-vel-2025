@@ -1,0 +1,23 @@
+using UnityEngine;
+
+public class TotemController : MonoBehaviour
+{
+    [SerializeField] Transform _irlTotem;
+
+    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    void Start()
+    {
+        
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
+
+    public Transform GetIRLTotem()
+    {
+        return _irlTotem;
+    }
+}

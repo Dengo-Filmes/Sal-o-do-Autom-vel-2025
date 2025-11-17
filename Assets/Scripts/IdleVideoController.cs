@@ -76,6 +76,7 @@ public class IdleVideoController : MonoBehaviour, IPointerDownHandler
 
     private void ShowVideo()
     {
+        PathController.Instance.ResetPath();
         if (fading || videoActive) return;
         StartCoroutine(FadeVideo(true));
     }

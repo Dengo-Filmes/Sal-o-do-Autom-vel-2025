@@ -7,6 +7,8 @@ using UnityEngine.InputSystem.EnhancedTouch;
 
 public class MapPanZoom2D : MonoBehaviour, IDragHandler, IBeginDragHandler
 {
+    public static MapPanZoom2D Instance;
+
     [Header("References")]
     public RectTransform mapTransform;
     public RectTransform containerRect;
@@ -27,6 +29,15 @@ public class MapPanZoom2D : MonoBehaviour, IDragHandler, IBeginDragHandler
 
     private Vector2 initialPos;
     private float initialZoom;
+
+    Stand2D _selectedStand;
+
+    public Camera mapCamera;
+
+    private void Awake()
+    {
+        Instance = this;
+    }
 
     [Header("Pinch")]
     public float pinchSensitivity = 0.003f;
@@ -58,12 +69,17 @@ public class MapPanZoom2D : MonoBehaviour, IDragHandler, IBeginDragHandler
     void Update()
     {
         inactivityTimer += Time.deltaTime;
-
         HandlePinchZoom_EnhancedTouch();
 
         if (inactivityTimer >= inactivityTime && !isFocusing)
         {
             ResetMapToDefault();
+            PathController.Instance.ResetPath();
+        }
+
+        if (zoom != 1)
+        {
+            PathController.Instance.ResetPath();
         }
     }
 
@@ -86,16 +102,18 @@ public class MapPanZoom2D : MonoBehaviour, IDragHandler, IBeginDragHandler
         if (isFocusing) return;
 
         zoom = Mathf.Clamp(value, minZoom, maxZoom);
-        mapTransform.localScale = Vector3.one * zoom;
 
+        mapTransform.localScale = Vector3.one * zoom;
         ClampMapInsideBounds();
         ResetInactivityTimer();
     }
 
-    public void FocusOnStand(RectTransform standRect, float zoomTarget = 4f)
+    public void FocusOnStand(Stand2D standRect, float zoomTarget = 4f)
     {
+        _selectedStand = standRect;
+
         StopAllFocusCoroutines();
-        focusCoroutine = StartCoroutine(FocusRoutine(standRect, zoomTarget));
+        focusCoroutine = StartCoroutine(FocusRoutine(standRect.GetComponent<RectTransform>(), zoomTarget));
         ResetInactivityTimer();
     }
 
@@ -155,6 +173,7 @@ public class MapPanZoom2D : MonoBehaviour, IDragHandler, IBeginDragHandler
     private void ResetMapToDefault()
     {
         if (isFocusing) return;
+        _selectedStand = null;
         StopAllFocusCoroutines();
 
         ArrowManager.Instance?.ClearAll();
@@ -274,4 +293,21 @@ public class MapPanZoom2D : MonoBehaviour, IDragHandler, IBeginDragHandler
 
         ResetInactivityTimer();
     }
+
+    #region Route
+    public void CalculatePath()
+    {
+        if (!_selectedStand.GetIRLTransform()) return;
+
+        if (!_selectedStand)
+        {
+            Debug.Log("No stand selected");
+            return;
+        }
+
+        ResetCamera();
+        PathController.Instance.SetPositions(OpenSettingsController.Instance.GetCurrentTotem().GetComponent<TotemController>().GetIRLTotem(), _selectedStand.GetIRLTransform());
+        PathController.Instance.CalculatePath();
+    }
+    #endregion
 }
