@@ -55,7 +55,7 @@ public class MapPanZoom2D : MonoBehaviour, IDragHandler, IBeginDragHandler
     {
         inactivityTimer += Time.deltaTime;
 
-        HandlePinchZoom(); // << pinch controla apenas o slider
+        HandlePinchZoom();
 
         if (inactivityTimer >= inactivityTime && !isFocusing)
         {
@@ -86,10 +86,8 @@ public class MapPanZoom2D : MonoBehaviour, IDragHandler, IBeginDragHandler
     public void SetZoom(float value)
     {
         if (isFocusing) return;
-
         zoom = value;
         mapTransform.localScale = Vector3.one * zoom;
-
         ClampMapInsideBounds();
         ResetInactivityTimer();
     }
@@ -246,33 +244,35 @@ public class MapPanZoom2D : MonoBehaviour, IDragHandler, IBeginDragHandler
         ClampMapInsideBounds();
     }
 
-    //-------------------------
-    // PINCH ALTERA O SLIDER
-    //-------------------------
+
     private void HandlePinchZoom()
     {
-        if (zoomSlider == null) return;
-        if (Input.touchCount != 2) return;
-        if (isFocusing) return;
+        if (Input.touchCount == 2 && !isFocusing)
+        {
+            Touch t0 = Input.GetTouch(0);
+            Touch t1 = Input.GetTouch(1);
 
-        Touch t0 = Input.GetTouch(0);
-        Touch t1 = Input.GetTouch(1);
+            Vector2 t0Prev = t0.position - t0.deltaPosition;
+            Vector2 t1Prev = t1.position - t1.deltaPosition;
 
-        Vector2 prev0 = t0.position - t0.deltaPosition;
-        Vector2 prev1 = t1.position - t1.deltaPosition;
+            float prevDist = Vector2.Distance(t0Prev, t1Prev);
+            float currDist = Vector2.Distance(t0.position, t1.position);
+            float delta = currDist - prevDist;
 
-        float prevDist = Vector2.Distance(prev0, prev1);
-        float currDist = Vector2.Distance(t0.position, t1.position);
+            float pinchSpeed = 0.01f;
 
-        float delta = currDist - prevDist;
+            float newZoom = zoom + delta * pinchSpeed;
+            newZoom = Mathf.Clamp(newZoom, minZoom, maxZoom);
 
-        float pinchSensitivity = 0.005f;
+            zoom = newZoom;
+            mapTransform.localScale = Vector3.one * zoom;
 
-        float newSliderValue = zoomSlider.value + delta * pinchSensitivity;
+            if (zoomSlider != null)
+                zoomSlider.value = zoom;
 
-        zoomSlider.value = Mathf.Clamp(newSliderValue, minZoom, maxZoom);
-
-        ResetInactivityTimer();
+            ClampMapInsideBounds();
+            ResetInactivityTimer();
+        }
     }
 
     #region Route
