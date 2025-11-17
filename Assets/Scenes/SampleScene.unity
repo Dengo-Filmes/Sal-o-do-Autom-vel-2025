@@ -174,6 +174,7 @@ MonoBehaviour:
   focusZoom: 1.5
   arrowPrefab: {fileID: 2536400114329630426, guid: 27cd8e8301cb0b84f8a740e49865f5a6, type: 3}
   mapTransform: {fileID: 1608541172}
+  originalColor: {r: 0, g: 0, b: 0, a: 0}
   _irlTransform: {fileID: 0}
 --- !u!61 &630671
 BoxCollider2D:
@@ -389,6 +390,7 @@ MonoBehaviour:
   focusZoom: 1.5
   arrowPrefab: {fileID: 2536400114329630426, guid: 27cd8e8301cb0b84f8a740e49865f5a6, type: 3}
   mapTransform: {fileID: 1608541172}
+  originalColor: {r: 0, g: 0, b: 0, a: 0}
   _irlTransform: {fileID: 96379131}
 --- !u!61 &22890684
 BoxCollider2D:
@@ -667,6 +669,7 @@ MonoBehaviour:
   focusZoom: 1.5
   arrowPrefab: {fileID: 2536400114329630426, guid: 27cd8e8301cb0b84f8a740e49865f5a6, type: 3}
   mapTransform: {fileID: 1608541172}
+  originalColor: {r: 0, g: 0, b: 0, a: 0}
   _irlTransform: {fileID: 221498738}
 --- !u!61 &50555336
 BoxCollider2D:
@@ -807,6 +810,7 @@ MonoBehaviour:
   focusZoom: 1.5
   arrowPrefab: {fileID: 2536400114329630426, guid: 27cd8e8301cb0b84f8a740e49865f5a6, type: 3}
   mapTransform: {fileID: 1608541172}
+  originalColor: {r: 0, g: 0, b: 0, a: 0}
   _irlTransform: {fileID: 1225226240}
 --- !u!61 &54088243
 BoxCollider2D:
@@ -947,6 +951,7 @@ MonoBehaviour:
   focusZoom: 1.5
   arrowPrefab: {fileID: 2536400114329630426, guid: 27cd8e8301cb0b84f8a740e49865f5a6, type: 3}
   mapTransform: {fileID: 1608541172}
+  originalColor: {r: 0, g: 0, b: 0, a: 0}
   _irlTransform: {fileID: 1463350699}
 --- !u!61 &55652636
 BoxCollider2D:
@@ -1224,6 +1229,7 @@ MonoBehaviour:
   focusZoom: 1.5
   arrowPrefab: {fileID: 2536400114329630426, guid: 27cd8e8301cb0b84f8a740e49865f5a6, type: 3}
   mapTransform: {fileID: 1608541172}
+  originalColor: {r: 0, g: 0, b: 0, a: 0}
   _irlTransform: {fileID: 1221747316}
 --- !u!61 &68193090
 BoxCollider2D:
@@ -1540,6 +1546,7 @@ MonoBehaviour:
   focusZoom: 1.5
   arrowPrefab: {fileID: 2536400114329630426, guid: 27cd8e8301cb0b84f8a740e49865f5a6, type: 3}
   mapTransform: {fileID: 1608541172}
+  originalColor: {r: 0, g: 0, b: 0, a: 0}
   _irlTransform: {fileID: 1785345321}
 --- !u!61 &79464223
 BoxCollider2D:
@@ -1680,6 +1687,7 @@ MonoBehaviour:
   focusZoom: 1.5
   arrowPrefab: {fileID: 2536400114329630426, guid: 27cd8e8301cb0b84f8a740e49865f5a6, type: 3}
   mapTransform: {fileID: 1608541172}
+  originalColor: {r: 0, g: 0, b: 0, a: 0}
   _irlTransform: {fileID: 612350525}
 --- !u!61 &91156793
 BoxCollider2D:
@@ -1888,6 +1896,7 @@ MonoBehaviour:
   focusZoom: 1.5
   arrowPrefab: {fileID: 2536400114329630426, guid: 27cd8e8301cb0b84f8a740e49865f5a6, type: 3}
   mapTransform: {fileID: 1608541172}
+  originalColor: {r: 0, g: 0, b: 0, a: 0}
   _irlTransform: {fileID: 675436778}
 --- !u!61 &106883280
 BoxCollider2D:
@@ -2159,6 +2168,7 @@ MonoBehaviour:
   focusZoom: 1.5
   arrowPrefab: {fileID: 2536400114329630426, guid: 27cd8e8301cb0b84f8a740e49865f5a6, type: 3}
   mapTransform: {fileID: 1608541172}
+  originalColor: {r: 0, g: 0, b: 0, a: 0}
   _irlTransform: {fileID: 0}
 --- !u!61 &137425937
 BoxCollider2D:
@@ -2367,6 +2377,7 @@ MonoBehaviour:
   focusZoom: 1.5
   arrowPrefab: {fileID: 2536400114329630426, guid: 27cd8e8301cb0b84f8a740e49865f5a6, type: 3}
   mapTransform: {fileID: 1608541172}
+  originalColor: {r: 0, g: 0, b: 0, a: 0}
   _irlTransform: {fileID: 2109474532}
 --- !u!61 &140341183
 BoxCollider2D:
@@ -2507,6 +2518,7 @@ MonoBehaviour:
   focusZoom: 1.5
   arrowPrefab: {fileID: 2536400114329630426, guid: 27cd8e8301cb0b84f8a740e49865f5a6, type: 3}
   mapTransform: {fileID: 1608541172}
+  originalColor: {r: 0, g: 0, b: 0, a: 0}
   _irlTransform: {fileID: 1319232611}
 --- !u!61 &141204026
 BoxCollider2D:
@@ -2647,6 +2659,7 @@ MonoBehaviour:
   focusZoom: 1.5
   arrowPrefab: {fileID: 2536400114329630426, guid: 27cd8e8301cb0b84f8a740e49865f5a6, type: 3}
   mapTransform: {fileID: 1608541172}
+  originalColor: {r: 0, g: 0, b: 0, a: 0}
   _irlTransform: {fileID: 1710405672}
 --- !u!61 &174916379
 BoxCollider2D:
@@ -2787,6 +2800,7 @@ MonoBehaviour:
   focusZoom: 1.5
   arrowPrefab: {fileID: 2536400114329630426, guid: 27cd8e8301cb0b84f8a740e49865f5a6, type: 3}
   mapTransform: {fileID: 1608541172}
+  originalColor: {r: 0, g: 0, b: 0, a: 0}
   _irlTransform: {fileID: 1660061759}
 --- !u!61 &177086403
 BoxCollider2D:
@@ -2995,6 +3009,7 @@ MonoBehaviour:
   focusZoom: 1.5
   arrowPrefab: {fileID: 2536400114329630426, guid: 27cd8e8301cb0b84f8a740e49865f5a6, type: 3}
   mapTransform: {fileID: 1608541172}
+  originalColor: {r: 0, g: 0, b: 0, a: 0}
   _irlTransform: {fileID: 1001135194}
 --- !u!61 &183058401
 BoxCollider2D:
@@ -3135,6 +3150,7 @@ MonoBehaviour:
   focusZoom: 1.5
   arrowPrefab: {fileID: 2536400114329630426, guid: 27cd8e8301cb0b84f8a740e49865f5a6, type: 3}
   mapTransform: {fileID: 1608541172}
+  originalColor: {r: 0, g: 0, b: 0, a: 0}
   _irlTransform: {fileID: 1373407459}
 --- !u!61 &185741788
 BoxCollider2D:
@@ -3454,6 +3470,7 @@ MonoBehaviour:
   focusZoom: 1.5
   arrowPrefab: {fileID: 2536400114329630426, guid: 27cd8e8301cb0b84f8a740e49865f5a6, type: 3}
   mapTransform: {fileID: 1608541172}
+  originalColor: {r: 0, g: 0, b: 0, a: 0}
   _irlTransform: {fileID: 0}
 --- !u!61 &214563366
 BoxCollider2D:
@@ -3657,6 +3674,7 @@ MonoBehaviour:
   focusZoom: 1.5
   arrowPrefab: {fileID: 2536400114329630426, guid: 27cd8e8301cb0b84f8a740e49865f5a6, type: 3}
   mapTransform: {fileID: 1608541172}
+  originalColor: {r: 0, g: 0, b: 0, a: 0}
   _irlTransform: {fileID: 2134812106}
 --- !u!61 &218630580
 BoxCollider2D:
@@ -3865,6 +3883,7 @@ MonoBehaviour:
   focusZoom: 1.5
   arrowPrefab: {fileID: 2536400114329630426, guid: 27cd8e8301cb0b84f8a740e49865f5a6, type: 3}
   mapTransform: {fileID: 1608541172}
+  originalColor: {r: 0, g: 0, b: 0, a: 0}
   _irlTransform: {fileID: 907475020}
 --- !u!61 &228753792
 BoxCollider2D:
@@ -4228,6 +4247,7 @@ MonoBehaviour:
   focusZoom: 1.5
   arrowPrefab: {fileID: 2536400114329630426, guid: 27cd8e8301cb0b84f8a740e49865f5a6, type: 3}
   mapTransform: {fileID: 1608541172}
+  originalColor: {r: 0, g: 0, b: 0, a: 0}
   _irlTransform: {fileID: 390705578}
 --- !u!61 &256857047
 BoxCollider2D:
@@ -4368,6 +4388,7 @@ MonoBehaviour:
   focusZoom: 1.5
   arrowPrefab: {fileID: 2536400114329630426, guid: 27cd8e8301cb0b84f8a740e49865f5a6, type: 3}
   mapTransform: {fileID: 1608541172}
+  originalColor: {r: 0, g: 0, b: 0, a: 0}
   _irlTransform: {fileID: 461488210}
 --- !u!61 &267460960
 BoxCollider2D:
@@ -4576,6 +4597,7 @@ MonoBehaviour:
   focusZoom: 1.5
   arrowPrefab: {fileID: 2536400114329630426, guid: 27cd8e8301cb0b84f8a740e49865f5a6, type: 3}
   mapTransform: {fileID: 1608541172}
+  originalColor: {r: 0, g: 0, b: 0, a: 0}
   _irlTransform: {fileID: 776163754}
 --- !u!61 &278182581
 BoxCollider2D:
@@ -4943,6 +4965,7 @@ MonoBehaviour:
   focusZoom: 1.5
   arrowPrefab: {fileID: 2536400114329630426, guid: 27cd8e8301cb0b84f8a740e49865f5a6, type: 3}
   mapTransform: {fileID: 1608541172}
+  originalColor: {r: 0, g: 0, b: 0, a: 0}
   _irlTransform: {fileID: 812938782}
 --- !u!61 &347795547
 BoxCollider2D:
@@ -5191,6 +5214,7 @@ MonoBehaviour:
   focusZoom: 1.5
   arrowPrefab: {fileID: 2536400114329630426, guid: 27cd8e8301cb0b84f8a740e49865f5a6, type: 3}
   mapTransform: {fileID: 1608541172}
+  originalColor: {r: 0, g: 0, b: 0, a: 0}
   _irlTransform: {fileID: 1481469618}
 --- !u!61 &357989966
 BoxCollider2D:
@@ -5331,6 +5355,7 @@ MonoBehaviour:
   focusZoom: 1.5
   arrowPrefab: {fileID: 2536400114329630426, guid: 27cd8e8301cb0b84f8a740e49865f5a6, type: 3}
   mapTransform: {fileID: 1608541172}
+  originalColor: {r: 0, g: 0, b: 0, a: 0}
   _irlTransform: {fileID: 403780097}
 --- !u!61 &369295696
 BoxCollider2D:
@@ -5471,6 +5496,7 @@ MonoBehaviour:
   focusZoom: 1.5
   arrowPrefab: {fileID: 2536400114329630426, guid: 27cd8e8301cb0b84f8a740e49865f5a6, type: 3}
   mapTransform: {fileID: 1608541172}
+  originalColor: {r: 0, g: 0, b: 0, a: 0}
   _irlTransform: {fileID: 1650177818}
 --- !u!61 &371340508
 BoxCollider2D:
@@ -5611,6 +5637,7 @@ MonoBehaviour:
   focusZoom: 1.5
   arrowPrefab: {fileID: 2536400114329630426, guid: 27cd8e8301cb0b84f8a740e49865f5a6, type: 3}
   mapTransform: {fileID: 1608541172}
+  originalColor: {r: 0, g: 0, b: 0, a: 0}
   _irlTransform: {fileID: 0}
 --- !u!61 &376368339
 BoxCollider2D:
@@ -5751,6 +5778,7 @@ MonoBehaviour:
   focusZoom: 1.5
   arrowPrefab: {fileID: 2536400114329630426, guid: 27cd8e8301cb0b84f8a740e49865f5a6, type: 3}
   mapTransform: {fileID: 1608541172}
+  originalColor: {r: 0, g: 0, b: 0, a: 0}
   _irlTransform: {fileID: 1668724489}
 --- !u!61 &376544923
 BoxCollider2D:
@@ -6238,6 +6266,7 @@ MonoBehaviour:
   focusZoom: 1.5
   arrowPrefab: {fileID: 2536400114329630426, guid: 27cd8e8301cb0b84f8a740e49865f5a6, type: 3}
   mapTransform: {fileID: 1608541172}
+  originalColor: {r: 0, g: 0, b: 0, a: 0}
   _irlTransform: {fileID: 0}
 --- !u!61 &403557148
 BoxCollider2D:
@@ -6446,6 +6475,7 @@ MonoBehaviour:
   focusZoom: 1.5
   arrowPrefab: {fileID: 2536400114329630426, guid: 27cd8e8301cb0b84f8a740e49865f5a6, type: 3}
   mapTransform: {fileID: 1608541172}
+  originalColor: {r: 0, g: 0, b: 0, a: 0}
   _irlTransform: {fileID: 298046097}
 --- !u!61 &415399029
 BoxCollider2D:
@@ -7255,6 +7285,7 @@ MonoBehaviour:
   focusZoom: 1.5
   arrowPrefab: {fileID: 2536400114329630426, guid: 27cd8e8301cb0b84f8a740e49865f5a6, type: 3}
   mapTransform: {fileID: 1608541172}
+  originalColor: {r: 0, g: 0, b: 0, a: 0}
   _irlTransform: {fileID: 0}
 --- !u!61 &449870540
 BoxCollider2D:
@@ -7594,6 +7625,7 @@ MonoBehaviour:
   focusZoom: 1.5
   arrowPrefab: {fileID: 2536400114329630426, guid: 27cd8e8301cb0b84f8a740e49865f5a6, type: 3}
   mapTransform: {fileID: 1608541172}
+  originalColor: {r: 0, g: 0, b: 0, a: 0}
   _irlTransform: {fileID: 195170489}
 --- !u!61 &470895888
 BoxCollider2D:
@@ -7865,6 +7897,7 @@ MonoBehaviour:
   focusZoom: 1.5
   arrowPrefab: {fileID: 2536400114329630426, guid: 27cd8e8301cb0b84f8a740e49865f5a6, type: 3}
   mapTransform: {fileID: 1608541172}
+  originalColor: {r: 0, g: 0, b: 0, a: 0}
   _irlTransform: {fileID: 1668724489}
 --- !u!61 &485193692
 BoxCollider2D:
@@ -8005,6 +8038,7 @@ MonoBehaviour:
   focusZoom: 1.5
   arrowPrefab: {fileID: 2536400114329630426, guid: 27cd8e8301cb0b84f8a740e49865f5a6, type: 3}
   mapTransform: {fileID: 1608541172}
+  originalColor: {r: 0, g: 0, b: 0, a: 0}
   _irlTransform: {fileID: 0}
 --- !u!61 &485442794
 BoxCollider2D:
@@ -8382,6 +8416,7 @@ MonoBehaviour:
   focusZoom: 1.5
   arrowPrefab: {fileID: 2536400114329630426, guid: 27cd8e8301cb0b84f8a740e49865f5a6, type: 3}
   mapTransform: {fileID: 1608541172}
+  originalColor: {r: 0, g: 0, b: 0, a: 0}
   _irlTransform: {fileID: 0}
 --- !u!61 &498027975
 BoxCollider2D:
@@ -8522,6 +8557,7 @@ MonoBehaviour:
   focusZoom: 1.5
   arrowPrefab: {fileID: 2536400114329630426, guid: 27cd8e8301cb0b84f8a740e49865f5a6, type: 3}
   mapTransform: {fileID: 1608541172}
+  originalColor: {r: 0, g: 0, b: 0, a: 0}
   _irlTransform: {fileID: 0}
 --- !u!61 &506087730
 BoxCollider2D:
@@ -8788,6 +8824,7 @@ MonoBehaviour:
   focusZoom: 1.5
   arrowPrefab: {fileID: 2536400114329630426, guid: 27cd8e8301cb0b84f8a740e49865f5a6, type: 3}
   mapTransform: {fileID: 1608541172}
+  originalColor: {r: 0, g: 0, b: 0, a: 0}
   _irlTransform: {fileID: 1345162434}
 --- !u!61 &514774666
 BoxCollider2D:
@@ -9238,7 +9275,7 @@ MonoBehaviour:
   focusLerpSpeed: 3
   inactivityTime: 10
   mapCamera: {fileID: 2015482802}
-  pinchSensitivity: 0.001
+  pinchSensitivity: 0.01
 --- !u!114 &529260150
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9308,6 +9345,7 @@ MonoBehaviour:
   focusZoom: 1.5
   arrowPrefab: {fileID: 2536400114329630426, guid: 27cd8e8301cb0b84f8a740e49865f5a6, type: 3}
   mapTransform: {fileID: 1608541172}
+  originalColor: {r: 0, g: 0, b: 0, a: 0}
   _irlTransform: {fileID: 1487332286}
 --- !u!61 &540628400
 BoxCollider2D:
@@ -9591,6 +9629,7 @@ MonoBehaviour:
   focusZoom: 1.5
   arrowPrefab: {fileID: 2536400114329630426, guid: 27cd8e8301cb0b84f8a740e49865f5a6, type: 3}
   mapTransform: {fileID: 1608541172}
+  originalColor: {r: 0, g: 0, b: 0, a: 0}
   _irlTransform: {fileID: 0}
 --- !u!61 &549979869
 BoxCollider2D:
@@ -9731,6 +9770,7 @@ MonoBehaviour:
   focusZoom: 1.5
   arrowPrefab: {fileID: 2536400114329630426, guid: 27cd8e8301cb0b84f8a740e49865f5a6, type: 3}
   mapTransform: {fileID: 1608541172}
+  originalColor: {r: 0, g: 0, b: 0, a: 0}
   _irlTransform: {fileID: 2108713354}
 --- !u!61 &554349555
 BoxCollider2D:
@@ -10172,6 +10212,7 @@ MonoBehaviour:
   focusZoom: 1.5
   arrowPrefab: {fileID: 2536400114329630426, guid: 27cd8e8301cb0b84f8a740e49865f5a6, type: 3}
   mapTransform: {fileID: 1608541172}
+  originalColor: {r: 0, g: 0, b: 0, a: 0}
   _irlTransform: {fileID: 0}
 --- !u!61 &574689753
 BoxCollider2D:
@@ -10337,6 +10378,7 @@ GameObject:
   - component: {fileID: 581031667}
   - component: {fileID: 581031666}
   - component: {fileID: 581031665}
+  - component: {fileID: 581031668}
   m_Layer: 5
   m_Name: Path
   m_TagString: Untagged
@@ -10433,15 +10475,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 0.764151, g: 0.764151, b: 0.764151, a: 1}
+  m_Color: {r: 1, g: 0.4901961, b: 0.13725491, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
-  m_Type: 0
+  m_Sprite: {fileID: 21300000, guid: 9d1e87cf18b78e84285230c55550613a, type: 3}
+  m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -10449,7 +10491,7 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
+  m_PixelsPerUnitMultiplier: 3
 --- !u!222 &581031667
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -10458,6 +10500,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 581031663}
   m_CullTransparentMesh: 1
+--- !u!114 &581031668
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 581031663}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc21db209412efa4f9d058e31c5c4664, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ButtonClickEffect
+  scaleAmount: 1.2
+  duration: 0.2
 --- !u!1 &584884724
 GameObject:
   m_ObjectHideFlags: 0
@@ -10513,6 +10569,7 @@ MonoBehaviour:
   focusZoom: 1.5
   arrowPrefab: {fileID: 2536400114329630426, guid: 27cd8e8301cb0b84f8a740e49865f5a6, type: 3}
   mapTransform: {fileID: 1608541172}
+  originalColor: {r: 0, g: 0, b: 0, a: 0}
   _irlTransform: {fileID: 1139171591}
 --- !u!61 &584884727
 BoxCollider2D:
@@ -10716,6 +10773,7 @@ MonoBehaviour:
   focusZoom: 1.5
   arrowPrefab: {fileID: 2536400114329630426, guid: 27cd8e8301cb0b84f8a740e49865f5a6, type: 3}
   mapTransform: {fileID: 1608541172}
+  originalColor: {r: 0, g: 0, b: 0, a: 0}
   _irlTransform: {fileID: 619881359}
 --- !u!61 &598762454
 BoxCollider2D:
@@ -11069,6 +11127,7 @@ MonoBehaviour:
   focusZoom: 1.5
   arrowPrefab: {fileID: 2536400114329630426, guid: 27cd8e8301cb0b84f8a740e49865f5a6, type: 3}
   mapTransform: {fileID: 1608541172}
+  originalColor: {r: 0, g: 0, b: 0, a: 0}
   _irlTransform: {fileID: 619881359}
 --- !u!61 &603072138
 BoxCollider2D:
@@ -12162,6 +12221,7 @@ MonoBehaviour:
   focusZoom: 1.5
   arrowPrefab: {fileID: 2536400114329630426, guid: 27cd8e8301cb0b84f8a740e49865f5a6, type: 3}
   mapTransform: {fileID: 1608541172}
+  originalColor: {r: 0, g: 0, b: 0, a: 0}
   _irlTransform: {fileID: 108086964}
 --- !u!61 &676405446
 BoxCollider2D:
@@ -12302,6 +12362,7 @@ MonoBehaviour:
   focusZoom: 1.5
   arrowPrefab: {fileID: 2536400114329630426, guid: 27cd8e8301cb0b84f8a740e49865f5a6, type: 3}
   mapTransform: {fileID: 1608541172}
+  originalColor: {r: 0, g: 0, b: 0, a: 0}
   _irlTransform: {fileID: 1891716904}
 --- !u!61 &702942507
 BoxCollider2D:
@@ -12573,6 +12634,7 @@ MonoBehaviour:
   focusZoom: 1.5
   arrowPrefab: {fileID: 2536400114329630426, guid: 27cd8e8301cb0b84f8a740e49865f5a6, type: 3}
   mapTransform: {fileID: 1608541172}
+  originalColor: {r: 0, g: 0, b: 0, a: 0}
   _irlTransform: {fileID: 0}
 --- !u!61 &753981460
 BoxCollider2D:
@@ -12713,6 +12775,7 @@ MonoBehaviour:
   focusZoom: 1.5
   arrowPrefab: {fileID: 2536400114329630426, guid: 27cd8e8301cb0b84f8a740e49865f5a6, type: 3}
   mapTransform: {fileID: 1608541172}
+  originalColor: {r: 0, g: 0, b: 0, a: 0}
   _irlTransform: {fileID: 0}
 --- !u!61 &758178840
 BoxCollider2D:
@@ -12984,6 +13047,7 @@ MonoBehaviour:
   focusZoom: 1.5
   arrowPrefab: {fileID: 2536400114329630426, guid: 27cd8e8301cb0b84f8a740e49865f5a6, type: 3}
   mapTransform: {fileID: 1608541172}
+  originalColor: {r: 0, g: 0, b: 0, a: 0}
   _irlTransform: {fileID: 606597053}
 --- !u!61 &765086916
 BoxCollider2D:
@@ -13187,6 +13251,7 @@ MonoBehaviour:
   focusZoom: 1.5
   arrowPrefab: {fileID: 2536400114329630426, guid: 27cd8e8301cb0b84f8a740e49865f5a6, type: 3}
   mapTransform: {fileID: 1608541172}
+  originalColor: {r: 0, g: 0, b: 0, a: 0}
   _irlTransform: {fileID: 882150950}
 --- !u!61 &768420363
 BoxCollider2D:
@@ -13395,6 +13460,7 @@ MonoBehaviour:
   focusZoom: 1.5
   arrowPrefab: {fileID: 2536400114329630426, guid: 27cd8e8301cb0b84f8a740e49865f5a6, type: 3}
   mapTransform: {fileID: 1608541172}
+  originalColor: {r: 0, g: 0, b: 0, a: 0}
   _irlTransform: {fileID: 1787262331}
 --- !u!61 &778892960
 BoxCollider2D:
@@ -13646,6 +13712,7 @@ MonoBehaviour:
   focusZoom: 1.5
   arrowPrefab: {fileID: 2536400114329630426, guid: 27cd8e8301cb0b84f8a740e49865f5a6, type: 3}
   mapTransform: {fileID: 1608541172}
+  originalColor: {r: 0, g: 0, b: 0, a: 0}
   _irlTransform: {fileID: 274165950}
 --- !u!61 &782121320
 BoxCollider2D:
@@ -13786,6 +13853,7 @@ MonoBehaviour:
   focusZoom: 1.5
   arrowPrefab: {fileID: 2536400114329630426, guid: 27cd8e8301cb0b84f8a740e49865f5a6, type: 3}
   mapTransform: {fileID: 1608541172}
+  originalColor: {r: 0, g: 0, b: 0, a: 0}
   _irlTransform: {fileID: 1180672993}
 --- !u!61 &794237664
 BoxCollider2D:
@@ -14253,6 +14321,7 @@ MonoBehaviour:
   focusZoom: 1.5
   arrowPrefab: {fileID: 2536400114329630426, guid: 27cd8e8301cb0b84f8a740e49865f5a6, type: 3}
   mapTransform: {fileID: 1608541172}
+  originalColor: {r: 0, g: 0, b: 0, a: 0}
   _irlTransform: {fileID: 0}
 --- !u!61 &804201800
 BoxCollider2D:
@@ -14524,6 +14593,7 @@ MonoBehaviour:
   focusZoom: 1.5
   arrowPrefab: {fileID: 2536400114329630426, guid: 27cd8e8301cb0b84f8a740e49865f5a6, type: 3}
   mapTransform: {fileID: 1608541172}
+  originalColor: {r: 0, g: 0, b: 0, a: 0}
   _irlTransform: {fileID: 401744622}
 --- !u!61 &826994941
 BoxCollider2D:
@@ -14664,6 +14734,7 @@ MonoBehaviour:
   focusZoom: 1.5
   arrowPrefab: {fileID: 2536400114329630426, guid: 27cd8e8301cb0b84f8a740e49865f5a6, type: 3}
   mapTransform: {fileID: 1608541172}
+  originalColor: {r: 0, g: 0, b: 0, a: 0}
   _irlTransform: {fileID: 1536728921}
 --- !u!61 &829837733
 BoxCollider2D:
@@ -14930,6 +15001,7 @@ MonoBehaviour:
   focusZoom: 1.5
   arrowPrefab: {fileID: 2536400114329630426, guid: 27cd8e8301cb0b84f8a740e49865f5a6, type: 3}
   mapTransform: {fileID: 1608541172}
+  originalColor: {r: 0, g: 0, b: 0, a: 0}
   _irlTransform: {fileID: 1385611333}
 --- !u!61 &840037172
 BoxCollider2D:
@@ -15269,6 +15341,7 @@ MonoBehaviour:
   focusZoom: 1.5
   arrowPrefab: {fileID: 2536400114329630426, guid: 27cd8e8301cb0b84f8a740e49865f5a6, type: 3}
   mapTransform: {fileID: 1608541172}
+  originalColor: {r: 0, g: 0, b: 0, a: 0}
   _irlTransform: {fileID: 0}
 --- !u!61 &883934846
 BoxCollider2D:
@@ -15409,6 +15482,7 @@ MonoBehaviour:
   focusZoom: 1.5
   arrowPrefab: {fileID: 2536400114329630426, guid: 27cd8e8301cb0b84f8a740e49865f5a6, type: 3}
   mapTransform: {fileID: 1608541172}
+  originalColor: {r: 0, g: 0, b: 0, a: 0}
   _irlTransform: {fileID: 0}
 --- !u!61 &884653616
 BoxCollider2D:
@@ -15549,6 +15623,7 @@ MonoBehaviour:
   focusZoom: 1.5
   arrowPrefab: {fileID: 2536400114329630426, guid: 27cd8e8301cb0b84f8a740e49865f5a6, type: 3}
   mapTransform: {fileID: 1608541172}
+  originalColor: {r: 0, g: 0, b: 0, a: 0}
   _irlTransform: {fileID: 853625105}
 --- !u!61 &891205744
 BoxCollider2D:
@@ -16451,6 +16526,7 @@ MonoBehaviour:
   focusZoom: 1.5
   arrowPrefab: {fileID: 2536400114329630426, guid: 27cd8e8301cb0b84f8a740e49865f5a6, type: 3}
   mapTransform: {fileID: 1608541172}
+  originalColor: {r: 0, g: 0, b: 0, a: 0}
   _irlTransform: {fileID: 0}
 --- !u!61 &942576781
 BoxCollider2D:
@@ -16860,6 +16936,7 @@ MonoBehaviour:
   focusZoom: 1.5
   arrowPrefab: {fileID: 2536400114329630426, guid: 27cd8e8301cb0b84f8a740e49865f5a6, type: 3}
   mapTransform: {fileID: 1608541172}
+  originalColor: {r: 0, g: 0, b: 0, a: 0}
   _irlTransform: {fileID: 0}
 --- !u!61 &978875534
 BoxCollider2D:
@@ -17063,6 +17140,7 @@ MonoBehaviour:
   focusZoom: 1.5
   arrowPrefab: {fileID: 2536400114329630426, guid: 27cd8e8301cb0b84f8a740e49865f5a6, type: 3}
   mapTransform: {fileID: 1608541172}
+  originalColor: {r: 0, g: 0, b: 0, a: 0}
   _irlTransform: {fileID: 0}
 --- !u!61 &983437175
 BoxCollider2D:
@@ -17271,6 +17349,7 @@ MonoBehaviour:
   focusZoom: 1.5
   arrowPrefab: {fileID: 2536400114329630426, guid: 27cd8e8301cb0b84f8a740e49865f5a6, type: 3}
   mapTransform: {fileID: 1608541172}
+  originalColor: {r: 0, g: 0, b: 0, a: 0}
   _irlTransform: {fileID: 1410496322}
 --- !u!61 &1013443469
 BoxCollider2D:
@@ -17411,6 +17490,7 @@ MonoBehaviour:
   focusZoom: 1.5
   arrowPrefab: {fileID: 2536400114329630426, guid: 27cd8e8301cb0b84f8a740e49865f5a6, type: 3}
   mapTransform: {fileID: 1608541172}
+  originalColor: {r: 0, g: 0, b: 0, a: 0}
   _irlTransform: {fileID: 557198847}
 --- !u!61 &1013492699
 BoxCollider2D:
@@ -17853,6 +17933,7 @@ MonoBehaviour:
   focusZoom: 1.5
   arrowPrefab: {fileID: 2536400114329630426, guid: 27cd8e8301cb0b84f8a740e49865f5a6, type: 3}
   mapTransform: {fileID: 1608541172}
+  originalColor: {r: 0, g: 0, b: 0, a: 0}
   _irlTransform: {fileID: 759834108}
 --- !u!61 &1060399582
 BoxCollider2D:
@@ -17993,6 +18074,7 @@ MonoBehaviour:
   focusZoom: 1.5
   arrowPrefab: {fileID: 2536400114329630426, guid: 27cd8e8301cb0b84f8a740e49865f5a6, type: 3}
   mapTransform: {fileID: 1608541172}
+  originalColor: {r: 0, g: 0, b: 0, a: 0}
   _irlTransform: {fileID: 0}
 --- !u!61 &1063133848
 BoxCollider2D:
@@ -19622,6 +19704,7 @@ MonoBehaviour:
   focusZoom: 1.5
   arrowPrefab: {fileID: 2536400114329630426, guid: 27cd8e8301cb0b84f8a740e49865f5a6, type: 3}
   mapTransform: {fileID: 1608541172}
+  originalColor: {r: 0, g: 0, b: 0, a: 0}
   _irlTransform: {fileID: 951531080}
 --- !u!61 &1149222305
 BoxCollider2D:
@@ -20388,6 +20471,7 @@ MonoBehaviour:
   focusZoom: 1.5
   arrowPrefab: {fileID: 2536400114329630426, guid: 27cd8e8301cb0b84f8a740e49865f5a6, type: 3}
   mapTransform: {fileID: 1608541172}
+  originalColor: {r: 0, g: 0, b: 0, a: 0}
   _irlTransform: {fileID: 77676504}
 --- !u!61 &1231338092
 BoxCollider2D:
@@ -20664,6 +20748,7 @@ MonoBehaviour:
   focusZoom: 1.5
   arrowPrefab: {fileID: 2536400114329630426, guid: 27cd8e8301cb0b84f8a740e49865f5a6, type: 3}
   mapTransform: {fileID: 1608541172}
+  originalColor: {r: 0, g: 0, b: 0, a: 0}
   _irlTransform: {fileID: 635584846}
 --- !u!61 &1244057424
 BoxCollider2D:
@@ -20804,6 +20889,7 @@ MonoBehaviour:
   focusZoom: 1.5
   arrowPrefab: {fileID: 2536400114329630426, guid: 27cd8e8301cb0b84f8a740e49865f5a6, type: 3}
   mapTransform: {fileID: 1608541172}
+  originalColor: {r: 0, g: 0, b: 0, a: 0}
   _irlTransform: {fileID: 1484904580}
 --- !u!61 &1246814524
 BoxCollider2D:
@@ -21295,6 +21381,7 @@ MonoBehaviour:
   focusZoom: 1.5
   arrowPrefab: {fileID: 2536400114329630426, guid: 27cd8e8301cb0b84f8a740e49865f5a6, type: 3}
   mapTransform: {fileID: 1608541172}
+  originalColor: {r: 0, g: 0, b: 0, a: 0}
   _irlTransform: {fileID: 1937286175}
 --- !u!61 &1261444377
 BoxCollider2D:
@@ -21525,6 +21612,7 @@ MonoBehaviour:
   focusZoom: 1.5
   arrowPrefab: {fileID: 2536400114329630426, guid: 27cd8e8301cb0b84f8a740e49865f5a6, type: 3}
   mapTransform: {fileID: 1608541172}
+  originalColor: {r: 0, g: 0, b: 0, a: 0}
   _irlTransform: {fileID: 435774483}
 --- !u!61 &1269833001
 BoxCollider2D:
@@ -21667,7 +21755,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 
+  m_text: VER ROTA
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -21676,8 +21764,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4281479730
-  m_fontColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -21694,13 +21782,13 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 24
+  m_fontSize: 72
   m_fontSizeBase: 24
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
@@ -22119,6 +22207,7 @@ MonoBehaviour:
   focusZoom: 1.5
   arrowPrefab: {fileID: 2536400114329630426, guid: 27cd8e8301cb0b84f8a740e49865f5a6, type: 3}
   mapTransform: {fileID: 1608541172}
+  originalColor: {r: 0, g: 0, b: 0, a: 0}
   _irlTransform: {fileID: 477636815}
 --- !u!61 &1319888607
 BoxCollider2D:
@@ -22259,6 +22348,7 @@ MonoBehaviour:
   focusZoom: 1.5
   arrowPrefab: {fileID: 2536400114329630426, guid: 27cd8e8301cb0b84f8a740e49865f5a6, type: 3}
   mapTransform: {fileID: 1608541172}
+  originalColor: {r: 0, g: 0, b: 0, a: 0}
   _irlTransform: {fileID: 1660061759}
 --- !u!61 &1327253767
 BoxCollider2D:
@@ -22462,6 +22552,7 @@ MonoBehaviour:
   focusZoom: 1.5
   arrowPrefab: {fileID: 2536400114329630426, guid: 27cd8e8301cb0b84f8a740e49865f5a6, type: 3}
   mapTransform: {fileID: 1608541172}
+  originalColor: {r: 0, g: 0, b: 0, a: 0}
   _irlTransform: {fileID: 1897332519}
 --- !u!61 &1332957027
 BoxCollider2D:
@@ -23078,6 +23169,7 @@ MonoBehaviour:
   focusZoom: 1.5
   arrowPrefab: {fileID: 2536400114329630426, guid: 27cd8e8301cb0b84f8a740e49865f5a6, type: 3}
   mapTransform: {fileID: 1608541172}
+  originalColor: {r: 0, g: 0, b: 0, a: 0}
   _irlTransform: {fileID: 1743562628}
 --- !u!61 &1378609674
 BoxCollider2D:
@@ -23616,6 +23708,7 @@ MonoBehaviour:
   focusZoom: 1.5
   arrowPrefab: {fileID: 2536400114329630426, guid: 27cd8e8301cb0b84f8a740e49865f5a6, type: 3}
   mapTransform: {fileID: 1608541172}
+  originalColor: {r: 0, g: 0, b: 0, a: 0}
   _irlTransform: {fileID: 0}
 --- !u!61 &1405413794
 BoxCollider2D:
@@ -23951,6 +24044,7 @@ MonoBehaviour:
   focusZoom: 1.5
   arrowPrefab: {fileID: 2536400114329630426, guid: 27cd8e8301cb0b84f8a740e49865f5a6, type: 3}
   mapTransform: {fileID: 1608541172}
+  originalColor: {r: 0, g: 0, b: 0, a: 0}
   _irlTransform: {fileID: 1122801120}
 --- !u!61 &1442853626
 BoxCollider2D:
@@ -24426,6 +24520,7 @@ MonoBehaviour:
   focusZoom: 1.5
   arrowPrefab: {fileID: 2536400114329630426, guid: 27cd8e8301cb0b84f8a740e49865f5a6, type: 3}
   mapTransform: {fileID: 1608541172}
+  originalColor: {r: 0, g: 0, b: 0, a: 0}
   _irlTransform: {fileID: 195170489}
 --- !u!61 &1501240037
 BoxCollider2D:
@@ -24566,6 +24661,7 @@ MonoBehaviour:
   focusZoom: 1.5
   arrowPrefab: {fileID: 2536400114329630426, guid: 27cd8e8301cb0b84f8a740e49865f5a6, type: 3}
   mapTransform: {fileID: 1608541172}
+  originalColor: {r: 0, g: 0, b: 0, a: 0}
   _irlTransform: {fileID: 449763287}
 --- !u!61 &1505506386
 BoxCollider2D:
@@ -24895,6 +24991,7 @@ MonoBehaviour:
   focusZoom: 1.5
   arrowPrefab: {fileID: 2536400114329630426, guid: 27cd8e8301cb0b84f8a740e49865f5a6, type: 3}
   mapTransform: {fileID: 1608541172}
+  originalColor: {r: 0, g: 0, b: 0, a: 0}
   _irlTransform: {fileID: 0}
 --- !u!61 &1528018860
 BoxCollider2D:
@@ -25239,6 +25336,7 @@ MonoBehaviour:
   focusZoom: 1.5
   arrowPrefab: {fileID: 2536400114329630426, guid: 27cd8e8301cb0b84f8a740e49865f5a6, type: 3}
   mapTransform: {fileID: 1608541172}
+  originalColor: {r: 0, g: 0, b: 0, a: 0}
   _irlTransform: {fileID: 177298389}
 --- !u!61 &1542462739
 BoxCollider2D:
@@ -25379,6 +25477,7 @@ MonoBehaviour:
   focusZoom: 1.5
   arrowPrefab: {fileID: 2536400114329630426, guid: 27cd8e8301cb0b84f8a740e49865f5a6, type: 3}
   mapTransform: {fileID: 1608541172}
+  originalColor: {r: 0, g: 0, b: 0, a: 0}
   _irlTransform: {fileID: 1611568625}
 --- !u!61 &1547209188
 BoxCollider2D:
@@ -25587,6 +25686,7 @@ MonoBehaviour:
   focusZoom: 1.5
   arrowPrefab: {fileID: 2536400114329630426, guid: 27cd8e8301cb0b84f8a740e49865f5a6, type: 3}
   mapTransform: {fileID: 1608541172}
+  originalColor: {r: 0, g: 0, b: 0, a: 0}
   _irlTransform: {fileID: 1263783418}
 --- !u!61 &1561146408
 BoxCollider2D:
@@ -26148,6 +26248,7 @@ MonoBehaviour:
   focusZoom: 1.5
   arrowPrefab: {fileID: 2536400114329630426, guid: 27cd8e8301cb0b84f8a740e49865f5a6, type: 3}
   mapTransform: {fileID: 1608541172}
+  originalColor: {r: 0, g: 0, b: 0, a: 0}
   _irlTransform: {fileID: 751562015}
 --- !u!61 &1621751255
 BoxCollider2D:
@@ -26288,6 +26389,7 @@ MonoBehaviour:
   focusZoom: 1.5
   arrowPrefab: {fileID: 2536400114329630426, guid: 27cd8e8301cb0b84f8a740e49865f5a6, type: 3}
   mapTransform: {fileID: 1608541172}
+  originalColor: {r: 0, g: 0, b: 0, a: 0}
   _irlTransform: {fileID: 0}
 --- !u!61 &1630118329
 BoxCollider2D:
@@ -26949,6 +27051,7 @@ MonoBehaviour:
   focusZoom: 1.5
   arrowPrefab: {fileID: 2536400114329630426, guid: 27cd8e8301cb0b84f8a740e49865f5a6, type: 3}
   mapTransform: {fileID: 1608541172}
+  originalColor: {r: 0, g: 0, b: 0, a: 0}
   _irlTransform: {fileID: 624969287}
 --- !u!61 &1677336731
 BoxCollider2D:
@@ -27089,6 +27192,7 @@ MonoBehaviour:
   focusZoom: 1.5
   arrowPrefab: {fileID: 2536400114329630426, guid: 27cd8e8301cb0b84f8a740e49865f5a6, type: 3}
   mapTransform: {fileID: 1608541172}
+  originalColor: {r: 0, g: 0, b: 0, a: 0}
   _irlTransform: {fileID: 0}
 --- !u!61 &1689430040
 BoxCollider2D:
@@ -27304,6 +27408,7 @@ MonoBehaviour:
   focusZoom: 1.5
   arrowPrefab: {fileID: 2536400114329630426, guid: 27cd8e8301cb0b84f8a740e49865f5a6, type: 3}
   mapTransform: {fileID: 1608541172}
+  originalColor: {r: 0, g: 0, b: 0, a: 0}
   _irlTransform: {fileID: 1877998157}
 --- !u!61 &1702527933
 BoxCollider2D:
@@ -28030,6 +28135,7 @@ MonoBehaviour:
   focusZoom: 1.5
   arrowPrefab: {fileID: 2536400114329630426, guid: 27cd8e8301cb0b84f8a740e49865f5a6, type: 3}
   mapTransform: {fileID: 1608541172}
+  originalColor: {r: 0, g: 0, b: 0, a: 0}
   _irlTransform: {fileID: 466421034}
 --- !u!61 &1743831286
 BoxCollider2D:
@@ -28369,6 +28475,7 @@ MonoBehaviour:
   focusZoom: 1.5
   arrowPrefab: {fileID: 2536400114329630426, guid: 27cd8e8301cb0b84f8a740e49865f5a6, type: 3}
   mapTransform: {fileID: 1608541172}
+  originalColor: {r: 0, g: 0, b: 0, a: 0}
   _irlTransform: {fileID: 571999427}
 --- !u!61 &1769107760
 BoxCollider2D:
@@ -28509,6 +28616,7 @@ MonoBehaviour:
   focusZoom: 1.5
   arrowPrefab: {fileID: 2536400114329630426, guid: 27cd8e8301cb0b84f8a740e49865f5a6, type: 3}
   mapTransform: {fileID: 1608541172}
+  originalColor: {r: 0, g: 0, b: 0, a: 0}
   _irlTransform: {fileID: 249103655}
 --- !u!61 &1780968444
 BoxCollider2D:
@@ -28649,6 +28757,7 @@ MonoBehaviour:
   focusZoom: 1.5
   arrowPrefab: {fileID: 2536400114329630426, guid: 27cd8e8301cb0b84f8a740e49865f5a6, type: 3}
   mapTransform: {fileID: 1608541172}
+  originalColor: {r: 0, g: 0, b: 0, a: 0}
   _irlTransform: {fileID: 1251472184}
 --- !u!61 &1781912068
 BoxCollider2D:
@@ -29177,6 +29286,7 @@ MonoBehaviour:
   focusZoom: 1.5
   arrowPrefab: {fileID: 2536400114329630426, guid: 27cd8e8301cb0b84f8a740e49865f5a6, type: 3}
   mapTransform: {fileID: 1608541172}
+  originalColor: {r: 0, g: 0, b: 0, a: 0}
   _irlTransform: {fileID: 382428241}
 --- !u!61 &1826475674
 BoxCollider2D:
@@ -29389,6 +29499,7 @@ MonoBehaviour:
   focusZoom: 1.5
   arrowPrefab: {fileID: 2536400114329630426, guid: 27cd8e8301cb0b84f8a740e49865f5a6, type: 3}
   mapTransform: {fileID: 1608541172}
+  originalColor: {r: 0, g: 0, b: 0, a: 0}
   _irlTransform: {fileID: 1901694453}
 --- !u!61 &1859021291
 BoxCollider2D:
@@ -30119,6 +30230,7 @@ MonoBehaviour:
   focusZoom: 1.5
   arrowPrefab: {fileID: 2536400114329630426, guid: 27cd8e8301cb0b84f8a740e49865f5a6, type: 3}
   mapTransform: {fileID: 1608541172}
+  originalColor: {r: 0, g: 0, b: 0, a: 0}
   _irlTransform: {fileID: 1039583635}
 --- !u!61 &1892580761
 BoxCollider2D:
@@ -30672,6 +30784,7 @@ MonoBehaviour:
   focusZoom: 1.5
   arrowPrefab: {fileID: 2536400114329630426, guid: 27cd8e8301cb0b84f8a740e49865f5a6, type: 3}
   mapTransform: {fileID: 1608541172}
+  originalColor: {r: 0, g: 0, b: 0, a: 0}
   _irlTransform: {fileID: 383958874}
 --- !u!61 &1908985505
 BoxCollider2D:
@@ -30812,6 +30925,7 @@ MonoBehaviour:
   focusZoom: 1.5
   arrowPrefab: {fileID: 2536400114329630426, guid: 27cd8e8301cb0b84f8a740e49865f5a6, type: 3}
   mapTransform: {fileID: 1608541172}
+  originalColor: {r: 0, g: 0, b: 0, a: 0}
   _irlTransform: {fileID: 1139171591}
 --- !u!61 &1921192508
 BoxCollider2D:
@@ -31042,6 +31156,7 @@ MonoBehaviour:
   focusZoom: 1.5
   arrowPrefab: {fileID: 2536400114329630426, guid: 27cd8e8301cb0b84f8a740e49865f5a6, type: 3}
   mapTransform: {fileID: 1608541172}
+  originalColor: {r: 0, g: 0, b: 0, a: 0}
   _irlTransform: {fileID: 0}
 --- !u!61 &1932064254
 BoxCollider2D:
@@ -31250,6 +31365,7 @@ MonoBehaviour:
   focusZoom: 1.5
   arrowPrefab: {fileID: 2536400114329630426, guid: 27cd8e8301cb0b84f8a740e49865f5a6, type: 3}
   mapTransform: {fileID: 1608541172}
+  originalColor: {r: 0, g: 0, b: 0, a: 0}
   _irlTransform: {fileID: 1550255562}
 --- !u!61 &1961933993
 BoxCollider2D:
@@ -31390,6 +31506,7 @@ MonoBehaviour:
   focusZoom: 1.5
   arrowPrefab: {fileID: 2536400114329630426, guid: 27cd8e8301cb0b84f8a740e49865f5a6, type: 3}
   mapTransform: {fileID: 1608541172}
+  originalColor: {r: 0, g: 0, b: 0, a: 0}
   _irlTransform: {fileID: 1397462259}
 --- !u!61 &1981512626
 BoxCollider2D:
@@ -32171,6 +32288,7 @@ MonoBehaviour:
   focusZoom: 1.5
   arrowPrefab: {fileID: 2536400114329630426, guid: 27cd8e8301cb0b84f8a740e49865f5a6, type: 3}
   mapTransform: {fileID: 1608541172}
+  originalColor: {r: 0, g: 0, b: 0, a: 0}
   _irlTransform: {fileID: 0}
 --- !u!61 &2017148373
 BoxCollider2D:
@@ -33559,6 +33677,7 @@ MonoBehaviour:
   focusZoom: 1.5
   arrowPrefab: {fileID: 2536400114329630426, guid: 27cd8e8301cb0b84f8a740e49865f5a6, type: 3}
   mapTransform: {fileID: 1608541172}
+  originalColor: {r: 0, g: 0, b: 0, a: 0}
   _irlTransform: {fileID: 138326266}
 --- !u!61 &2044402927
 BoxCollider2D:
@@ -33699,6 +33818,7 @@ MonoBehaviour:
   focusZoom: 1.5
   arrowPrefab: {fileID: 2536400114329630426, guid: 27cd8e8301cb0b84f8a740e49865f5a6, type: 3}
   mapTransform: {fileID: 1608541172}
+  originalColor: {r: 0, g: 0, b: 0, a: 0}
   _irlTransform: {fileID: 1069461542}
 --- !u!61 &2053981953
 BoxCollider2D:
@@ -33839,6 +33959,7 @@ MonoBehaviour:
   focusZoom: 1.5
   arrowPrefab: {fileID: 2536400114329630426, guid: 27cd8e8301cb0b84f8a740e49865f5a6, type: 3}
   mapTransform: {fileID: 1608541172}
+  originalColor: {r: 0, g: 0, b: 0, a: 0}
   _irlTransform: {fileID: 1291091440}
 --- !u!61 &2055156498
 BoxCollider2D:
@@ -33979,6 +34100,7 @@ MonoBehaviour:
   focusZoom: 1.5
   arrowPrefab: {fileID: 2536400114329630426, guid: 27cd8e8301cb0b84f8a740e49865f5a6, type: 3}
   mapTransform: {fileID: 1608541172}
+  originalColor: {r: 0, g: 0, b: 0, a: 0}
   _irlTransform: {fileID: 882150950}
 --- !u!61 &2079284028
 BoxCollider2D:
@@ -34119,6 +34241,7 @@ MonoBehaviour:
   focusZoom: 1.5
   arrowPrefab: {fileID: 2536400114329630426, guid: 27cd8e8301cb0b84f8a740e49865f5a6, type: 3}
   mapTransform: {fileID: 1608541172}
+  originalColor: {r: 0, g: 0, b: 0, a: 0}
   _irlTransform: {fileID: 0}
 --- !u!61 &2080759746
 BoxCollider2D:
@@ -34322,6 +34445,7 @@ MonoBehaviour:
   focusZoom: 1.5
   arrowPrefab: {fileID: 2536400114329630426, guid: 27cd8e8301cb0b84f8a740e49865f5a6, type: 3}
   mapTransform: {fileID: 1608541172}
+  originalColor: {r: 0, g: 0, b: 0, a: 0}
   _irlTransform: {fileID: 577947639}
 --- !u!61 &2096076001
 BoxCollider2D:
@@ -34462,6 +34586,7 @@ MonoBehaviour:
   focusZoom: 1.5
   arrowPrefab: {fileID: 2536400114329630426, guid: 27cd8e8301cb0b84f8a740e49865f5a6, type: 3}
   mapTransform: {fileID: 1608541172}
+  originalColor: {r: 0, g: 0, b: 0, a: 0}
   _irlTransform: {fileID: 237554567}
 --- !u!61 &2096472555
 BoxCollider2D:
