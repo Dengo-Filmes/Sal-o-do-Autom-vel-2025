@@ -2,6 +2,8 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 using System.Collections;
+using UnityEngine.InputSystem;
+using UnityEngine.InputSystem.EnhancedTouch;
 
 public class MapPanZoom2D : MonoBehaviour, IDragHandler, IBeginDragHandler
 {
@@ -26,6 +28,9 @@ public class MapPanZoom2D : MonoBehaviour, IDragHandler, IBeginDragHandler
     private Vector2 initialPos;
     private float initialZoom;
 
+    [Header("Pinch")]
+    public float pinchSensitivity = 0.003f;
+
     void Start()
     {
         initialPos = mapTransform.anchoredPosition;
@@ -40,11 +45,21 @@ public class MapPanZoom2D : MonoBehaviour, IDragHandler, IBeginDragHandler
         }
     }
 
+    void OnEnable()
+    {
+        EnhancedTouchSupport.Enable();
+    }
+
+    void OnDisable()
+    {
+        EnhancedTouchSupport.Disable();
+    }
+
     void Update()
     {
         inactivityTimer += Time.deltaTime;
 
-        HandlePinchZoom(); // << pinch controla apenas o slider
+        HandlePinchZoom_EnhancedTouch();
 
         if (inactivityTimer >= inactivityTime && !isFocusing)
         {
@@ -70,7 +85,7 @@ public class MapPanZoom2D : MonoBehaviour, IDragHandler, IBeginDragHandler
     {
         if (isFocusing) return;
 
-        zoom = value;
+        zoom = Mathf.Clamp(value, minZoom, maxZoom);
         mapTransform.localScale = Vector3.one * zoom;
 
         ClampMapInsideBounds();
@@ -172,6 +187,7 @@ public class MapPanZoom2D : MonoBehaviour, IDragHandler, IBeginDragHandler
         }
 
         zoom = targetZoom;
+
         mapTransform.localScale = Vector3.one * zoom;
         mapTransform.anchoredPosition = targetPos;
 
@@ -226,31 +242,35 @@ public class MapPanZoom2D : MonoBehaviour, IDragHandler, IBeginDragHandler
         ClampMapInsideBounds();
     }
 
-    //-------------------------
-    // PINCH ALTERA O SLIDER
-    //-------------------------
-    private void HandlePinchZoom()
+    // -----------------------------------------------------
+    // PINCH USANDO EnhancedTouch (CORRIGIDO)
+    // -----------------------------------------------------
+    private void HandlePinchZoom_EnhancedTouch()
     {
         if (zoomSlider == null) return;
-        if (Input.touchCount != 2) return;
         if (isFocusing) return;
 
-        Touch t0 = Input.GetTouch(0);
-        Touch t1 = Input.GetTouch(1);
+        var touches = UnityEngine.InputSystem.EnhancedTouch.Touch.activeTouches;
+        if (touches.Count < 2) return;
 
-        Vector2 prev0 = t0.position - t0.deltaPosition;
-        Vector2 prev1 = t1.position - t1.deltaPosition;
+        var t0 = touches[0];
+        var t1 = touches[1];
+
+        // posições atuais
+        Vector2 p0 = t0.screenPosition;
+        Vector2 p1 = t1.screenPosition;
+
+        // posições anteriores usando delta
+        Vector2 prev0 = p0 - t0.delta;
+        Vector2 prev1 = p1 - t1.delta;
 
         float prevDist = Vector2.Distance(prev0, prev1);
-        float currDist = Vector2.Distance(t0.position, t1.position);
+        float currDist = Vector2.Distance(p0, p1);
 
         float delta = currDist - prevDist;
 
-        float pinchSensitivity = 0.005f;
-
-        float newSliderValue = zoomSlider.value + delta * pinchSensitivity;
-
-        zoomSlider.value = Mathf.Clamp(newSliderValue, minZoom, maxZoom);
+        float newValue = zoomSlider.value + delta * pinchSensitivity;
+        zoomSlider.value = Mathf.Clamp(newValue, minZoom, maxZoom);
 
         ResetInactivityTimer();
     }

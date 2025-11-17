@@ -6851,6 +6851,7 @@ MonoBehaviour:
   maxZoom: 3
   focusLerpSpeed: 3
   inactivityTime: 10
+  pinchSensitivity: 0.01
 --- !u!114 &529260150
 MonoBehaviour:
   m_ObjectHideFlags: 0
