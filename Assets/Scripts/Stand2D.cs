@@ -35,7 +35,7 @@ public class Stand2D : MonoBehaviour, IPointerClickHandler
 
     public void OnPointerClick(PointerEventData eventData)
     {
-        SelectIRLStand();
+        //SelectIRLStand();
 
         var map = FindObjectOfType<MapPanZoom2D>();
         if (map != null)
@@ -84,6 +84,8 @@ public class Stand2D : MonoBehaviour, IPointerClickHandler
             _irlTransform = hit.transform;
             Debug.Log("IRL Stand encontrado: " + _irlTransform.name);
         }
+
+        Debug.DrawRay(ray.origin, ray.direction * 15, Color.red);
     }
 
     public Vector3 ConvertUIToOtherCamera(RectTransform button, Camera uiCam, Camera otherCam)
