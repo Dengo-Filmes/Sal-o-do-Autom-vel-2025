@@ -3,6 +3,8 @@ using UnityEngine.UI;
 
 public class PanelController : MonoBehaviour
 {
+    public static PanelController Instance;
+
     [Header("Referências UI")]
     public GameObject menuPanel;
     public Button openButton;
@@ -13,6 +15,8 @@ public class PanelController : MonoBehaviour
 
     void Start()
     {
+        Instance = this;
+
         menuPanel.SetActive(false);
 
         openButton.onClick.AddListener(OpenPanel);
@@ -23,21 +27,23 @@ public class PanelController : MonoBehaviour
     {
         menuPanel.SetActive(true);
 
-        // Oculta o path quando o painel abre
         if (pathController != null)
-        {
             pathController.SetPathVisibility(false);
-        }
     }
 
     public void ClosePanel()
     {
         menuPanel.SetActive(false);
 
-        // Mostra o path quando o painel fecha
         if (pathController != null)
-        {
             pathController.SetPathVisibility(true);
+    }
+
+    public void ForceCloseIfOpen()
+    {
+        if (menuPanel.activeSelf)
+        {
+            ClosePanel();
         }
     }
 

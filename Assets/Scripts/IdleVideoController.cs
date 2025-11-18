@@ -144,7 +144,7 @@ public class IdleVideoWithTransition : MonoBehaviour, IPointerDownHandler
 
         float frameTime = 1f / framesPerSecond;
         float totalAnimationTime = transitionSprites.Count * frameTime;
-        float timeToStopVideo = totalAnimationTime - 0.5f; // segundos antes do final
+        float timeToStopVideo = totalAnimationTime - 0.5f;
 
         for (int i = 0; i < transitionSprites.Count; i++)
         {
@@ -226,6 +226,9 @@ public class IdleVideoWithTransition : MonoBehaviour, IPointerDownHandler
     IEnumerator ShowVideoWithFade()
     {
         inTransition = true;
+
+        if (PanelController.Instance != null)
+            PanelController.Instance.ForceCloseIfOpen();
 
         if (videoPlayer != null)
         {
