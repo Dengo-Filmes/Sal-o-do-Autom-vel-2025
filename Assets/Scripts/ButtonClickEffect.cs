@@ -4,8 +4,8 @@ using UnityEngine.UI;
 public class ButtonClickEffect : MonoBehaviour
 {
     [Header("Configurações do efeito")]
-    public float scaleAmount = 1.2f;    // quanto aumenta ao clicar
-    public float duration = 0.2f;       // duração do efeito
+    public float scaleAmount = 1.2f;    
+    public float duration = 0.2f;       
     private Vector3 originalScale;
 
     private Button button;
@@ -22,13 +22,11 @@ public class ButtonClickEffect : MonoBehaviour
 
         originalScale = transform.localScale;
 
-        // adiciona o listener do clique
         button.onClick.AddListener(OnButtonClick);
     }
 
     void OnButtonClick()
     {
-        // anima o botão para crescer e voltar
         LeanTween.scale(gameObject, originalScale * scaleAmount, duration)
                  .setEase(LeanTweenType.easeOutQuad)
                  .setOnComplete(() =>
@@ -39,7 +37,6 @@ public class ButtonClickEffect : MonoBehaviour
 
     private void OnDestroy()
     {
-        // remove listener para evitar erros
         if (button != null)
             button.onClick.RemoveListener(OnButtonClick);
     }

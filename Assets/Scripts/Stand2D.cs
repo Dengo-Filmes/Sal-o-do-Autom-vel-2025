@@ -14,7 +14,7 @@ public class Stand2D : MonoBehaviour, IPointerClickHandler
     public RectTransform mapTransform;
 
     [Header("Highlight")]
-    public Color originalColor;  // agora público para outros scripts acessarem
+    public Color originalColor;  
     private Color highlightColor = new Color(255f / 255f, 20f / 255f, 4f / 255f, 100f / 255f);
 
     private Image image;
@@ -58,8 +58,8 @@ public class Stand2D : MonoBehaviour, IPointerClickHandler
 
         if (image != null)
         {
-            StopAllCoroutines();                  // evita acúmulo
-            image.color = originalColor;          // reseta cor original
+            StopAllCoroutines();                  
+            image.color = originalColor;          
             StartCoroutine(UIHighlightHelper.Flash(image, highlightColor, 0.25f));
         }
 

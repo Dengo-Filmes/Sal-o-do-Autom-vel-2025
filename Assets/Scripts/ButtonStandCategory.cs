@@ -47,8 +47,8 @@ public class ButtonStandCategory : MonoBehaviour
             var img = stand.GetComponent<UnityEngine.UI.Image>();
             if (img != null)
             {
-                stand.StopAllCoroutines();             // evita acúmulo
-                img.color = stand.originalColor;       // reseta cor original
+                stand.StopAllCoroutines();             
+                img.color = stand.originalColor;       
                 StartCoroutine(UIHighlightHelper.Flash(img, unifiedHighlightColor, 0.4f));
             }
         }

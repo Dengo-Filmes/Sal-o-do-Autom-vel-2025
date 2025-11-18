@@ -2,8 +2,9 @@ using UnityEngine;
 using UnityEngine.Video;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
-using UnityEngine.InputSystem; 
+using UnityEngine.InputSystem;
 using System.Collections;
+using TMPro;
 
 public class IdleVideoController : MonoBehaviour, IPointerDownHandler
 {
@@ -65,8 +66,27 @@ public class IdleVideoController : MonoBehaviour, IPointerDownHandler
     public void RegisterInteraction()
     {
         ResetTimer();
+
         if (videoActive)
             HideVideo();
+    }
+
+    public void ForceCloseDropdowns()
+    {
+        TMP_Dropdown[] dropdowns = FindObjectsOfType<TMP_Dropdown>();
+        foreach (TMP_Dropdown dropdown in dropdowns)
+        {
+            dropdown.Hide();
+
+            if (dropdown.transform.childCount > 1)
+            {
+                Transform template = dropdown.transform.Find("Template");
+                if (template != null && template.gameObject.activeInHierarchy)
+                {
+                    template.gameObject.SetActive(false);
+                }
+            }
+        }
     }
 
     private void ResetTimer()
@@ -78,6 +98,9 @@ public class IdleVideoController : MonoBehaviour, IPointerDownHandler
     {
         PathController.Instance.ResetPath();
         if (fading || videoActive) return;
+
+        ForceCloseDropdowns();
+
         StartCoroutine(FadeVideo(true));
     }
 

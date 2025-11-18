@@ -261,9 +261,7 @@ public class MapPanZoom2D : MonoBehaviour, IDragHandler, IBeginDragHandler
         ClampMapInsideBounds();
     }
 
-    // -----------------------------------------------------
     // PINCH USANDO EnhancedTouch (CORRIGIDO)
-    // -----------------------------------------------------
     private void HandlePinchZoom_EnhancedTouch()
     {
         if (zoomSlider == null) return;
@@ -275,11 +273,9 @@ public class MapPanZoom2D : MonoBehaviour, IDragHandler, IBeginDragHandler
         var t0 = touches[0];
         var t1 = touches[1];
 
-        // posições atuais
         Vector2 p0 = t0.screenPosition;
         Vector2 p1 = t1.screenPosition;
 
-        // posições anteriores usando delta
         Vector2 prev0 = p0 - t0.delta;
         Vector2 prev1 = p1 - t1.delta;
 

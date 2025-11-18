@@ -18,7 +18,7 @@ public class UppercaseInput : MonoBehaviour
         {
             int caretPos = inputField.stringPosition;
             inputField.text = text.ToUpper();
-            inputField.stringPosition = caretPos; // mantém o cursor na posição certa
+            inputField.stringPosition = caretPos;
         }
     }
 }
