@@ -12,23 +12,48 @@ public class PathController : MonoBehaviour
     public Transform pointA;
     public Transform pointB;
 
+    // Variável para controlar a visibilidade
+    private bool _isVisible = true;
+
     private void Awake()
     {
         Instance = this;
     }
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         _lineRenderer = GetComponent<LineRenderer>();
     }
 
-    // Update is called once per frame
-    void Update()
+    // Método para mostrar/ocultar a linha
+    public void SetPathVisibility(bool visible)
     {
-        
+        _isVisible = visible;
+
+        if (_lineRenderer != null)
+        {
+            _lineRenderer.enabled = visible;
+        }
     }
 
+    // Método para alternar a visibilidade
+    public void TogglePathVisibility()
+    {
+        _isVisible = !_isVisible;
+
+        if (_lineRenderer != null)
+        {
+            _lineRenderer.enabled = _isVisible;
+        }
+    }
+
+    // Método para obter o estado atual da visibilidade
+    public bool IsPathVisible()
+    {
+        return _isVisible;
+    }
+
+    // Resto do seu código permanece igual...
     public void SetPositions(Transform totem, Transform destination)
     {
         pointA = totem;
@@ -76,11 +101,11 @@ public class PathController : MonoBehaviour
 
     List<Vector3> Orthogonalize(List<Vector3> corners, float threshold = 0f)
     {
+        // Seu código existente...
         List<Vector3> result = new List<Vector3>();
         if (corners.Count == 0)
             return result;
 
-        // Primeiro ponto garantido
         Vector3 first = corners[0];
         first.y = 1f;
         result.Add(first);
@@ -89,9 +114,8 @@ public class PathController : MonoBehaviour
 
         while (i < corners.Count - 1)
         {
-            Vector3 start = result[result.Count - 1]; // já normalizado
+            Vector3 start = result[result.Count - 1];
             Vector3 next = corners[i + 1];
-
             next.y = 1f;
 
             float dx = Mathf.Abs(next.x - start.x);
@@ -101,12 +125,10 @@ public class PathController : MonoBehaviour
 
             int farthest = i + 1;
 
-            // Procurar o último ponto que ainda está nesta direção
             for (int j = i + 2; j < corners.Count; j++)
             {
                 Vector3 prev = corners[farthest];
                 Vector3 curr = corners[j];
-
                 curr.y = 1f;
 
                 float dx2 = Mathf.Abs(curr.x - prev.x);
@@ -125,13 +147,8 @@ public class PathController : MonoBehaviour
                 farthest = j;
             }
 
-            // Ponto final bruto
             Vector3 end = corners[farthest];
             end.y = 1f;
-
-            // ---------------------------------------------------------
-            // NORMALIZAÇÃO DOS DOIS PONTOS (MÉDIA)
-            // ---------------------------------------------------------
 
             if (horizontal)
             {
