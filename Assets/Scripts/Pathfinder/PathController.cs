@@ -74,40 +74,51 @@ public class PathController : MonoBehaviour
         return sourcePos; // fallback
     }
 
-    List<Vector3> Orthogonalize(List<Vector3> corners)
+    List<Vector3> Orthogonalize(List<Vector3> corners, float threshold = 0f)
     {
         List<Vector3> result = new List<Vector3>();
         if (corners.Count == 0)
             return result;
 
-        // Força Y = 1 no primeiro ponto
+        // Primeiro ponto garantido
         Vector3 first = corners[0];
-        first.y = 1;
+        first.y = 1f;
         result.Add(first);
 
         int i = 0;
 
         while (i < corners.Count - 1)
         {
-            Vector3 start = result[result.Count - 1];   // já normalizado
+            Vector3 start = result[result.Count - 1]; // já normalizado
             Vector3 next = corners[i + 1];
+
+            next.y = 1f;
 
             float dx = Mathf.Abs(next.x - start.x);
             float dz = Mathf.Abs(next.z - start.z);
 
             bool horizontal = dx > dz;
+
             int farthest = i + 1;
 
-            // Encontra o último ponto contínuo na mesma direção
+            // Procurar o último ponto que ainda está nesta direção
             for (int j = i + 2; j < corners.Count; j++)
             {
                 Vector3 prev = corners[farthest];
                 Vector3 curr = corners[j];
 
+                curr.y = 1f;
+
                 float dx2 = Mathf.Abs(curr.x - prev.x);
                 float dz2 = Mathf.Abs(curr.z - prev.z);
 
-                bool sameDir = horizontal ? (dx2 >= dz2) : (dz2 >= dx2);
+                bool sameDir;
+
+                if (horizontal)
+                    sameDir = dx2 >= (dz2 + threshold);
+                else
+                    sameDir = dz2 >= (dx2 + threshold);
+
                 if (!sameDir)
                     break;
 
@@ -116,10 +127,12 @@ public class PathController : MonoBehaviour
 
             // Ponto final bruto
             Vector3 end = corners[farthest];
+            end.y = 1f;
 
-            // -------------------------------
-            // NORMALIZAÇÃO DOS EIXOS
-            // -------------------------------
+            // ---------------------------------------------------------
+            // NORMALIZAÇÃO DOS DOIS PONTOS (MÉDIA)
+            // ---------------------------------------------------------
+
             if (horizontal)
             {
                 float avgZ = (start.z + end.z) * 0.5f;
@@ -134,9 +147,6 @@ public class PathController : MonoBehaviour
                 end.x = avgX;
                 result[result.Count - 1] = start;
             }
-
-            // 🔥 GARANTE Y = 1 NO END
-            end.y = 1;
 
             result.Add(end);
             i = farthest;
