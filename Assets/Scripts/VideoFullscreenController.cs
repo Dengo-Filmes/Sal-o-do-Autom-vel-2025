@@ -7,13 +7,13 @@ using UnityEngine.Video;
 public class VideoFullscreenToggle : MonoBehaviour, IPointerClickHandler
 {
     [Header("Main (dropdown)")]
-    public VideoPlayer mainVideoPlayer;     
-    public RawImage mainRawImage;           
+    public VideoPlayer mainVideoPlayer;
+    public RawImage mainRawImage;
 
     [Header("Fullscreen (preparado)")]
-    public GameObject fullscreenPanel;      
-    public RawImage fullscreenRawImage;     
-    public VideoPlayer fullscreenVideoPlayer; 
+    public GameObject fullscreenPanel;
+    public RawImage fullscreenRawImage;
+    public VideoPlayer fullscreenVideoPlayer;
 
     [Header("Config")]
     public bool pauseMainWhileFullscreen = true;
@@ -44,6 +44,8 @@ public class VideoFullscreenToggle : MonoBehaviour, IPointerClickHandler
             Debug.LogWarning("VideoFullscreenToggle: atribua mainVideoPlayer, fullscreenVideoPlayer, fullscreenRawImage e fullscreenPanel no inspector.");
             return;
         }
+
+        HidePathLines();
 
         fullscreenVideoPlayer.Stop();
         fullscreenVideoPlayer.clip = mainVideoPlayer.clip;
@@ -90,10 +92,38 @@ public class VideoFullscreenToggle : MonoBehaviour, IPointerClickHandler
 
         fullscreenPanel.SetActive(false);
 
+        ShowPathLines();
+
         var catcher = fullscreenPanel.GetComponent<FullscreenClickCatcher>();
         if (catcher != null) Destroy(catcher);
 
         isFullscreen = false;
+    }
+
+    private void HidePathLines()
+    {
+        if (PathController.Instance != null)
+        {
+            PathController.Instance.ResetPath();
+        }
+
+        LineRenderer[] allLines = FindObjectsOfType<LineRenderer>();
+        foreach (LineRenderer line in allLines)
+        {
+            if (line.gameObject != this.gameObject) 
+            {
+                line.enabled = false;
+            }
+        }
+    }
+
+    private void ShowPathLines()
+    {
+        LineRenderer[] allLines = FindObjectsOfType<LineRenderer>();
+        foreach (LineRenderer line in allLines)
+        {
+            line.enabled = true;
+        }
     }
 }
 
