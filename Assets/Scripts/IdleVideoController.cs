@@ -49,7 +49,7 @@ public class IdleVideoController : MonoBehaviour, IPointerDownHandler
 
         timer += Time.deltaTime;
 
-        if (timer >= idleTime && !videoActive)
+        if (timer >= idleTime && !videoActive && !IsAnyVideoFullscreenActive())
         {
             ShowVideo();
         }
@@ -69,6 +69,19 @@ public class IdleVideoController : MonoBehaviour, IPointerDownHandler
 
         if (videoActive)
             HideVideo();
+    }
+
+    private bool IsAnyVideoFullscreenActive()
+    {
+        VideoFullscreenToggle[] fullscreenPlayers = FindObjectsOfType<VideoFullscreenToggle>();
+        foreach (VideoFullscreenToggle player in fullscreenPlayers)
+        {
+            if (player.fullscreenPanel != null && player.fullscreenPanel.activeInHierarchy)
+            {
+                return true;
+            }
+        }
+        return false;
     }
 
     public void ForceCloseDropdowns()
@@ -100,7 +113,6 @@ public class IdleVideoController : MonoBehaviour, IPointerDownHandler
         if (fading || videoActive) return;
 
         ForceCloseDropdowns();
-
         StartCoroutine(FadeVideo(true));
     }
 
