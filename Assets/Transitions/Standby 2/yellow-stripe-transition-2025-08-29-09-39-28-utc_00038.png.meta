@@ -1,0 +1,1183 @@
+fileFormatVersion: 2
+guid: e19f3e9fe8a791e41be30beca2ee9a88
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -5992652379763205262
+    second: yellow-stripe-transition-2025-08-29-09-39-28-utc_00038_0
+  - first:
+      213: 5128909263691103725
+    second: yellow-stripe-transition-2025-08-29-09-39-28-utc_00038_1
+  - first:
+      213: 4062670437802960854
+    second: yellow-stripe-transition-2025-08-29-09-39-28-utc_00038_2
+  - first:
+      213: -1177220153836276843
+    second: yellow-stripe-transition-2025-08-29-09-39-28-utc_00038_3
+  - first:
+      213: -3368924808724911627
+    second: yellow-stripe-transition-2025-08-29-09-39-28-utc_00038_4
+  - first:
+      213: -4828507402585612319
+    second: yellow-stripe-transition-2025-08-29-09-39-28-utc_00038_5
+  - first:
+      213: -5487613715494324034
+    second: yellow-stripe-transition-2025-08-29-09-39-28-utc_00038_6
+  - first:
+      213: 7876923817088863660
+    second: yellow-stripe-transition-2025-08-29-09-39-28-utc_00038_7
+  - first:
+      213: 6238799159169332932
+    second: yellow-stripe-transition-2025-08-29-09-39-28-utc_00038_8
+  - first:
+      213: -9050325097418160848
+    second: yellow-stripe-transition-2025-08-29-09-39-28-utc_00038_9
+  - first:
+      213: -4413560964296700067
+    second: yellow-stripe-transition-2025-08-29-09-39-28-utc_00038_10
+  - first:
+      213: -6821377671454485279
+    second: yellow-stripe-transition-2025-08-29-09-39-28-utc_00038_11
+  - first:
+      213: 7569303560738219088
+    second: yellow-stripe-transition-2025-08-29-09-39-28-utc_00038_12
+  - first:
+      213: 8185847966449369936
+    second: yellow-stripe-transition-2025-08-29-09-39-28-utc_00038_13
+  - first:
+      213: -5825872238111841014
+    second: yellow-stripe-transition-2025-08-29-09-39-28-utc_00038_14
+  - first:
+      213: -5180327143243756415
+    second: yellow-stripe-transition-2025-08-29-09-39-28-utc_00038_15
+  - first:
+      213: 6843525388436527539
+    second: yellow-stripe-transition-2025-08-29-09-39-28-utc_00038_16
+  - first:
+      213: 5742173247274878937
+    second: yellow-stripe-transition-2025-08-29-09-39-28-utc_00038_17
+  - first:
+      213: -7269664092468140259
+    second: yellow-stripe-transition-2025-08-29-09-39-28-utc_00038_18
+  - first:
+      213: -8943186578710095330
+    second: yellow-stripe-transition-2025-08-29-09-39-28-utc_00038_19
+  - first:
+      213: -7423101332678742646
+    second: yellow-stripe-transition-2025-08-29-09-39-28-utc_00038_20
+  - first:
+      213: 3254622649637750378
+    second: yellow-stripe-transition-2025-08-29-09-39-28-utc_00038_21
+  - first:
+      213: 6839741578247201257
+    second: yellow-stripe-transition-2025-08-29-09-39-28-utc_00038_22
+  - first:
+      213: 4860746379359240240
+    second: yellow-stripe-transition-2025-08-29-09-39-28-utc_00038_23
+  - first:
+      213: -8945037986900807663
+    second: yellow-stripe-transition-2025-08-29-09-39-28-utc_00038_24
+  - first:
+      213: 6198518370020108983
+    second: yellow-stripe-transition-2025-08-29-09-39-28-utc_00038_25
+  - first:
+      213: 3658431357916803298
+    second: yellow-stripe-transition-2025-08-29-09-39-28-utc_00038_26
+  - first:
+      213: -3402290167297330414
+    second: yellow-stripe-transition-2025-08-29-09-39-28-utc_00038_27
+  - first:
+      213: -4364869308997211030
+    second: yellow-stripe-transition-2025-08-29-09-39-28-utc_00038_28
+  - first:
+      213: -4346177490209564150
+    second: yellow-stripe-transition-2025-08-29-09-39-28-utc_00038_29
+  - first:
+      213: 8461627422387439317
+    second: yellow-stripe-transition-2025-08-29-09-39-28-utc_00038_30
+  - first:
+      213: -5036035402901261932
+    second: yellow-stripe-transition-2025-08-29-09-39-28-utc_00038_31
+  - first:
+      213: 8260563778152327786
+    second: yellow-stripe-transition-2025-08-29-09-39-28-utc_00038_32
+  - first:
+      213: -5550721712032803394
+    second: yellow-stripe-transition-2025-08-29-09-39-28-utc_00038_33
+  - first:
+      213: 5974931262581007222
+    second: yellow-stripe-transition-2025-08-29-09-39-28-utc_00038_34
+  - first:
+      213: 2844572288213315546
+    second: yellow-stripe-transition-2025-08-29-09-39-28-utc_00038_35
+  - first:
+      213: -5756375110043383949
+    second: yellow-stripe-transition-2025-08-29-09-39-28-utc_00038_36
+  - first:
+      213: 7965665645804706929
+    second: yellow-stripe-transition-2025-08-29-09-39-28-utc_00038_37
+  - first:
+      213: 3239878584569498899
+    second: yellow-stripe-transition-2025-08-29-09-39-28-utc_00038_38
+  - first:
+      213: 2841215294792934787
+    second: yellow-stripe-transition-2025-08-29-09-39-28-utc_00038_39
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: yellow-stripe-transition-2025-08-29-09-39-28-utc_00038_0
+      rect:
+        serializedVersion: 2
+        x: 289
+        y: 988
+        width: 22
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 27b90d93962d5dca0800000000000000
+      internalID: -5992652379763205262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yellow-stripe-transition-2025-08-29-09-39-28-utc_00038_1
+      rect:
+        serializedVersion: 2
+        x: 282
+        y: 961
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dedb48b1dcb8d2740800000000000000
+      internalID: 5128909263691103725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yellow-stripe-transition-2025-08-29-09-39-28-utc_00038_2
+      rect:
+        serializedVersion: 2
+        x: 289
+        y: 948
+        width: 22
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d7e9bcfc31816830800000000000000
+      internalID: 4062670437802960854
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yellow-stripe-transition-2025-08-29-09-39-28-utc_00038_3
+      rect:
+        serializedVersion: 2
+        x: 282
+        y: 920
+        width: 29
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 593782cd18ca9afe0800000000000000
+      internalID: -1177220153836276843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yellow-stripe-transition-2025-08-29-09-39-28-utc_00038_4
+      rect:
+        serializedVersion: 2
+        x: 1609
+        y: 929
+        width: 22
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5f963fc5cbc2f31d0800000000000000
+      internalID: -3368924808724911627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yellow-stripe-transition-2025-08-29-09-39-28-utc_00038_5
+      rect:
+        serializedVersion: 2
+        x: 282
+        y: 900
+        width: 13
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1ef5a819912bdfcb0800000000000000
+      internalID: -4828507402585612319
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yellow-stripe-transition-2025-08-29-09-39-28-utc_00038_6
+      rect:
+        serializedVersion: 2
+        x: 788
+        y: 902
+        width: 31
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eb8366f766418d3b0800000000000000
+      internalID: -5487613715494324034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yellow-stripe-transition-2025-08-29-09-39-28-utc_00038_7
+      rect:
+        serializedVersion: 2
+        x: 1665
+        y: 900
+        width: 13
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cad45685a74705d60800000000000000
+      internalID: 7876923817088863660
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yellow-stripe-transition-2025-08-29-09-39-28-utc_00038_8
+      rect:
+        serializedVersion: 2
+        x: 788
+        y: 870
+        width: 31
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c63b4bd7caa49650800000000000000
+      internalID: 6238799159169332932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yellow-stripe-transition-2025-08-29-09-39-28-utc_00038_9
+      rect:
+        serializedVersion: 2
+        x: 788
+        y: 855
+        width: 31
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 035869a4649c66280800000000000000
+      internalID: -9050325097418160848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yellow-stripe-transition-2025-08-29-09-39-28-utc_00038_10
+      rect:
+        serializedVersion: 2
+        x: 1101
+        y: 855
+        width: 31
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d5f8090efa1efb2c0800000000000000
+      internalID: -4413560964296700067
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yellow-stripe-transition-2025-08-29-09-39-28-utc_00038_11
+      rect:
+        serializedVersion: 2
+        x: 801
+        y: 839
+        width: 16
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e49c2626299551a0800000000000000
+      internalID: -6821377671454485279
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yellow-stripe-transition-2025-08-29-09-39-28-utc_00038_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 211
+        width: 791
+        height: 614
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 054a6ee0c719b0960800000000000000
+      internalID: 7569303560738219088
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yellow-stripe-transition-2025-08-29-09-39-28-utc_00038_13
+      rect:
+        serializedVersion: 2
+        x: 801
+        y: 824
+        width: 16
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0538191ea59f99170800000000000000
+      internalID: 8185847966449369936
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yellow-stripe-transition-2025-08-29-09-39-28-utc_00038_14
+      rect:
+        serializedVersion: 2
+        x: 1143
+        y: 824
+        width: 16
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a05a884f018562fa0800000000000000
+      internalID: -5825872238111841014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yellow-stripe-transition-2025-08-29-09-39-28-utc_00038_15
+      rect:
+        serializedVersion: 2
+        x: 1129
+        y: 672
+        width: 55
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 18c44a6e8e7cb18b0800000000000000
+      internalID: -5180327143243756415
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yellow-stripe-transition-2025-08-29-09-39-28-utc_00038_16
+      rect:
+        serializedVersion: 2
+        x: 1129
+        y: 655
+        width: 55
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3b9502d051619fe50800000000000000
+      internalID: 6843525388436527539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yellow-stripe-transition-2025-08-29-09-39-28-utc_00038_17
+      rect:
+        serializedVersion: 2
+        x: 770
+        y: 618
+        width: 35
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9d70292252c40bf40800000000000000
+      internalID: 5742173247274878937
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yellow-stripe-transition-2025-08-29-09-39-28-utc_00038_18
+      rect:
+        serializedVersion: 2
+        x: 1155
+        y: 618
+        width: 35
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d1726043607fc1b90800000000000000
+      internalID: -7269664092468140259
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yellow-stripe-transition-2025-08-29-09-39-28-utc_00038_19
+      rect:
+        serializedVersion: 2
+        x: 1879
+        y: 595
+        width: 13
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e1a91ff803b63e380800000000000000
+      internalID: -8943186578710095330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yellow-stripe-transition-2025-08-29-09-39-28-utc_00038_20
+      rect:
+        serializedVersion: 2
+        x: 1375
+        y: 395
+        width: 116
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a8d64fdcaa8dbf890800000000000000
+      internalID: -7423101332678742646
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yellow-stripe-transition-2025-08-29-09-39-28-utc_00038_21
+      rect:
+        serializedVersion: 2
+        x: 1463
+        y: 350
+        width: 69
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a66499d5e0eba2d20800000000000000
+      internalID: 3254622649637750378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yellow-stripe-transition-2025-08-29-09-39-28-utc_00038_22
+      rect:
+        serializedVersion: 2
+        x: 1133
+        y: 295
+        width: 36
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9e1e4e61ab4abee50800000000000000
+      internalID: 6839741578247201257
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yellow-stripe-transition-2025-08-29-09-39-28-utc_00038_23
+      rect:
+        serializedVersion: 2
+        x: 1133
+        y: 282
+        width: 36
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 03049f42417d47340800000000000000
+      internalID: 4860746379359240240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yellow-stripe-transition-2025-08-29-09-39-28-utc_00038_24
+      rect:
+        serializedVersion: 2
+        x: 781
+        y: 247
+        width: 20
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 110f6600857dcd380800000000000000
+      internalID: -8945037986900807663
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yellow-stripe-transition-2025-08-29-09-39-28-utc_00038_25
+      rect:
+        serializedVersion: 2
+        x: 1133
+        y: 247
+        width: 46
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7ba28cacd9f850650800000000000000
+      internalID: 6198518370020108983
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yellow-stripe-transition-2025-08-29-09-39-28-utc_00038_26
+      rect:
+        serializedVersion: 2
+        x: 1159
+        y: 234
+        width: 20
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2e0f7c3dfeb55c230800000000000000
+      internalID: 3658431357916803298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yellow-stripe-transition-2025-08-29-09-39-28-utc_00038_27
+      rect:
+        serializedVersion: 2
+        x: 1159
+        y: 208
+        width: 20
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 21330737e13a8c0d0800000000000000
+      internalID: -3402290167297330414
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yellow-stripe-transition-2025-08-29-09-39-28-utc_00038_28
+      rect:
+        serializedVersion: 2
+        x: 1639
+        y: 211
+        width: 68
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a6c67325d7edc63c0800000000000000
+      internalID: -4364869308997211030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yellow-stripe-transition-2025-08-29-09-39-28-utc_00038_29
+      rect:
+        serializedVersion: 2
+        x: 213
+        y: 194
+        width: 68
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a0a924589964fa3c0800000000000000
+      internalID: -4346177490209564150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yellow-stripe-transition-2025-08-29-09-39-28-utc_00038_30
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 161
+        width: 78
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5d68b1d1f4dbd6570800000000000000
+      internalID: 8461627422387439317
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yellow-stripe-transition-2025-08-29-09-39-28-utc_00038_31
+      rect:
+        serializedVersion: 2
+        x: 1716
+        y: 161
+        width: 41
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 49177cdab786c1ab0800000000000000
+      internalID: -5036035402901261932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yellow-stripe-transition-2025-08-29-09-39-28-utc_00038_32
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 143
+        width: 41
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a6a6a396dfa63a270800000000000000
+      internalID: 8260563778152327786
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yellow-stripe-transition-2025-08-29-09-39-28-utc_00038_33
+      rect:
+        serializedVersion: 2
+        x: 633
+        y: 131
+        width: 19
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eb59c3b0300e7f2b0800000000000000
+      internalID: -5550721712032803394
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yellow-stripe-transition-2025-08-29-09-39-28-utc_00038_34
+      rect:
+        serializedVersion: 2
+        x: 1268
+        y: 131
+        width: 19
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6736487a3583be250800000000000000
+      internalID: 5974931262581007222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yellow-stripe-transition-2025-08-29-09-39-28-utc_00038_35
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 109
+        width: 41
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: adfefd8cc63f97720800000000000000
+      internalID: 2844572288213315546
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yellow-stripe-transition-2025-08-29-09-39-28-utc_00038_36
+      rect:
+        serializedVersion: 2
+        x: 633
+        y: 110
+        width: 19
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 377c6f3065f3d10b0800000000000000
+      internalID: -5756375110043383949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yellow-stripe-transition-2025-08-29-09-39-28-utc_00038_37
+      rect:
+        serializedVersion: 2
+        x: 633
+        y: 57
+        width: 19
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 17cd8b173babb8e60800000000000000
+      internalID: 7965665645804706929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yellow-stripe-transition-2025-08-29-09-39-28-utc_00038_38
+      rect:
+        serializedVersion: 2
+        x: 1311
+        y: 78
+        width: 9
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 31d09a4386c56fc20800000000000000
+      internalID: 3239878584569498899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yellow-stripe-transition-2025-08-29-09-39-28-utc_00038_39
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 14
+        width: 9
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3852a88d1460e6720800000000000000
+      internalID: 2841215294792934787
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      yellow-stripe-transition-2025-08-29-09-39-28-utc_00038_0: -5992652379763205262
+      yellow-stripe-transition-2025-08-29-09-39-28-utc_00038_1: 5128909263691103725
+      yellow-stripe-transition-2025-08-29-09-39-28-utc_00038_10: -4413560964296700067
+      yellow-stripe-transition-2025-08-29-09-39-28-utc_00038_11: -6821377671454485279
+      yellow-stripe-transition-2025-08-29-09-39-28-utc_00038_12: 7569303560738219088
+      yellow-stripe-transition-2025-08-29-09-39-28-utc_00038_13: 8185847966449369936
+      yellow-stripe-transition-2025-08-29-09-39-28-utc_00038_14: -5825872238111841014
+      yellow-stripe-transition-2025-08-29-09-39-28-utc_00038_15: -5180327143243756415
+      yellow-stripe-transition-2025-08-29-09-39-28-utc_00038_16: 6843525388436527539
+      yellow-stripe-transition-2025-08-29-09-39-28-utc_00038_17: 5742173247274878937
+      yellow-stripe-transition-2025-08-29-09-39-28-utc_00038_18: -7269664092468140259
+      yellow-stripe-transition-2025-08-29-09-39-28-utc_00038_19: -8943186578710095330
+      yellow-stripe-transition-2025-08-29-09-39-28-utc_00038_2: 4062670437802960854
+      yellow-stripe-transition-2025-08-29-09-39-28-utc_00038_20: -7423101332678742646
+      yellow-stripe-transition-2025-08-29-09-39-28-utc_00038_21: 3254622649637750378
+      yellow-stripe-transition-2025-08-29-09-39-28-utc_00038_22: 6839741578247201257
+      yellow-stripe-transition-2025-08-29-09-39-28-utc_00038_23: 4860746379359240240
+      yellow-stripe-transition-2025-08-29-09-39-28-utc_00038_24: -8945037986900807663
+      yellow-stripe-transition-2025-08-29-09-39-28-utc_00038_25: 6198518370020108983
+      yellow-stripe-transition-2025-08-29-09-39-28-utc_00038_26: 3658431357916803298
+      yellow-stripe-transition-2025-08-29-09-39-28-utc_00038_27: -3402290167297330414
+      yellow-stripe-transition-2025-08-29-09-39-28-utc_00038_28: -4364869308997211030
+      yellow-stripe-transition-2025-08-29-09-39-28-utc_00038_29: -4346177490209564150
+      yellow-stripe-transition-2025-08-29-09-39-28-utc_00038_3: -1177220153836276843
+      yellow-stripe-transition-2025-08-29-09-39-28-utc_00038_30: 8461627422387439317
+      yellow-stripe-transition-2025-08-29-09-39-28-utc_00038_31: -5036035402901261932
+      yellow-stripe-transition-2025-08-29-09-39-28-utc_00038_32: 8260563778152327786
+      yellow-stripe-transition-2025-08-29-09-39-28-utc_00038_33: -5550721712032803394
+      yellow-stripe-transition-2025-08-29-09-39-28-utc_00038_34: 5974931262581007222
+      yellow-stripe-transition-2025-08-29-09-39-28-utc_00038_35: 2844572288213315546
+      yellow-stripe-transition-2025-08-29-09-39-28-utc_00038_36: -5756375110043383949
+      yellow-stripe-transition-2025-08-29-09-39-28-utc_00038_37: 7965665645804706929
+      yellow-stripe-transition-2025-08-29-09-39-28-utc_00038_38: 3239878584569498899
+      yellow-stripe-transition-2025-08-29-09-39-28-utc_00038_39: 2841215294792934787
+      yellow-stripe-transition-2025-08-29-09-39-28-utc_00038_4: -3368924808724911627
+      yellow-stripe-transition-2025-08-29-09-39-28-utc_00038_5: -4828507402585612319
+      yellow-stripe-transition-2025-08-29-09-39-28-utc_00038_6: -5487613715494324034
+      yellow-stripe-transition-2025-08-29-09-39-28-utc_00038_7: 7876923817088863660
+      yellow-stripe-transition-2025-08-29-09-39-28-utc_00038_8: 6238799159169332932
+      yellow-stripe-transition-2025-08-29-09-39-28-utc_00038_9: -9050325097418160848
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
