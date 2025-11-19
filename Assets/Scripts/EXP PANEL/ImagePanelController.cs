@@ -54,9 +54,15 @@ public class PanelController : MonoBehaviour
     {
         if (menuPanel.activeSelf)
         {
-            ClosePanel();
+            LeanTween.cancel(menuPanel);
+            menuPanel.transform.localScale = Vector3.zero;
+            menuPanel.SetActive(false);
+
+            if (pathController != null)
+                pathController.SetPathVisibility(true);
         }
     }
+
 
     void OnDestroy()
     {
