@@ -18,6 +18,7 @@ public class PanelController : MonoBehaviour
         Instance = this;
 
         menuPanel.SetActive(false);
+        menuPanel.transform.localScale = Vector3.zero;
 
         openButton.onClick.AddListener(OpenPanel);
         exitButton.onClick.AddListener(ClosePanel);
@@ -27,16 +28,26 @@ public class PanelController : MonoBehaviour
     {
         menuPanel.SetActive(true);
 
+        menuPanel.transform.localScale = Vector3.zero;
+
+        LeanTween.scale(menuPanel, Vector3.one, 0.6f)
+            .setEaseOutBack();
+
         if (pathController != null)
             pathController.SetPathVisibility(false);
     }
 
     public void ClosePanel()
     {
-        menuPanel.SetActive(false);
+        LeanTween.scale(menuPanel, Vector3.zero, 0.45f)
+            .setEaseInBack()
+            .setOnComplete(() =>
+            {
+                menuPanel.SetActive(false);
 
-        if (pathController != null)
-            pathController.SetPathVisibility(true);
+                if (pathController != null)
+                    pathController.SetPathVisibility(true);
+            });
     }
 
     public void ForceCloseIfOpen()
