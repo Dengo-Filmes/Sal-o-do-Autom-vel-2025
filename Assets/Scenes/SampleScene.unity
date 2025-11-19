@@ -4806,7 +4806,7 @@ VideoPlayer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 336574958}
   m_Enabled: 1
-  m_VideoClip: {fileID: 32900000, guid: 746c8fc22c5e54d4eb9cac575f29abb1, type: 3}
+  m_VideoClip: {fileID: 32900000, guid: f36e0bceee4cd2e48902359e8aafce13, type: 3}
   m_TargetCameraAlpha: 1
   m_TargetCamera3DLayout: 0
   m_TargetCamera: {fileID: 0}
@@ -27559,7 +27559,7 @@ VideoPlayer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1706629544}
   m_Enabled: 1
-  m_VideoClip: {fileID: 32900000, guid: 57a033f16331f7049b22a95b4378c3c8, type: 3}
+  m_VideoClip: {fileID: 32900000, guid: bb0e775be61f4fa4b856e0da418b4537, type: 3}
   m_TargetCameraAlpha: 1
   m_TargetCamera3DLayout: 0
   m_TargetCamera: {fileID: 0}
@@ -31747,8 +31747,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ImageDateSwitcher
   targetImage: {fileID: 1981766524}
-  image21: {fileID: -855298285791758126, guid: 7c15a8ebba6ec8a4f8a601b602494af2, type: 3}
-  image22: {fileID: 179270238933396434, guid: f855d5a9389a5754e8a907ed53d5b5d4, type: 3}
+  image21: {fileID: -5519887364772964858, guid: 66546b2746910fd4f9d403355b295e20, type: 3}
+  image22: {fileID: 1576582450065561586, guid: 8ac4f92d36e44f647bd59022978a697a, type: 3}
 --- !u!1 &1994347700
 GameObject:
   m_ObjectHideFlags: 0
